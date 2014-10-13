@@ -2,7 +2,7 @@
 
 A new BikeWise is under development and the data is still in migration.
 
-The updated version of BikeWise (this version) is available at [BikeWise.BikeIndex.org](https://bikewise.bikeindex.org). It will move to bikewise.org once everything has been sorted out.
+The updated version of BikeWise (this version) is available at [BikeWise.BikeIndex.org](https://bikewise.bikeindex.org). It will move to [BikeWise.org](https://bikewise.org) once everything has been sorted out.
 
 This documentation might not be perfect, because stuff.
 
@@ -17,17 +17,49 @@ There are two endpoints: *locations* and *incidents* ([api/v1/locations](https:/
 Here is a location:
 
 ```
+{
+  "type": "Feature",
+  "properties": {
+    "id": 1451,
+    "type": "Theft"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      32.8563846,
+      -117.2029363
+    ]
+  }
+}
 
 ```
 
 Here is the incident for that location:
 
 ```
-
+{
+  "id": 1451,
+  "title": "Stolen Diamondback Outlook (blue)",
+  "description": "Parking Garage Bike Rack Reward: 20",
+  "address": "La Jolla/Utc, CA, 92122",
+  "type": "Theft",
+  "occurred_at": "2014-02-18T00:00:00.000-06:00",
+  "updated_at": "2014-10-13T09:22:43.823-05:00",
+  "url": "https://bikewise.bikeindex.org/api/v1/incidents/1451",
+  "source": {
+    "name": "BikeIndex.org",
+    "html_url": "https://bikeindex.org/bikes/6638",
+    "api_url": "https://bikeindex.org/api/v1/bikes/6638"
+  },
+  "media": {
+    "image_url": null,
+    "image_url_thumb": null
+  }
+}
 ```
 
 
-[CORS is enabled](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), so cross origin requests aren't an issue (use it from the browser or bakcend/app/party-time.
+[CORS is enabled](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), so cross origin requests aren't an issue. Use BikeWise from the browser or server/mobile/party-time.
 
 The API is versioned in the URL path because [pragmatism](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#versioning).
 
@@ -65,7 +97,12 @@ The following are the ways they're special little snowflakes.
 
 Incidents uses meta for pagination. You can include page number (`page`) and incidents per page (`per_page`) in your query - [api/v1/incidents?page=2&per_page_42](https://bikewise.bikeindex.org/api/v1/incidents?page=2&per_page_42).
 
-Locations is too raw and gritty for that bullshit. Locations returns the first 1,000 matching your query. Unless you pass `all=true`, in which case it will just give you all of them.
+Locations is too raw and gritty for that bullshit. Locations returns the first 1,000 matching your query. Unless you pass `all=true`, in which case it will do that.
+
+
+### Showing incidents
+
+You can also show an individual incident (particularly useful when you get the id from the location) - [api/v1/locations/42](https://bikewise.bikeindex.org/api/v1/locations/42).
 
 
 ### Creating incidents

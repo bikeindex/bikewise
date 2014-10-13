@@ -26,6 +26,7 @@ describe SeeClickFixIntegration do
       expect(ScfReport.count).to eq(0)
       integration.make_reports_from_issues_page(hash)
       expect(ScfReport.count).to eq(99)
+      ScfReport.all.each { |r| expect(r.processed).to be_false }
     end
   end
 

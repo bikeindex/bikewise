@@ -22,6 +22,8 @@ gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'geocoder'
 
+gem 'honeybadger'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -33,7 +35,6 @@ gem 'sinatra', '>= 1.3.0', :require => nil
 gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'sidekiq-unique-jobs'
-gem 'sidekiq-limit_fetch'
 gem 'pg_search'
 
 gem 'kaminari'

@@ -15,7 +15,6 @@ class BikeIndexIntegration
     hash = get_request("bikes/#{binx_id}?")
     return nil unless hash.present?
     binx_report = BinxReport.find_or_new_from_external_api(hash)
-    binx_report.process_hash
     binx_report.save
   end
 

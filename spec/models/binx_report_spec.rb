@@ -15,6 +15,7 @@ describe BinxReport do
     it "should make a binx report from an api hash and not save" do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
       binx_report = BinxReport.find_or_new_from_external_api(hash)
+      expect(binx_report.processed).to be_false
       binx_report.process_hash
       expect(binx_report.external_api_id).to be_present
       expect(binx_report.external_api_updated_at).to be_present
@@ -30,6 +31,7 @@ describe BinxReport do
       og_binx_report = BinxReport.create(external_api_id: 146, binx_id: 69)
       expect(BinxReport.count).to eq(1)
       binx_report = BinxReport.find_or_new_from_external_api(hash)
+      expect(binx_report.processed).to be_false
       binx_report.process_hash
       expect(binx_report.external_api_id).to eq(146)
       expect(binx_report.binx_id).to be_present
@@ -43,10 +45,10 @@ describe BinxReport do
       incident_type = FactoryGirl.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
       binx_report = BinxReport.find_or_new_from_external_api(hash)
+      expect(binx_report.processed).to be_false
       binx_report.process_hash
       binx_report.stub(:incident_type_id).and_return(69)
       hash = binx_report.incident_attrs
-
       expected_keys = [:latitude, :longitude, :address, :title, :description, :occurred_at, :incident_type_id, :image_url, :image_url, :create_open311_report]
       expect(expected_keys - hash.keys).to eq([])
       expect(hash[:latitude]).to eq(41.92031)
@@ -72,6 +74,7 @@ describe BinxReport do
       expect(binx_report.incident).to be_present
       expect(binx_report.incident.id).to eq(incident.id)
       expect(binx_report.incident_report.is_incident_source).to be_true
+      expect(binx_report.processed).to be_true
 
       hash = binx_report.incident_attrs
       expect(incident.latitude).to eq(hash[:latitude])
@@ -95,6 +98,7 @@ describe BinxReport do
       binx_report.process_hash.save
       binx_report.reload
       expect(binx_report.incident).to be_present
+      expect(binx_report.processed).to be_true
       expect(Incident.count).to eq(1)
       incident = binx_report.create_or_update_incident
       expect(Incident.count).to eq(1)
