@@ -2,14 +2,14 @@ desc "initial import from SeeClickFix"
 task :seeclickfix_import => :environment do
   import = ImportStatus.find_or_create_by(source: 'seeclickfix')
   import.info_hash[:imported_pages] = [] unless import.info_hash[:imported_pages].present? 
-  first_page = 1
-  import.info_hash[:imported_pages] << first_page
-
-  puts "Importing SeeClickFix data\n\nStarting page #{first_page}"
-  last_page = SeeClickFixIntegration.new.get_issues_and_make_reports(1)
-  last_page = 100 unless last_page < 50
-  puts "\nProcessing pages up to page #{last_page}"
-  pages = ((first_page+1)..(last_page)).to_a
+  last_page = 10
+  # last_page_issues = integration.get_issues_page(last_page)
+  # updated_at = integration.last_issue_updated_at(last_page_issues)
+  # puts updated_at
+  # last_page = 5 if updated_at > (Time.now - 1.hours)
+  # integration.make_reports_from_issues_page(last_page_issues)
+  # puts "\nProcessing pages up to page #{last_page}"
+  pages = (1...(last_page)).to_a
   pages.each do |page|
     next if import.info_hash[:imported_pages].include?(page)
     import.info_hash[:imported_pages] << page
@@ -29,7 +29,6 @@ task :bikeindex_import => :environment do
   import.info_hash[:stolen_bikes_to_import] = bike_ids
   import.save
 end
-
 
 desc "Process unprocessed reports"
 task :process_reports => :environment do

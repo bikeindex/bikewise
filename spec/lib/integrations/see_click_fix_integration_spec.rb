@@ -7,7 +7,7 @@ describe SeeClickFixIntegration do
         integration = SeeClickFixIntegration.new
         issues = integration.get_issues_page(1)
         expect(issues.kind_of?(Hash)).to be_true
-        expect(issues['issues'].count).to eq(100)
+        expect(issues['issues'].count).to eq(50)
       end
     end
     it "should return nil if the page is after the pagination max" do
@@ -24,9 +24,18 @@ describe SeeClickFixIntegration do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/see_click_fix_issues_page.json')))
       integration = SeeClickFixIntegration.new
       expect(ScfReport.count).to eq(0)
-      integration.make_reports_from_issues_page(hash)
+      info = integration.make_reports_from_issues_page(hash)
       expect(ScfReport.count).to eq(99)
       ScfReport.all.each { |r| expect(r.processed).to be_false }
+    end
+  end
+
+  describe :last_issue_updated_at do 
+    it "should return the last issue of the issue page update at" do 
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/see_click_fix_issues_page.json')))
+      integration = SeeClickFixIntegration.new
+      updated_at = integration.last_issue_updated_at(hash)
+      expect(updated_at).to be > (Time.now - 1.year)
     end
   end
 

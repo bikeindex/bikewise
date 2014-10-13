@@ -8,7 +8,7 @@ class SeeClickFixIntegration
   end
 
   def get_issues_page(page)
-    issues_page = get_request("issues?page=#{page}&per_page=100")
+    issues_page = get_request("issues?page=#{page}&per_page=50")
     return nil if page > issues_page['metadata']['pagination']['pages']
     issues_page
   end
@@ -19,6 +19,11 @@ class SeeClickFixIntegration
       scf_report = ScfReport.find_or_new_from_external_api(issue)
       scf_report.save
     end
+  end
+
+  def last_issue_updated_at(issues_page)
+    last_issue = issues_page['issues'].last
+    Time.parse(last_issue['updated_at'])
   end
 
   def get_issues_and_make_reports(page)

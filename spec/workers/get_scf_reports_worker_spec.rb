@@ -7,7 +7,7 @@ describe GetScfReportsWorker do
       Sidekiq::Testing.inline!
       expect(ScfReport.count).to eq(0)
       GetScfReportsWorker.perform_async(2)
-      expect(ScfReport.count).to eq(100)
+      expect(ScfReport.count).to eq(50)
     end
   end
 
