@@ -1,0 +1,41 @@
+body.home {
+  // background: rgb(198,222,246);
+}
+
+.navbar {
+  .logo img { height: 50px; }
+  margin-bottom: 0;
+}
+
+.home-intro {
+  padding: 40px 0 80px;
+  background: #5499C7;
+  color: white;
+  h1 { margin-bottom: 1em; }
+  p { font-size: 20px; }
+}
+
+@media (min-width: 900px) {
+  .home-intro { padding: 200px 0 100px; }
+}
+
+
+@media(max-width: 899px) {
+  .map-container { padding: 40px 0; }
+}
+
+@media(min-width: 900px) {
+  .map {
+    margin-top: -80px;
+    iframe { float: right; }
+  }
+}
+
+.developer-info {
+  h2, h3 { margin-bottom: 1em; }
+  margin-top: 40px;
+  // background: rgb(198,222,246);
+  border-top: 1px solid #C6E2F5;
+  background: #E5F2FA;
+  padding: 40px 0 80px;
+}

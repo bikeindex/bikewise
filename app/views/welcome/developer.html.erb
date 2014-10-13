@@ -1,0 +1,192 @@
+<p>Welcome to the updated version of BikeWise!</p>
+
+<p>This documentation is not be perfect, and I apologize.</p>
+
+<h2>
+<a name="user-content-api-useage" class="anchor" href="#api-useage" aria-hidden="true"><span class="octicon octicon-link"></span></a>API useage</h2>
+
+<p>BikeWise has a versioned open RESTful API.</p>
+
+<p>There are two endpoints: <em>locations</em> and <em>incidents</em> (<a href="https://bikewise.bikeindex.org/api/v1/locations&amp;updated_since=yesterday">api/v1/locations</a>, <a href="https://bikewise.bikeindex.org/api/v1/incidents">api/v1/incidents</a>)</p>
+
+<p><em>Locations</em> provides a valid GeoJSON response, while <em>incidents</em> provides the information about incidents. Both use the same search methods described below. They both reference the same thing - locations are incident locations, but in valid <a href="http://geojson.org/">GeoJSON</a>. The Incident endpoint returns a FeatureCollection of points with IDs that match Incidents.</p>
+
+<p>Here is a location:</p>
+
+<pre><code>{
+  "type": "Feature",
+  "properties": {
+    "id": 1451,
+    "type": "Theft"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      32.8563846,
+      -117.2029363
+    ]
+  }
+}
+
+</code></pre>
+
+<p>Here is the incident for that location:</p>
+
+<pre><code>{
+  "id": 1451,
+  "title": "Stolen Diamondback Outlook (blue)",
+  "description": "Parking Garage Bike Rack Reward: 20",
+  "address": "La Jolla/Utc, CA, 92122",
+  "type": "Theft",
+  "occurred_at": "2014-02-18T00:00:00.000-06:00",
+  "updated_at": "2014-10-13T09:22:43.823-05:00",
+  "url": "https://bikewise.bikeindex.org/api/v1/incidents/1451",
+  "source": {
+    "name": "BikeIndex.org",
+    "html_url": "https://bikeindex.org/bikes/6638",
+    "api_url": "https://bikeindex.org/api/v1/bikes/6638"
+  },
+  "media": {
+    "image_url": null,
+    "image_url_thumb": null
+  }
+}
+</code></pre>
+
+<p><a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS is enabled</a>, so cross origin requests aren't an issue. Use BikeWise from the browser or server/mobile/party-time.</p>
+
+<p>The API is versioned in the URL path because <a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#versioning">pragmatism</a>.</p>
+
+<h3>
+<a name="user-content-incidents-by-area" class="anchor" href="#incidents-by-area" aria-hidden="true"><span class="octicon octicon-link"></span></a>Incidents by area</h3>
+
+<p>You can get incidents in an an area.</p>
+
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>what it does</th>
+<th>blank/default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>location</code></td>
+<td>Incidents near this location. can be a full or partial address, or latitude, longitude</td>
+<td>Shows from everywhere</td>
+</tr>
+<tr>
+<td><code>proximity_width</code></td>
+<td>Width of the box for locations, in miles</td>
+<td>Defaults to 50</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a name="user-content-searching-for-incidents-with-the-api" class="anchor" href="#searching-for-incidents-with-the-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Searching for incidents with the API</h3>
+
+<p>You can also search for incidents. All these properties can be combined with the properties that are above.</p>
+
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>what it does</th>
+<th>blank/default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>query</code></td>
+<td>Full text search of incidents</td>
+<td></td>
+</tr>
+<tr>
+<td><code>occurred_since</code></td>
+<td>Incidents that occurred after this <a href="https://en.wikipedia.org/wiki/Unix_time">timestamp</a> (integer).</td>
+<td>Shows from all time</td>
+</tr>
+<tr>
+<td><code>occurred_before</code></td>
+<td>Incidents that occurred before this timestamp (integer).</td>
+<td>Shows from all time</td>
+</tr>
+<tr>
+<td><code>updated_since</code></td>
+<td>Incidents created or updated since this timestamp (integer) - <em>you can pass <code>yesterday</code> instead of a timestamp here</em>.</td>
+<td>Shows from all time</td>
+</tr>
+<tr>
+<td><code>incident_type</code></td>
+<td>Incidents of matching types. Split with commas. Possible types are 'Crash', 'Hazard' and 'Theft'.</td>
+<td>Shows all types</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<p>Above here, the two endpoints perform essentially the same. </p>
+
+<p>The following are the ways they're special little snowflakes.</p>
+
+<h3>
+<a name="user-content-pagination" class="anchor" href="#pagination" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pagination</h3>
+
+<p>Incidents uses meta for pagination. You can include page number (<code>page</code>) and incidents per page (<code>per_page</code>) in your query - <a href="https://bikewise.bikeindex.org/api/v1/incidents?page=2&amp;per_page_42">api/v1/incidents?page=2&amp;per_page_42</a>.</p>
+
+<p>Locations is too raw and gritty for that bullshit. Locations returns the first 100 matching your query. Unless you pass <code>all=true</code>, in which case it will return all.</p>
+
+<h3>
+<a name="user-content-showing-incidents" class="anchor" href="#showing-incidents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Showing incidents</h3>
+
+<p>You can also show an individual incident (particularly useful when you get the id from the location) - <a href="https://bikewise.bikeindex.org/api/v1/locations/42">api/v1/locations/42</a>.</p>
+
+<h3>
+<a name="user-content-creating-incidents" class="anchor" href="#creating-incidents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating incidents</h3>
+
+<p>You can add incidents to BikeWise. Post a hash to <a href="https://bikewise.bikeindex.org/api/v1/incidents">api/v1/incidents</a> that looks like this:</p>
+
+<pre><code>{
+  "latitude": 41.92031,
+  "longitude": -87.715781,
+  "occurred_at": 1413129174,
+  "incident_type": "theft",
+  "create_open311_report": false,
+  "description": "This is a report that was submitted directly to BikeWise.org",
+  "title": "Some new incident",
+  "media": {
+    "image_url": "https://seeclickfix.com/files/issue_images/0024/8363/1411756212949.jpg",
+    "image_url_thumb": "https://seeclickfix.com/files/issue_images/0024/8363/1411756212949.jpg"
+  }
+}
+</code></pre>
+
+<p>You can also submit an address instead of (or in addition to) latitude and longitude.</p>
+
+<p><strong>Please note:</strong> Adding separate import strategies for data sources is trivial - so if you've got a bunch of incident data you'd like to add, hit us up, <a href="mailto:contact@bikeindex.org">contact@bikeindex.org</a>!</p>
+
+<h2>
+<a name="user-content-development-running-it-locally" class="anchor" href="#development-running-it-locally" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development, running it locally</h2>
+
+<p>This is a <a href="http://rubyonrails.org/">Rails 4.1</a> app run on <a href="http://www.ruby-lang.org/en/">Ruby 2.1</a> (we use <a href="https://rvm.io/">RVM</a>) with PostgreSQL.</p>
+
+<h3>
+<a name="user-content-whats-up" class="anchor" href="#whats-up" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's up</h3>
+
+<p>Immediate Goals:</p>
+
+<ul>
+<li><p>Make a homepage</p></li>
+<li><p>Improve documentation. Make it interactive-y and stuff</p></li>
+<li><p>Add <a href="https://help.github.com/articles/mapping-geojson-files-on-github/">GitHub maps for GeoJSON export</a> (and automate data export to GitHub)</p></li>
+<li><p>Submit open311 reports</p></li>
+<li><p>Provide a form to submit incidents</p></li>
+</ul>
+
+<hr>
+
+<p>Made with all the <img class="emoji" title=":princess:" alt=":princess:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f478.png" height="20" width="20" align="absmiddle"></p>
+</article></body></html>

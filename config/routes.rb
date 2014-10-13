@@ -2,7 +2,7 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   
   root 'welcome#index'
-  get 'developers', to: 'welcome#developers'
+  get 'developer', to: 'welcome#developer'
 
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do

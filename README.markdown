@@ -4,7 +4,7 @@ A new BikeWise is under development and the data is still in migration.
 
 The updated version of BikeWise (this version) is available at [BikeWise.BikeIndex.org](https://bikewise.bikeindex.org). It will move to [BikeWise.org](https://bikewise.org) once everything has been sorted out.
 
-This documentation might not be perfect, because stuff.
+This documentation is not be perfect, and I apologize.
 
 ## API useage
 
@@ -12,7 +12,7 @@ BikeWise has a versioned open RESTful API.
 
 There are two endpoints: *locations* and *incidents* ([api/v1/locations](https://bikewise.bikeindex.org/api/v1/locations&updated_since=yesterday), [api/v1/incidents](https://bikewise.bikeindex.org/api/v1/incidents))
 
-*Locations* provides a valid GeoJSON response, while *incidents* provides the information about incidents. Both use the same search methods described below. They both reference the same thing - locations are just incident locations, but in a better format for mapping (they include an id so you can grab the matching location).
+*Locations* provides a valid GeoJSON response, while *incidents* provides the information about incidents. Both use the same search methods described below. They both reference the same thing - locations are incident locations, but in valid [GeoJSON](http://geojson.org/). The Incident endpoint returns a FeatureCollection of points with IDs that match Incidents.
 
 Here is a location:
 

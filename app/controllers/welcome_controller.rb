@@ -1,7 +1,9 @@
 class WelcomeController < ApplicationController
   def index
+    @bodyclass = 'home'
   end
 
-  def developers
+  def developer
+    @bodyclass = 'dev'
   end
 end
