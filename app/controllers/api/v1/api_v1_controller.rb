@@ -11,7 +11,11 @@ module Api
       def find_incidents
         incidents = Incident.all
         if params[:updated_since].present?
-          date = Time.at(params[:updated_since].to_i).utc.to_datetime
+          if params[:occurred_since] == 'yesterday'
+            date = (Time.now - 1.days) 
+          else
+            date = Time.at(params[:updated_since].to_i).utc.to_datetime
+          end
           incidents = incidents.where("updated_at >= ?", date)
         end
         if params[:occurred_since].present?

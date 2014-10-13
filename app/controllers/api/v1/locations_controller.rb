@@ -5,6 +5,7 @@ module Api
 
       
       def index
+        @incidents = @incidents.limit(1000) unless params[:all]
         geoj = { type: "FeatureCollection", features: @incidents.as_geojson }
         render json: geoj
       end
