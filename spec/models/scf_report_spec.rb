@@ -109,7 +109,7 @@ describe ScfReport do
       expect(incident.occurred_at).to eq(hash[:occurred_at])
       expect(incident.create_open311_report).to be_false
       expect(incident.title).to be_present
-      expect(incident.description).to be_present
+      expect(incident.type_name).to eq('Unconfirmed')
       expect(incident.description).to be_present
     end
 

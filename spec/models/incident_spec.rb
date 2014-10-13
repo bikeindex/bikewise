@@ -19,8 +19,8 @@ describe Incident do
       expect(result.first[:type]).to eq('Feature')
       expect(result.first[:properties][:type]).to eq(i1.type_name)
       expect(result.first[:properties][:id]).to eq(i1.id)
-      expect(result.first[:geometry][:coordinates][0]).to eq(i1.latitude)
-      expect(result.first[:geometry][:coordinates][1]).to eq(i1.longitude)
+      expect(result.first[:geometry][:coordinates][1]).to eq(i1.latitude)
+      expect(result.first[:geometry][:coordinates][0]).to eq(i1.longitude)
     end
   end
 

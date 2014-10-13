@@ -67,6 +67,7 @@ describe BinxReport do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
       binx_report = BinxReport.find_or_new_from_external_api(hash)
       binx_report.process_hash
+      binx_report.save
       expect(binx_report.incident).to_not be_present
       incident = binx_report.create_or_update_incident
       binx_report.reload
@@ -75,7 +76,6 @@ describe BinxReport do
       expect(binx_report.incident.id).to eq(incident.id)
       expect(binx_report.incident_report.is_incident_source).to be_true
       expect(binx_report.processed).to be_true
-
       hash = binx_report.incident_attrs
       expect(incident.latitude).to eq(hash[:latitude])
       expect(incident.longitude).to eq(hash[:longitude])
@@ -86,6 +86,21 @@ describe BinxReport do
       expect(incident.description).to be_present
       expect(incident.type_name).to eq('Theft')
       expect(incident.incident_type_id).to eq(incident_type.id)
+    end
+
+    it "should not create an incident if there isn't both lat & long" do
+      incident_type = FactoryGirl.create(:incident_type_theft)
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
+      hash['bikes']['stolen_record']['location'] = ''
+      hash['bikes']['stolen_record']['latitude'] = ''
+      # hash['bikes']['stolen_record']['longitude'] = ''
+      binx_report = BinxReport.find_or_new_from_external_api(hash)
+      binx_report.process_hash
+      incident = binx_report.create_or_update_incident
+      expect(incident).to_not be_present
+      expect(binx_report.incident).to_not be_present
+      expect(binx_report.processed).to be_true
+      expect(binx_report.should_create_incident).to be_false
     end
 
     xit "should not change the source or the incident_type if incident already exists" do 

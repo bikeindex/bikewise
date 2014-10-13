@@ -37,8 +37,7 @@ class BwReport < ActiveRecord::Base
   end
 
   def incident_type_id
-    slug = Slugifyer.slugify(external_api_hash[:incident_type])
-    IncidentType.find_by(slug: slug).id
+    IncidentType.fuzzy_find_id(external_api_hash[:incident_type])
   end
 
   def source_hash

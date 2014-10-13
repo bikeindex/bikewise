@@ -28,11 +28,10 @@ module Api
         end
         if params[:incident_types].present?
           ids = []
-          params[:incident_types].split(',').each do |it_name|
-            i = IncidentType.find_by(slug: Slugifyer.slugify(it_name))
-            ids << i.id if i.present?
+          params[:incident_types].split(',').each do |name|
+            ids << IncidentType.fuzzy_find_id(i)
           end
-          incidents = incidents.where("incident_type_id IN (?)", ids)
+          incidents = incidents.where("incident_type_id IN (?)", ids.reject(&:empty?))
         end
         if params[:location].present?
           width = params[:location_width].present? ? params[:location_width] : 50

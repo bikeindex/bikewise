@@ -27,7 +27,8 @@ class Incident < ActiveRecord::Base
 
   before_save :set_type_name
   def set_type_name
-    self.type_name = incident_type.present? ? incident_type.name : 'tbd'
+    self.incident_type = IncidentType.find_or_create_by(name: 'Unconfirmed') unless self.incident_type_id.present?
+    self.type_name = incident_type.name
   end
 
   def source

@@ -16,6 +16,7 @@ module Reportable
 
   def process_hash
     set_attrs_from_hash
+    do_not_process_without_address
     self.processed = true
     self
   end
@@ -30,14 +31,17 @@ module Reportable
         raise StandardError, "IncidentReport create error #{self.class.name} #{id} - #{ir.errors.full_messages.to_sentence}"
       end
     end
-    u_incident.attributes = incident_attrs    
-    unless u_incident.incident_type_id.present?
-      # Update with incident type if incident doesn't have type
-      # Since we're initially grabbing but not typing, we'll update later
-      u_incident.incident_type_id = incident_type_id
-    end
+    u_incident.attributes = incident_attrs
+    u_incident.incident_type_id = incident_type_id
     u_incident.save
     u_incident
+  end
+
+  def do_not_process_without_address
+    return if incident_attrs[:address].present?
+    unless  incident_attrs[:latitude].present? && incident_attrs[:longitude].present?
+      self.should_create_incident = false
+    end
   end
 
   module ClassMethods
