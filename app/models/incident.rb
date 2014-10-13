@@ -19,7 +19,7 @@ class Incident < ActiveRecord::Base
   after_validation :geocode, unless: ->(obj){ obj.latitude.present? && obj.longitude.present? }
 
   include PgSearch
-  pg_search_scope :search, against: {
+  pg_search_scope :search_text, against: {
     title: 'A',
     description:   'B',
   },
@@ -47,7 +47,7 @@ class Incident < ActiveRecord::Base
         },
         geometry: {
           type: "Point",
-          coordinates: [attrs['latitude'].to_f, attrs['longitude'].to_f]}
+          coordinates: [attrs['longitude'].to_f, attrs['latitude'].to_f]}
       }
     }
   end

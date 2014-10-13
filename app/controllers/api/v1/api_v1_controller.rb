@@ -40,7 +40,7 @@ module Api
           incidents = incidents.within_bounding_box(box)
         end
         if params[:query].present?
-          incidents = incidents.search(params[:query])
+          incidents = incidents.search_text(params[:query])
         end
         @incidents = incidents
       end
