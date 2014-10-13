@@ -2,12 +2,12 @@ desc "initial import from SeeClickFix"
 task :seeclickfix_import => :environment do
   import = ImportStatus.find_or_create_by(source: 'seeclickfix')
   import.info_hash[:imported_pages] = [] unless import.info_hash[:imported_pages].present? 
-  last_page = 10
-  # last_page_issues = integration.get_issues_page(last_page)
-  # updated_at = integration.last_issue_updated_at(last_page_issues)
-  # puts updated_at
-  # last_page = 5 if updated_at > (Time.now - 1.hours)
-  # integration.make_reports_from_issues_page(last_page_issues)
+  last_page = 3
+  integration = SeeClickFixIntegration.new 
+  last_page_issues = integration.get_issues_page(last_page)
+  last_updated_at = integration.last_issue_updated_at(last_page_issues)
+  last_page = 8 unless last_updated_at > (Time.now - 2.hours)
+  integration.make_reports_from_issues_page(last_page_issues)
   # puts "\nProcessing pages up to page #{last_page}"
   pages = (1...(last_page)).to_a
   pages.each do |page|
@@ -23,7 +23,7 @@ desc "initial import from BikeIndex"
 task :bikeindex_import => :environment do
   import = ImportStatus.find_or_create_by(source: 'bikeindex')
   integration = BikeIndexIntegration.new 
-  time = Time.now - 1.days
+  time = Time.now - 2.hours
   bike_ids = integration.get_stolen_bikes_updated_since(time)
   bike_ids.each { |id| GetBinxReportWorker.perform_async(id) }
   import.info_hash[:stolen_bikes_to_import] = bike_ids

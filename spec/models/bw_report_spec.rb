@@ -38,6 +38,17 @@ describe BwReport do
       expect(hash[:post_to_scf]).to be_false
       expect(hash[:description]).to match("This is a report.")
     end
+
+    it "should return always be processed, because there isn't a reason for us to call it unless it's updated" do 
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/bw_report_hash.json')))
+      bw_report = BwReport.find_or_new_from_external_api(hash)
+      expect(bw_report.processed).to be_false
+      bw_report.process_hash
+      bw_report.save
+      expect(bw_report.processed).to be_true
+      bw_report = BwReport.find_or_new_from_external_api(hash)
+      expect(bw_report).to be_present
+    end
   end
 
   describe :create_or_update_incident do

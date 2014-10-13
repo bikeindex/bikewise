@@ -49,4 +49,8 @@ class BinxReport < ActiveRecord::Base
     }
   end
 
+  def hash_updated_at(hash)
+    Time.parse(hash[:bikes][:registration_updated_at])
+  end
+
 end

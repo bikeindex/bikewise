@@ -51,7 +51,6 @@ describe ScfReport do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/see_click_fix_issue_bike_related.json')))
       scf_report = ScfReport.find_or_new_from_external_api(hash)
       scf_report.process_hash
-
       hash = scf_report.incident_attrs
       expected_keys = [:latitude, :longitude, :address, :title, :description, :occurred_at, :incident_type_id, :image_url, :image_url]
       expect(expected_keys - hash.keys).to eq([])
@@ -63,6 +62,17 @@ describe ScfReport do
       expect(hash[:occurred_at].month).to eq(10)
       expect(hash[:title]).to be_present
       expect(hash[:description]).to be_present
+    end
+
+    it "should return nil if the external_api hasn't been updated since processed" do 
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/see_click_fix_issue_bike_related.json')))
+      scf_report = ScfReport.find_or_new_from_external_api(hash)
+      expect(scf_report.processed).to be_false
+      scf_report.process_hash
+      scf_report.save
+      expect(scf_report.processed).to be_true
+      scf_report = ScfReport.find_or_new_from_external_api(hash)
+      expect(scf_report).to_not be_present
     end
   end
 

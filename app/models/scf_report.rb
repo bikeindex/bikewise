@@ -50,4 +50,8 @@ class ScfReport < ActiveRecord::Base
     }
   end
 
+  def hash_updated_at(hash)
+    Time.parse(hash[:updated_at])
+  end
+
 end

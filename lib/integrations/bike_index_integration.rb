@@ -15,7 +15,7 @@ class BikeIndexIntegration
     hash = get_request("bikes/#{binx_id}?")
     return nil unless hash.present?
     binx_report = BinxReport.find_or_new_from_external_api(hash)
-    binx_report.save
+    binx_report.save if binx_report.present?
   end
 
   def get_stolen_bikes_updated_since(time)

@@ -52,4 +52,8 @@ class BwReport < ActiveRecord::Base
     Time.at(external_api_hash[:occurred_at].to_i).utc.to_datetime
   end
 
+  def hash_updated_at(hash)
+    Time.now
+  end
+
 end

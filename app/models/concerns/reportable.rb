@@ -49,7 +49,11 @@ module Reportable
       hash = ActiveSupport::HashWithIndifferentAccess.new(h)
       id = self.id_from_external_hash(hash)
       obj = self.where(external_api_id: id).first if id.present?
-      unless obj.present?
+      if obj.present?
+        if obj.external_api_updated_at.present? && obj.processed
+          return nil unless obj.external_api_updated_at < obj.hash_updated_at(hash)
+        end
+      else
         obj = self.new(external_api_id: id) 
       end
       obj.external_api_hash = hash

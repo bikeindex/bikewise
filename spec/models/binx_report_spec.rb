@@ -59,6 +59,28 @@ describe BinxReport do
       expect(hash[:title]).to match(/Stolen 2014 Jamis Allegro Comp Disc .blue./)
       expect(hash[:description]).to match("This is a test stolen bike.")
     end
+
+    it "should return nil if the external_api hasn't been updated since processed" do 
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
+      binx_report = BinxReport.find_or_new_from_external_api(hash)
+      expect(binx_report.processed).to be_false
+      binx_report.process_hash
+      binx_report.save
+      expect(binx_report.processed).to be_true
+      binx_report = BinxReport.find_or_new_from_external_api(hash)
+      expect(binx_report).to_not be_present
+    end
+
+    it "should return the report if external_api hasn't been updated since processed, but we're not processed" do 
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
+      binx_report = BinxReport.find_or_new_from_external_api(hash)
+      expect(binx_report.processed).to be_false
+      binx_report.process_hash
+      binx_report.processed = false
+      binx_report.save
+      binx_report = BinxReport.find_or_new_from_external_api(hash)
+      expect(binx_report).to be_present
+    end
   end
 
   describe :create_or_update_incident do

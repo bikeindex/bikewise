@@ -17,7 +17,7 @@ class SeeClickFixIntegration
     issues = issues_page['issues']
     issues.each do |issue|
       scf_report = ScfReport.find_or_new_from_external_api(issue)
-      scf_report.save
+      scf_report.save if scf_report.present?
     end
   end
 
