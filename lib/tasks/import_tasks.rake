@@ -23,11 +23,9 @@ desc "initial import from BikeIndex"
 task :bikeindex_import => :environment do
   import = ImportStatus.find_or_create_by(source: 'bikeindex')
   integration = BikeIndexIntegration.new 
-  party_time = Time.now - 2.months
-  bike_ids = integration.get_stolen_bikes_updated_since(party_time)
-  bike_ids.each do |id| 
-    GetBinxReportWorker.perform_async(id)
-  end
+  time = Time.now - 1.days
+  bike_ids = integration.get_stolen_bikes_updated_since(time)
+  bike_ids.each { |id| GetBinxReportWorker.perform_async(id) }
   import.info_hash[:stolen_bikes_to_import] = bike_ids
   import.save
 end

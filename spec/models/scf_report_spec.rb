@@ -86,6 +86,7 @@ describe ScfReport do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/see_click_fix_issue_not_bike_related.json')))
       scf_report = ScfReport.find_or_new_from_external_api(hash)
       scf_report.process_hash
+      expect(scf_report.processed).to be_true
       expect(scf_report.incident).to_not be_present
       scf_report.create_or_update_incident
       expect(scf_report.incident).to_not be_present
