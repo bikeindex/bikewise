@@ -7,7 +7,7 @@ task :seeclickfix_import => :environment do
 
   puts "Importing SeeClickFix data\n\nStarting page #{first_page}"
   last_page = SeeClickFixIntegration.new.get_issues_and_make_reports(1)
-  last_page = 100 unless last_page < 50
+  # last_page = 100 unless last_page < 50
   puts "\nProcessing pages up to page #{last_page}"
   pages = ((first_page+1)..(last_page)).to_a
   pages.each do |page|
