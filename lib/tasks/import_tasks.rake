@@ -37,7 +37,7 @@ desc "Process unprocessed reports"
 task :process_reports => :environment do
   report_klasses = ["BinxReport", "ScfReport", "BwReport"]
   report_klasses.each do |klass|
-    report_ids = klass.constantize.unprocessed.pluck(:id)
+    report_ids = klass.constantize.pluck(:id)
     report_ids.each { |id| ProcessReportsWorker.perform_async(klass, id) }
   end
 end
