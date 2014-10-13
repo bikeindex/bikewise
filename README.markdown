@@ -97,7 +97,7 @@ The following are the ways they're special little snowflakes.
 
 Incidents uses meta for pagination. You can include page number (`page`) and incidents per page (`per_page`) in your query - [api/v1/incidents?page=2&per_page_42](https://bikewise.bikeindex.org/api/v1/incidents?page=2&per_page_42).
 
-Locations is too raw and gritty for that bullshit. Locations returns the first 1,000 matching your query. Unless you pass `all=true`, in which case it will do that.
+Locations is too raw and gritty for that bullshit. Locations returns the first 100 matching your query. Unless you pass `all=true`, in which case it will return all.
 
 
 ### Showing incidents
