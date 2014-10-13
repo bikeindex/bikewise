@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title BikeWise
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    <link rel="shortcut icon" href="/fav.ico" />
+  %body
+    %header
+      .navbar.navbar-default
+        .container
+          .navbar-header
+            %a.logo{ href: root_url }
+              %img{ src: '/assets/logo.png' }
+          .navbar-text.navbar-left
+            Bicycle incident reporting
+
+
+    .container
+      = yield

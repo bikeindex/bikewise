@@ -1,0 +1,40 @@
+{
+  "id": 1316783,
+  "status": "Open",
+  "summary": "Policing Issue",
+  "description": "Stolen bicycle.  Powder blue bicycle, with cream colored, balloon tires, and a coffee cup holder, on the handlebar.\r\nI saw this bicycle, yesterday, around 1:00pm, locked outside of the Yale SOM, on Whitney Ave.  Then, around 5:15 pm, I see the same bicycle, with a young (12-13 years old), black male, riding the same bike, cutting across route 34, in front of rush hour traffic, with his two friends.  Last seen heading West, on Washington Ave. at Cedar St.   So, if the bike is yours, take a ride down Washington Ave., you might find your bike...",
+  "rating": 1,
+  "lat": 41.3157120640421,
+  "lng": -72.9201111932928,
+  "address": "195 Whitney Avenue New Haven, Connecticut",
+  "closed_at": null,
+  "acknowledged_at": null,
+  "created_at": "2014-10-10T11:00:25-04:00",
+  "updated_at": "2014-10-10T11:00:25-04:00",
+  "shortened_url": "http://bit.ly/1oXNzz6",
+  "point": {
+    "type": "Point",
+    "coordinates": [
+      -72.92011119329283,
+      41.31571206404209
+    ]
+  },
+  "url": "https://seeclickfix.com/api/v2/issues/1316783",
+  "comment_url": "https://seeclickfix.com/api/v2/issues/1316783/comments",
+  "html_url": "https://seeclickfix.com/issues/1316783",
+  "reporter": {
+    "id": 0,
+    "name": "New Haven cesspool",
+    "witty_title": "Street Smart",
+    "civic_points": 0,
+    "avatar": {
+      "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+      "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+    }
+  },
+  "media": {
+    "video_url": null,
+    "image_full": "https://seeclickfix.com/files/issue_images/0024/8363/1411756212949.jpg",
+    "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8363/1411756212949.jpg"
+  }
+}

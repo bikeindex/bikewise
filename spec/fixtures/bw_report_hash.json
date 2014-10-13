@@ -1,0 +1,14 @@
+{
+  "address": "25542 N Milwaukee Ave, Chicago, IL 60647",
+  "occurred_at": 1413129174,
+  "incident_type": "theft",
+  "latitude": 41.92031,
+  "longitude": -87.715781,
+  "create_open311_report": false,
+  "description": "This is a report that was submitted directly to BikeWise.org",
+  "title": "Some new incident",
+  "media": {
+    "image_url": "https://seeclickfix.com/files/issue_images/0024/8363/1411756212949.jpg",
+    "image_url_thumb": "https://seeclickfix.com/files/issue_images/0024/8363/1411756212949.jpg"
+  }
+}

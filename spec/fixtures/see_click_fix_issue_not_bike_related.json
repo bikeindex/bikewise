@@ -1,0 +1,40 @@
+{
+  "id": 1316553,
+  "status": "Acknowledged",
+  "summary": "Street Light Maintenance",
+  "description": "",
+  "rating": 2,
+  "lat": 43.4022367,
+  "lng": -79.8050588,
+  "address": "4360 Taywood Drive Burlington, Ontario",
+  "closed_at": null,
+  "acknowledged_at": "2014-10-10T09:24:12-04:00",
+  "created_at": "2014-10-10T09:15:34-04:00",
+  "updated_at": "2014-10-10T09:24:12-04:00",
+  "shortened_url": "http://bit.ly/1oXwLYN",
+  "point": {
+    "type": "Point",
+    "coordinates": [
+      -79.8050588,
+      43.4022367
+    ]
+  },
+  "url": "https://seeclickfix.com/api/v2/issues/1316553",
+  "comment_url": "https://seeclickfix.com/api/v2/issues/1316553/comments",
+  "html_url": "https://seeclickfix.com/issues/1316553",
+  "reporter": {
+    "id": 392151,
+    "name": "COBRPM4",
+    "witty_title": "Heman",
+    "civic_points": 6480,
+    "avatar": {
+      "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+      "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+    }
+  },
+  "media": {
+    "video_url": null,
+    "image_full": null,
+    "image_square_100x100": null
+  }
+}

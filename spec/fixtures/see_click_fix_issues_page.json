@@ -1,0 +1,3974 @@
+{
+  "issues": [
+    {
+      "id": 1316783,
+      "status": "Open",
+      "summary": "Policing Issue",
+      "description": "Stolen bicycle.  Powder blue bicycle, with cream colored, balloon tires, and a coffee cup holder, on the handlebar.\r\nI saw this bicycle, yesterday, around 1:00pm, locked outside of the Yale SOM, on Whitney Ave.  Then, around 5:15 pm, I see the same bicycle, with a young (12-13 years old), black male, riding the same bike, cutting across route 34, in front of rush hour traffic, with his two friends.  Last seen heading West, on Washington Ave. at Cedar St.   So, if the bike is yours, take a ride down Washington Ave., you might find your bike...",
+      "rating": 1,
+      "lat": 41.3157120640421,
+      "lng": -72.9201111932928,
+      "address": "195 Whitney Avenue New Haven, Connecticut",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T11:00:25-04:00",
+      "updated_at": "2014-10-10T11:00:25-04:00",
+      "shortened_url": "http://bit.ly/1oXNzz6",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -72.92011119329283,
+          41.31571206404209
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316783",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316783/comments",
+      "html_url": "https://seeclickfix.com/issues/1316783",
+      "reporter": {
+        "id": 0,
+        "name": "New Haven cesspool",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316553,
+      "status": "Acknowledged",
+      "summary": "Street Light Maintenance",
+      "description": "",
+      "rating": 2,
+      "lat": 43.4022367,
+      "lng": -79.8050588,
+      "address": "4360 Taywood Drive Burlington, Ontario",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:24:12-04:00",
+      "created_at": "2014-10-10T09:15:34-04:00",
+      "updated_at": "2014-10-10T09:24:12-04:00",
+      "shortened_url": "http://bit.ly/1oXwLYN",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -79.8050588,
+          43.4022367
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316553",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316553/comments",
+      "html_url": "https://seeclickfix.com/issues/1316553",
+      "reporter": {
+        "id": 392151,
+        "name": "COBRPM4",
+        "witty_title": "Heman",
+        "civic_points": 6480,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316552,
+      "status": "Acknowledged",
+      "summary": "Street Light Maintenance",
+      "description": "",
+      "rating": 2,
+      "lat": 43.3891285,
+      "lng": -79.8053962,
+      "address": "4178 Arbourfield Drive Burlington, Ontario",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:24:12-04:00",
+      "created_at": "2014-10-10T09:15:06-04:00",
+      "updated_at": "2014-10-10T09:24:12-04:00",
+      "shortened_url": "http://bit.ly/1oXwGV4",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -79.8053962,
+          43.3891285
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316552",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316552/comments",
+      "html_url": "https://seeclickfix.com/issues/1316552",
+      "reporter": {
+        "id": 392151,
+        "name": "COBRPM4",
+        "witty_title": "Heman",
+        "civic_points": 6480,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316551,
+      "status": "Acknowledged",
+      "summary": "Street Light Maintenance",
+      "description": "",
+      "rating": 2,
+      "lat": 43.37738722582,
+      "lng": -79.8428083444114,
+      "address": "1272 Rosseau Place Burlington, Ontario",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:24:12-04:00",
+      "created_at": "2014-10-10T09:14:10-04:00",
+      "updated_at": "2014-10-10T09:24:12-04:00",
+      "shortened_url": "http://bit.ly/1oXwwgD",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -79.8428083444114,
+          43.37738722582
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316551",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316551/comments",
+      "html_url": "https://seeclickfix.com/issues/1316551",
+      "reporter": {
+        "id": 392151,
+        "name": "COBRPM4",
+        "witty_title": "Heman",
+        "civic_points": 6480,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316550,
+      "status": "Open",
+      "summary": "Traffic Signals",
+      "description": "",
+      "rating": 1,
+      "lat": 42.5246690306568,
+      "lng": -70.8937816246873,
+      "address": "22-46 Saint Peter Street Salem, MA 01970, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T09:12:56-04:00",
+      "updated_at": "2014-10-10T09:12:57-04:00",
+      "shortened_url": "http://bit.ly/1oXwpBs",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -70.8937816246873,
+          42.5246690306568
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316550",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316550/comments",
+      "html_url": "https://seeclickfix.com/issues/1316550",
+      "reporter": {
+        "id": 649753,
+        "name": "Elysia",
+        "witty_title": "Street Smart",
+        "civic_points": 65,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316549,
+      "status": "Open",
+      "summary": "Missed Trash, Recycling or Yard Waste",
+      "description": "",
+      "rating": 1,
+      "lat": 42.5221817002104,
+      "lng": -70.9082881,
+      "address": "90 Mason Street Salem, MA 01970, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T09:11:15-04:00",
+      "updated_at": "2014-10-10T09:11:16-04:00",
+      "shortened_url": "http://bit.ly/1oXw4Ph",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -70.9082881,
+          42.5221817002104
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316549",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316549/comments",
+      "html_url": "https://seeclickfix.com/issues/1316549",
+      "reporter": {
+        "id": 445836,
+        "name": "Shanefitz",
+        "witty_title": "Civic Crusader",
+        "civic_points": 350,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316548,
+      "status": "Acknowledged",
+      "summary": "Nuisance",
+      "description": "",
+      "rating": 1,
+      "lat": 41.6332550048828,
+      "lng": -83.5214385986328,
+      "address": "927 Butler Street Toledo, OH 43605, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:31-04:00",
+      "created_at": "2014-10-10T09:09:59-04:00",
+      "updated_at": "2014-10-10T09:10:32-04:00",
+      "shortened_url": "http://bit.ly/1oXvK39",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -83.5214385986328,
+          41.6332550048828
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316548",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316548/comments",
+      "html_url": "https://seeclickfix.com/issues/1316548",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316547,
+      "status": "Open",
+      "summary": "Full garbage can... again!",
+      "description": "I don't think this garbage can has been emptied in about 3 weeks.  It is full.\nIt should be emptied at least once a week.  Either someone isn't doing their job or the City of Toronto has forgotten about it.",
+      "rating": 1,
+      "lat": 43.7256051484042,
+      "lng": -79.3137265741825,
+      "address": "193-195 Bermondsey Rd Ontario",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T09:06:40-04:00",
+      "updated_at": "2014-10-10T09:06:40-04:00",
+      "shortened_url": "http://bit.ly/1oXuQ6N",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -79.31372657418251,
+          43.72560514840425
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316547",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316547/comments",
+      "html_url": "https://seeclickfix.com/issues/1316547",
+      "reporter": {
+        "id": 81304,
+        "name": "Steve B.",
+        "witty_title": "Digital Superhero",
+        "civic_points": 1095,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316546,
+      "status": "Acknowledged",
+      "summary": "Nuisance",
+      "description": "Washer or dryer in driveway.  Other trash.    936 Butler st",
+      "rating": 2,
+      "lat": 41.6332359313965,
+      "lng": -83.5216293334961,
+      "address": "928 Butler Street Toledo, OH 43605, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:29-04:00",
+      "created_at": "2014-10-10T09:06:13-04:00",
+      "updated_at": "2014-10-10T09:10:29-04:00",
+      "shortened_url": "http://bit.ly/1oXuJrV",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -83.5216293334961,
+          41.6332359313965
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316546",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316546/comments",
+      "html_url": "https://seeclickfix.com/issues/1316546",
+      "reporter": {
+        "id": 605567,
+        "name": "Jwilson",
+        "witty_title": "Civic Pride",
+        "civic_points": 120,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8363/1411756212949.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8363/1411756212949.jpg"
+      }
+    },
+    {
+      "id": 1316545,
+      "status": "Acknowledged",
+      "summary": "Graffiti",
+      "description": "",
+      "rating": 1,
+      "lat": 44.9614448547363,
+      "lng": -93.2777557373047,
+      "address": "2121 Nicollet Avenue Minneapolis, MN 55404, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:26-04:00",
+      "created_at": "2014-10-10T09:05:48-04:00",
+      "updated_at": "2014-10-10T09:10:26-04:00",
+      "shortened_url": "http://bit.ly/1oXuDAm",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -93.2777557373047,
+          44.9614448547363
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316545",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316545/comments",
+      "html_url": "https://seeclickfix.com/issues/1316545",
+      "reporter": {
+        "id": 0,
+        "name": "HealyWatchDog",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8362/1412946283155.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8362/1412946283155.jpg"
+      }
+    },
+    {
+      "id": 1316544,
+      "status": "Acknowledged",
+      "summary": "Pothole",
+      "description": "There are numerous potholes along Little Patuxent Pky between the Hospital and the bridge going over Rt. 29. There are potholes on both the East bound and West bound sides. These potholes have been there since February of this year and need attention. ",
+      "rating": 3,
+      "lat": 39.2053260803223,
+      "lng": -76.8917922973633,
+      "address": "6004 Middlewater Court Columbia, MD 21044, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:25:41-04:00",
+      "created_at": "2014-10-10T09:04:55-04:00",
+      "updated_at": "2014-10-10T10:50:04-04:00",
+      "shortened_url": "http://bit.ly/1oXujlh",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -76.8917922973633,
+          39.2053260803223
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316544",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316544/comments",
+      "html_url": "https://seeclickfix.com/issues/1316544",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316543,
+      "status": "Acknowledged",
+      "summary": "Street Light Maintenance",
+      "description": "2 on the NE corner (one on each street)",
+      "rating": 2,
+      "lat": 43.3590550698487,
+      "lng": -79.7614348830811,
+      "address": "Shoreacres Road @ Shoreacres Place Burlington, Ontario",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:24:12-04:00",
+      "created_at": "2014-10-10T09:04:35-04:00",
+      "updated_at": "2014-10-10T09:24:12-04:00",
+      "shortened_url": "http://bit.ly/1oXudKh",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -79.7614348830811,
+          43.3590550698487
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316543",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316543/comments",
+      "html_url": "https://seeclickfix.com/issues/1316543",
+      "reporter": {
+        "id": 392151,
+        "name": "COBRPM4",
+        "witty_title": "Heman",
+        "civic_points": 6480,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316542,
+      "status": "Acknowledged",
+      "summary": "Trash/Bulk Pick-ups",
+      "description": "SOFA, CHAIRS, MATTRESSES, HOUSEHOLD GOODS, DRESSER, RECLINERS. IN THE ALLEY BETWEEN 28THST AND 29TH STREET. ",
+      "rating": 1,
+      "lat": 37.538779,
+      "lng": -77.40807,
+      "address": "1300 28th St Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:25-04:00",
+      "created_at": "2014-10-10T09:04:16-04:00",
+      "updated_at": "2014-10-10T09:10:25-04:00",
+      "shortened_url": "http://bit.ly/1oXubCn",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.40807,
+          37.538779
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316542",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316542/comments",
+      "html_url": "https://seeclickfix.com/issues/1316542",
+      "reporter": {
+        "id": 0,
+        "name": "GLADYS TAYLOR",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316541,
+      "status": "Acknowledged",
+      "summary": "Graffiti",
+      "description": "",
+      "rating": 1,
+      "lat": 44.9606060185688,
+      "lng": -93.2776819459098,
+      "address": "2205 Nicollet Avenue Minneapolis, MN 55404, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:23-04:00",
+      "created_at": "2014-10-10T09:03:36-04:00",
+      "updated_at": "2014-10-10T09:10:23-04:00",
+      "shortened_url": "http://bit.ly/1oXtXer",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -93.2776819459098,
+          44.9606060185688
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316541",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316541/comments",
+      "html_url": "https://seeclickfix.com/issues/1316541",
+      "reporter": {
+        "id": 0,
+        "name": "HealyWatchDog",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8361/1412946172789.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8361/1412946172789.jpg"
+      }
+    },
+    {
+      "id": 1316540,
+      "status": "Acknowledged",
+      "summary": "Street Light Maintenance",
+      "description": "",
+      "rating": 2,
+      "lat": 43.3586651,
+      "lng": -79.7609531,
+      "address": "365 Shoreacres Road Burlington, Ontario",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:24:12-04:00",
+      "created_at": "2014-10-10T09:02:59-04:00",
+      "updated_at": "2014-10-10T09:24:13-04:00",
+      "shortened_url": "http://bit.ly/1oXtMjk",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -79.7609531,
+          43.3586651
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316540",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316540/comments",
+      "html_url": "https://seeclickfix.com/issues/1316540",
+      "reporter": {
+        "id": 392151,
+        "name": "COBRPM4",
+        "witty_title": "Heman",
+        "civic_points": 6480,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316539,
+      "status": "Acknowledged",
+      "summary": "Nuisance On Property",
+      "description": "Graffiti on Beachnut street sign. In picture look at far right side of photo. ",
+      "rating": 1,
+      "lat": 29.682289014331,
+      "lng": -95.4580958883817,
+      "address": "4684-4698 North Braeswood Boulevard Houston, TX 77096, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:22-04:00",
+      "created_at": "2014-10-10T09:02:54-04:00",
+      "updated_at": "2014-10-10T09:10:22-04:00",
+      "shortened_url": "http://bit.ly/1oXtLvC",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -95.4580958883817,
+          29.682289014331
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316539",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316539/comments",
+      "html_url": "https://seeclickfix.com/issues/1316539",
+      "reporter": {
+        "id": 0,
+        "name": "Shervin Joseph",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8360/1412946118960.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8360/1412946118960.jpg"
+      }
+    },
+    {
+      "id": 1316538,
+      "status": "Acknowledged",
+      "summary": "Graffiti Removal",
+      "description": "",
+      "rating": 1,
+      "lat": 41.8669096839052,
+      "lng": -87.6565970704792,
+      "address": "1155-1199 West Roosevelt Road Chicago, IL 60608, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:21-04:00",
+      "created_at": "2014-10-10T09:02:46-04:00",
+      "updated_at": "2014-10-10T09:10:21-04:00",
+      "shortened_url": "http://bit.ly/1oXtIA6",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -87.6565970704792,
+          41.8669096839052
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316538",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316538/comments",
+      "html_url": "https://seeclickfix.com/issues/1316538",
+      "reporter": {
+        "id": 67342,
+        "name": "Canit01",
+        "witty_title": "Digital Superhero",
+        "civic_points": 1805,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8359/1412946005060.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8359/1412946005060.jpg"
+      }
+    },
+    {
+      "id": 1316537,
+      "status": "Acknowledged",
+      "summary": "Other",
+      "description": "",
+      "rating": 2,
+      "lat": 29.6892940012898,
+      "lng": -95.488546,
+      "address": "5602 Beechnut Street Houston, TX 77096, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:18-04:00",
+      "created_at": "2014-10-10T09:01:55-04:00",
+      "updated_at": "2014-10-10T09:33:32-04:00",
+      "shortened_url": "http://bit.ly/1oXtzMZ",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -95.488546,
+          29.6892940012898
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316537",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316537/comments",
+      "html_url": "https://seeclickfix.com/issues/1316537",
+      "reporter": {
+        "id": 0,
+        "name": "Jwild",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8358/1412946103097.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8358/1412946103097.jpg"
+      }
+    },
+    {
+      "id": 1316536,
+      "status": "Acknowledged",
+      "summary": "Graffiti",
+      "description": "",
+      "rating": 1,
+      "lat": 44.9594688415527,
+      "lng": -93.2777633666992,
+      "address": "2315 Nicollet Avenue Minneapolis, MN 55404, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:17-04:00",
+      "created_at": "2014-10-10T09:01:45-04:00",
+      "updated_at": "2014-10-10T09:10:17-04:00",
+      "shortened_url": "http://bit.ly/1oXtyZl",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -93.2777633666992,
+          44.9594688415527
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316536",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316536/comments",
+      "html_url": "https://seeclickfix.com/issues/1316536",
+      "reporter": {
+        "id": 0,
+        "name": "HealyWatchDog",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8357/1412946068899.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8357/1412946068899.jpg"
+      }
+    },
+    {
+      "id": 1316535,
+      "status": "Acknowledged",
+      "summary": "Graffiti",
+      "description": "",
+      "rating": 1,
+      "lat": 44.9592451027641,
+      "lng": -93.2777247925403,
+      "address": "2-98 East 24th Street Minneapolis, MN 55404, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:10:16-04:00",
+      "created_at": "2014-10-10T09:00:46-04:00",
+      "updated_at": "2014-10-10T09:10:16-04:00",
+      "shortened_url": "http://bit.ly/1oXtlWc",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -93.2777247925403,
+          44.9592451027641
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316535",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316535/comments",
+      "html_url": "https://seeclickfix.com/issues/1316535",
+      "reporter": {
+        "id": 0,
+        "name": "HealyWatchDog",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8356/1412945975055.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8356/1412945975055.jpg"
+      }
+    },
+    {
+      "id": 1316534,
+      "status": "Open",
+      "summary": "tree trimming requested",
+      "description": "There are a couple trees near the bus stop on this street. Is it possible to trim them up so that they are no longer at eye/head level, also away from the buses pulling in because they hit the tree branches.\nthank you!",
+      "rating": 1,
+      "lat": 37.5893013951241,
+      "lng": -77.4398031926208,
+      "address": "4100-4148 Moss Side Avenue Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:59:51-04:00",
+      "updated_at": "2014-10-10T08:59:51-04:00",
+      "shortened_url": "http://bit.ly/1oXtdWs",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.43980319262084,
+          37.58930139512406
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316534",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316534/comments",
+      "html_url": "https://seeclickfix.com/issues/1316534",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8355/Stop_1840__Moss_Side___Akron_N__9.26.14_2.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8355/Stop_1840__Moss_Side___Akron_N__9.26.14_2.jpg"
+      }
+    },
+    {
+      "id": 1316533,
+      "status": "Acknowledged",
+      "summary": "Trash/Bulk Pick-ups",
+      "description": "citizen is requesting a bulk pick up for yard waste it will be located next to his can",
+      "rating": 1,
+      "lat": 37.52624,
+      "lng": -77.51215,
+      "address": "6221 Kimberely Circle Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:00:21-04:00",
+      "created_at": "2014-10-10T08:56:08-04:00",
+      "updated_at": "2014-10-10T09:00:21-04:00",
+      "shortened_url": "http://bit.ly/1oXsBQN",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.51215,
+          37.52624
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316533",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316533/comments",
+      "html_url": "https://seeclickfix.com/issues/1316533",
+      "reporter": {
+        "id": 0,
+        "name": "herb",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316532,
+      "status": "Open",
+      "summary": "Sign and Marking Concern",
+      "description": "Stop sign is bent and not standing up fully. ",
+      "rating": 1,
+      "lat": 39.197522262047,
+      "lng": -76.7969056250561,
+      "address": "6303 Roan Stallion Lane Columbia, MD 21045, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:55:05-04:00",
+      "updated_at": "2014-10-10T09:48:05-04:00",
+      "shortened_url": "http://bit.ly/1oXst3K",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -76.7969056250561,
+          39.197522262047
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316532",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316532/comments",
+      "html_url": "https://seeclickfix.com/issues/1316532",
+      "reporter": {
+        "id": 548673,
+        "name": "Katiej8",
+        "witty_title": "Street Smart",
+        "civic_points": 70,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316531,
+      "status": "Open",
+      "summary": "Street Light",
+      "description": "The lights on this street is not working at all.  ",
+      "rating": 1,
+      "lat": 41.7053014,
+      "lng": -88.3173646,
+      "address": "413 & 431 & 455 Gloria Lane Oswego, Illinois",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:54:52-04:00",
+      "updated_at": "2014-10-10T08:54:53-04:00",
+      "shortened_url": "http://bit.ly/1oXssgh",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -88.3173646,
+          41.7053014
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316531",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316531/comments",
+      "html_url": "https://seeclickfix.com/issues/1316531",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316530,
+      "status": "Acknowledged",
+      "summary": "Nuisance On Property",
+      "description": "Corner of Dixie and England. Right by children's bus stop.",
+      "rating": 1,
+      "lat": 29.7011756896973,
+      "lng": -95.3532257080078,
+      "address": "5910 England Street Houston, TX 77021, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:00:19-04:00",
+      "created_at": "2014-10-10T08:53:31-04:00",
+      "updated_at": "2014-10-10T09:00:19-04:00",
+      "shortened_url": "http://bit.ly/1oXsgxo",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -95.3532257080078,
+          29.7011756896973
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316530",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316530/comments",
+      "html_url": "https://seeclickfix.com/issues/1316530",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8354/1412946250193.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8354/1412946250193.jpg"
+      }
+    },
+    {
+      "id": 1316529,
+      "status": "Acknowledged",
+      "summary": "Street light",
+      "description": "The streetlight is much brighter than any other light on the street. Other lights on the street project light downward. The light in question projects a wide beam of light that lights up the three houses across the street and on our side of the street. At night the inside of our houses are full of light. Other lights do not do that. Your attention to this would be appreciated.",
+      "rating": 2,
+      "lat": 36.066052,
+      "lng": -79.836727,
+      "address": "2608 Sherwood Street Greensboro, North Carolina",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T11:10:48-04:00",
+      "created_at": "2014-10-10T08:52:51-04:00",
+      "updated_at": "2014-10-10T11:10:48-04:00",
+      "shortened_url": "http://bit.ly/1oXsbKc",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -79.836727,
+          36.066052
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316529",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316529/comments",
+      "html_url": "https://seeclickfix.com/issues/1316529",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316528,
+      "status": "Acknowledged",
+      "summary": "Remove Dead Animal from City Street or Curb",
+      "description": "",
+      "rating": 1,
+      "lat": 29.7771892547607,
+      "lng": -95.4837875366211,
+      "address": "200 Chimney Rock Road Houston, TX 77024, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T08:50:19-04:00",
+      "created_at": "2014-10-10T08:49:28-04:00",
+      "updated_at": "2014-10-10T08:50:19-04:00",
+      "shortened_url": "http://bit.ly/1oXryAl",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -95.4837875366211,
+          29.7771892547607
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316528",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316528/comments",
+      "html_url": "https://seeclickfix.com/issues/1316528",
+      "reporter": {
+        "id": 0,
+        "name": "Michael",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316527,
+      "status": "Open",
+      "summary": "Graffiti ",
+      "description": "Graffiti on mural on the Pacific Ave. Ocean side. ",
+      "rating": 1,
+      "lat": 39.3529764,
+      "lng": -74.4435539,
+      "address": "199 S Belmont Ave Atlantic City, New Jersey",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:41:37-04:00",
+      "updated_at": "2014-10-10T08:41:37-04:00",
+      "shortened_url": "http://bit.ly/1oXqcpp",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -74.4435539,
+          39.3529764
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316527",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316527/comments",
+      "html_url": "https://seeclickfix.com/issues/1316527",
+      "reporter": {
+        "id": 395515,
+        "name": "CRDA ABM 40",
+        "witty_title": "Digital Superhero",
+        "civic_points": 1355,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8353/SCF__20141010_084128437551868.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8353/SCF__20141010_084128437551868.jpg"
+      }
+    },
+    {
+      "id": 1316526,
+      "status": "Acknowledged",
+      "summary": "Traffic Signals",
+      "description": "This light needs attention, I go through this light north on Redwood at 4:00am and no other vehicle around and the light is red and does not change, at 5:40 pm traffic is backed up north and south bound and the north bound turn lane get backed up to Camp Williams.",
+      "rating": 2,
+      "lat": 40.4628446095405,
+      "lng": -111.943798238672,
+      "address": "Porter Rockwell Boulevard Bluffdale, Utah",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T10:44:48-04:00",
+      "created_at": "2014-10-10T08:40:47-04:00",
+      "updated_at": "2014-10-10T10:44:48-04:00",
+      "shortened_url": "http://bit.ly/1oXpZm6",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -111.943798238672,
+          40.4628446095405
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316526",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316526/comments",
+      "html_url": "https://seeclickfix.com/issues/1316526",
+      "reporter": {
+        "id": 0,
+        "name": "Tom",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316525,
+      "status": "Acknowledged",
+      "summary": "Trash/Bulk Pick-ups",
+      "description": "Citizen needs very large limbs picked up.",
+      "rating": 1,
+      "lat": 37.495244,
+      "lng": -77.472155,
+      "address": "1325 Evergreen Ave Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T08:40:49-04:00",
+      "created_at": "2014-10-10T08:40:07-04:00",
+      "updated_at": "2014-10-10T08:40:50-04:00",
+      "shortened_url": "http://bit.ly/1oXpSGX",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.472155,
+          37.495244
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316525",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316525/comments",
+      "html_url": "https://seeclickfix.com/issues/1316525",
+      "reporter": {
+        "id": 0,
+        "name": "Iris Mitchner",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316524,
+      "status": "Closed",
+      "summary": "Weeds & Litter Complaint",
+      "description": "large bush blocks sidewalk",
+      "rating": 1,
+      "lat": 35.15683,
+      "lng": -106.570672,
+      "address": "6809 Luella Anne Albuquerque, New Mexico",
+      "closed_at": "2014-10-10T08:56:17-04:00",
+      "acknowledged_at": "2014-10-10T08:40:48-04:00",
+      "created_at": "2014-10-10T08:38:42-04:00",
+      "updated_at": "2014-10-10T08:56:17-04:00",
+      "shortened_url": "http://bit.ly/1oXpAA3",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -106.570672,
+          35.15683
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316524",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316524/comments",
+      "html_url": "https://seeclickfix.com/issues/1316524",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316523,
+      "status": "Acknowledged",
+      "summary": "Overgrown Lots",
+      "description": "The Family Dollar located at 2845 Broad Rock Road grass needs to be cut and there is trash all over the parking lot",
+      "rating": 2,
+      "lat": 37.484319,
+      "lng": -77.4737493,
+      "address": "2845 Broad Rock Road  Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:12:52-04:00",
+      "created_at": "2014-10-10T08:36:32-04:00",
+      "updated_at": "2014-10-10T09:12:53-04:00",
+      "shortened_url": "http://bit.ly/1oXp5FZ",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.4737493,
+          37.484319
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316523",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316523/comments",
+      "html_url": "https://seeclickfix.com/issues/1316523",
+      "reporter": {
+        "id": 29101,
+        "name": "City of Richmond",
+        "witty_title": "\"Jane Jacobs\"",
+        "civic_points": 220295,
+        "avatar": {
+          "full": "https://seeclickfix.com/files/user_images/0002/3490/citylogo.gif",
+          "square_100x100": "https://seeclickfix.com/files/user_images/0002/3490/citylogo_square.gif"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316522,
+      "status": "Closed",
+      "summary": "Missed collection ",
+      "description": "",
+      "rating": 1,
+      "lat": 36.1656155,
+      "lng": -80.2939352,
+      "address": "2099 Tenney Ln Winston-Salem, North Carolina",
+      "closed_at": "2014-10-10T08:56:16-04:00",
+      "acknowledged_at": "2014-10-10T08:40:30-04:00",
+      "created_at": "2014-10-10T08:36:07-04:00",
+      "updated_at": "2014-10-10T08:56:16-04:00",
+      "shortened_url": "http://bit.ly/1oXp05m",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -80.2939352,
+          36.1656155
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316522",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316522/comments",
+      "html_url": "https://seeclickfix.com/issues/1316522",
+      "reporter": {
+        "id": 116610,
+        "name": "N&N Properties, of the Triad, Inc.",
+        "witty_title": "Civic Crusader",
+        "civic_points": 295,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316521,
+      "status": "Closed",
+      "summary": "2nd week  reported still not collected. ",
+      "description": "",
+      "rating": 1,
+      "lat": 36.165508,
+      "lng": -80.294026,
+      "address": "4060 Bethania Station Rd  Winston-Salem, North Carolina",
+      "closed_at": "2014-10-10T08:56:15-04:00",
+      "acknowledged_at": "2014-10-10T08:40:26-04:00",
+      "created_at": "2014-10-10T08:36:02-04:00",
+      "updated_at": "2014-10-10T08:56:15-04:00",
+      "shortened_url": "http://bit.ly/1oXoZOA",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -80.294026,
+          36.165508
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316521",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316521/comments",
+      "html_url": "https://seeclickfix.com/issues/1316521",
+      "reporter": {
+        "id": 116610,
+        "name": "N&N Properties, of the Triad, Inc.",
+        "witty_title": "Civic Crusader",
+        "civic_points": 295,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8352/SCF__20141010_082756-1261702366.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8352/SCF__20141010_082756-1261702366.jpg"
+      }
+    },
+    {
+      "id": 1316520,
+      "status": "Acknowledged",
+      "summary": "Illegal dumping",
+      "description": "Illegal dumping. This is a chronic problem",
+      "rating": 2,
+      "lat": 28.0535261940691,
+      "lng": -82.7278610851807,
+      "address": "960 County Road 90 Palm Harbor, Florida",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T08:48:57-04:00",
+      "created_at": "2014-10-10T08:34:09-04:00",
+      "updated_at": "2014-10-10T08:48:57-04:00",
+      "shortened_url": "http://bit.ly/1oXoC6K",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -82.7278610851807,
+          28.0535261940691
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316520",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316520/comments",
+      "html_url": "https://seeclickfix.com/issues/1316520",
+      "reporter": {
+        "id": 649680,
+        "name": "John Barna",
+        "witty_title": "Street Smart",
+        "civic_points": 85,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8351/CR90_dumping.JPG",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8351/CR90_dumping.JPG"
+      }
+    },
+    {
+      "id": 1316519,
+      "status": "Acknowledged",
+      "summary": "Missed ",
+      "description": "Missed for 2 weeks. \n",
+      "rating": 1,
+      "lat": 36.165508,
+      "lng": -80.294026,
+      "address": "4060 Bethania Station Rd Winston-Salem, North Carolina",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T08:40:22-04:00",
+      "created_at": "2014-10-10T08:31:58-04:00",
+      "updated_at": "2014-10-10T08:40:22-04:00",
+      "shortened_url": "http://bit.ly/1oXoe8f",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -80.294026,
+          36.165508
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316519",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316519/comments",
+      "html_url": "https://seeclickfix.com/issues/1316519",
+      "reporter": {
+        "id": 116610,
+        "name": "N&N Properties, of the Triad, Inc.",
+        "witty_title": "Civic Crusader",
+        "civic_points": 295,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8350/SCF__20141006_092525-1261702366.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8350/SCF__20141006_092525-1261702366.jpg"
+      }
+    },
+    {
+      "id": 1316518,
+      "status": "Open",
+      "summary": "Tilted trash can",
+      "description": "Trash can tilted ",
+      "rating": 1,
+      "lat": 39.3615042,
+      "lng": -74.4402005,
+      "address": "N Mississippi Ave & Atlantic City-Brigantine Connector Atlantic City, New Jersey",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:31:43-04:00",
+      "updated_at": "2014-10-10T08:31:43-04:00",
+      "shortened_url": "http://bit.ly/1oXoeFn",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -74.4402005,
+          39.3615042
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316518",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316518/comments",
+      "html_url": "https://seeclickfix.com/issues/1316518",
+      "reporter": {
+        "id": 395515,
+        "name": "CRDA ABM 40",
+        "witty_title": "Digital Superhero",
+        "civic_points": 1355,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8349/SCF__20141010_083025819154379.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8349/SCF__20141010_083025819154379.jpg"
+      }
+    },
+    {
+      "id": 1316517,
+      "status": "Open",
+      "summary": "Broken lock",
+      "description": "Lock is broken on trash can in front of the Tropicana Casino city side on the boardwalk in front of the double doors that have emergency exit connected to the buffet.",
+      "rating": 1,
+      "lat": 39.3529764,
+      "lng": -74.4435539,
+      "address": "199 S Belmont Ave Atlantic City, New Jersey",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:28:27-04:00",
+      "updated_at": "2014-10-10T08:28:27-04:00",
+      "shortened_url": "http://bit.ly/1oXny2M",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -74.4435539,
+          39.3529764
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316517",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316517/comments",
+      "html_url": "https://seeclickfix.com/issues/1316517",
+      "reporter": {
+        "id": 395515,
+        "name": "CRDA ABM 40",
+        "witty_title": "Digital Superhero",
+        "civic_points": 1355,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8348/SCF__20141009_094328-1176381652.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8348/SCF__20141009_094328-1176381652.jpg"
+      }
+    },
+    {
+      "id": 1316516,
+      "status": "Open",
+      "summary": "SOLID WASTE: Animal - Dead Pickup Request",
+      "description": "Reported dead animal in middle of street.",
+      "rating": 1,
+      "lat": 32.8661672,
+      "lng": -83.5908054,
+      "address": "Knights Bridge Road Macon, Georgia",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:27:42-04:00",
+      "updated_at": "2014-10-10T08:27:45-04:00",
+      "shortened_url": "http://bit.ly/1oXnkbQ",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -83.5908054,
+          32.8661672
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316516",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316516/comments",
+      "html_url": "https://seeclickfix.com/issues/1316516",
+      "reporter": {
+        "id": 437961,
+        "name": "Ashley Baldschun",
+        "witty_title": "Digital Superhero",
+        "civic_points": 1665,
+        "avatar": {
+          "full": "https://seeclickfix.com/files/user_images/0002/4939/Macon-Bibb_Logo.jpg",
+          "square_100x100": "https://seeclickfix.com/files/user_images/0002/4939/Macon-Bibb_Logo_square.jpg"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316515,
+      "status": "Open",
+      "summary": "Code Compliance Issue",
+      "description": "Water runoff in street from construction site",
+      "rating": 1,
+      "lat": 33.8708126883342,
+      "lng": -84.3169799513495,
+      "address": "1749-1755 Georgian Terrace Atlanta, GA 30341, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:25:09-04:00",
+      "updated_at": "2014-10-10T08:25:09-04:00",
+      "shortened_url": "http://bit.ly/1oXmLPe",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -84.31697995134952,
+          33.87081268833421
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316515",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316515/comments",
+      "html_url": "https://seeclickfix.com/issues/1316515",
+      "reporter": {
+        "id": 121256,
+        "name": "Holland",
+        "witty_title": "Civic Crusader",
+        "civic_points": 465,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8347/1412943770828.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8347/1412943770828.jpg"
+      }
+    },
+    {
+      "id": 1316514,
+      "status": "Open",
+      "summary": "Traffic Signal / Pedestrian Signal",
+      "description": "Buttons not properly working on pedestrian signals. Need lots of force to push. ",
+      "rating": 4,
+      "lat": 41.3265838623047,
+      "lng": -72.9626846313477,
+      "address": "15 Harrison Street New Haven, CT 06515, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:24:17-04:00",
+      "updated_at": "2014-10-10T10:51:40-04:00",
+      "shortened_url": "http://bit.ly/1oXmFY8",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -72.96268463134766,
+          41.32658386230469
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316514",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316514/comments",
+      "html_url": "https://seeclickfix.com/issues/1316514",
+      "reporter": {
+        "id": 0,
+        "name": "Resident3",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316513,
+      "status": "Acknowledged",
+      "summary": "Large dead branches falling on street and sidewalk",
+      "description": "The tree out front in the tree box has many dead branches. The dead branches have begun to fall on the sidewalk and street posing an immediate danger to cars and pedestrians. ",
+      "rating": 1,
+      "lat": 38.886513,
+      "lng": -76.98988,
+      "address": "232 12th St Se Washington, District of Columbia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T08:20:22-04:00",
+      "created_at": "2014-10-10T08:16:56-04:00",
+      "updated_at": "2014-10-10T08:20:22-04:00",
+      "shortened_url": "http://bit.ly/1oXlgAH",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -76.98988,
+          38.886513
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316513",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316513/comments",
+      "html_url": "https://seeclickfix.com/issues/1316513",
+      "reporter": {
+        "id": 404933,
+        "name": "Ryan",
+        "witty_title": "Civic Pride",
+        "civic_points": 110,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8346/SCF__20141010_0816261679548431.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8346/SCF__20141010_0816261679548431.jpg"
+      }
+    },
+    {
+      "id": 1316512,
+      "status": "Closed",
+      "summary": "Dead Animal",
+      "description": "Dead raccoon on School Street, lower end near North St.",
+      "rating": 2,
+      "lat": 42.5269241333008,
+      "lng": -70.9098892211914,
+      "address": "109 School Street Salem, MA 01970, USA",
+      "closed_at": "2014-10-10T10:30:18-04:00",
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:14:37-04:00",
+      "updated_at": "2014-10-10T10:30:18-04:00",
+      "shortened_url": "http://bit.ly/1oXkYd2",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -70.9098892211914,
+          42.5269241333008
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316512",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316512/comments",
+      "html_url": "https://seeclickfix.com/issues/1316512",
+      "reporter": {
+        "id": 649637,
+        "name": "KER",
+        "witty_title": "Street Smart",
+        "civic_points": 65,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316511,
+      "status": "Acknowledged",
+      "summary": "Trash/Bulk Pick-ups",
+      "description": "Citizen needs brush picked up.",
+      "rating": 1,
+      "lat": 37.466679,
+      "lng": -77.486126,
+      "address": "3601 Patsy Ann Drive Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T08:20:17-04:00",
+      "created_at": "2014-10-10T08:11:13-04:00",
+      "updated_at": "2014-10-10T08:20:17-04:00",
+      "shortened_url": "http://bit.ly/1oXkinW",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.486126,
+          37.466679
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316511",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316511/comments",
+      "html_url": "https://seeclickfix.com/issues/1316511",
+      "reporter": {
+        "id": 0,
+        "name": "Mathew Bates",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316510,
+      "status": "Closed",
+      "summary": "Graffiti",
+      "description": "Garage across from 24 cortland",
+      "rating": 3,
+      "lat": 42.661904,
+      "lng": -73.7741659,
+      "address": "24 Cortlamd Pl Albany, New York",
+      "closed_at": "2014-10-10T10:02:29-04:00",
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:09:47-04:00",
+      "updated_at": "2014-10-10T10:51:57-04:00",
+      "shortened_url": "http://bit.ly/1oXk1BI",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -73.7741659,
+          42.661904
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316510",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316510/comments",
+      "html_url": "https://seeclickfix.com/issues/1316510",
+      "reporter": {
+        "id": 126593,
+        "name": "Broom",
+        "witty_title": "City Fixer",
+        "civic_points": 2435,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316509,
+      "status": "Acknowledged",
+      "summary": "Trash/Bulk Pick-ups",
+      "description": "There trash in the alley of the 700 block of Gladstone Avenue and Meadowbridge Road that has been there for quit and while.  I ride by this each morning wondering why the homeowners don't remove.",
+      "rating": 1,
+      "lat": 37.574955,
+      "lng": -77.422442,
+      "address": "700 Block Of Gladstone Avenue Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T08:10:18-04:00",
+      "created_at": "2014-10-10T08:08:38-04:00",
+      "updated_at": "2014-10-10T08:10:18-04:00",
+      "shortened_url": "http://bit.ly/1oXjG1K",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.422442,
+          37.574955
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316509",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316509/comments",
+      "html_url": "https://seeclickfix.com/issues/1316509",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316508,
+      "status": "Open",
+      "summary": "Traffic Signal Repairs",
+      "description": "The signal at the Brevator/Lincoln intersection is not switching.  Brevator street remains a constant green while Lincoln remains a constant red.  It was backing up traffic on Lincoln.",
+      "rating": 3,
+      "lat": 42.679524,
+      "lng": -73.798234,
+      "address": "Brevator And Lincoln Ave Albany, New York",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:07:53-04:00",
+      "updated_at": "2014-10-10T08:22:19-04:00",
+      "shortened_url": "http://bit.ly/1oXjvn2",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -73.798234,
+          42.679524
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316508",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316508/comments",
+      "html_url": "https://seeclickfix.com/issues/1316508",
+      "reporter": {
+        "id": 0,
+        "name": "ST",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316507,
+      "status": "Open",
+      "summary": "Parking Enforcement",
+      "description": "",
+      "rating": 2,
+      "lat": 42.6530748684234,
+      "lng": -73.7636910323048,
+      "address": "59 Dove Street Albany, NY 12210, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T08:06:18-04:00",
+      "updated_at": "2014-10-10T09:56:46-04:00",
+      "shortened_url": "http://bit.ly/1oXja3H",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -73.7636910323048,
+          42.6530748684234
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316507",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316507/comments",
+      "html_url": "https://seeclickfix.com/issues/1316507",
+      "reporter": {
+        "id": 410296,
+        "name": "BT",
+        "witty_title": "Civic Pride",
+        "civic_points": 210,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8345/1412942749179.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8345/1412942749179.jpg"
+      }
+    },
+    {
+      "id": 1316506,
+      "status": "Acknowledged",
+      "summary": "Trash",
+      "description": "There is a back of a television in the grass that has been there for several months that should be removed.",
+      "rating": 1,
+      "lat": 37.5766363,
+      "lng": -77.421434,
+      "address": "700 Block Meadowbrige Road And Pollock Street Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T08:10:17-04:00",
+      "created_at": "2014-10-10T08:05:42-04:00",
+      "updated_at": "2014-10-10T08:10:17-04:00",
+      "shortened_url": "http://bit.ly/1nfBKsh",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.421434,
+          37.5766363
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316506",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316506/comments",
+      "html_url": "https://seeclickfix.com/issues/1316506",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316505,
+      "status": "Acknowledged",
+      "summary": "Road Maintenance",
+      "description": "Sidewalk/Road needs fixed after water main break. Handicap kids have hard time going up sidewalk ",
+      "rating": 2,
+      "lat": 42.2612814086712,
+      "lng": -83.3039359196944,
+      "address": "26577 Beverly Road Taylor, MI 48180, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:13:26-04:00",
+      "created_at": "2014-10-10T08:03:28-04:00",
+      "updated_at": "2014-10-10T09:13:26-04:00",
+      "shortened_url": "http://bit.ly/1nfBBVR",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -83.3039359196944,
+          42.2612814086712
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316505",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316505/comments",
+      "html_url": "https://seeclickfix.com/issues/1316505",
+      "reporter": {
+        "id": 646777,
+        "name": "Steve",
+        "witty_title": "Civic Pride",
+        "civic_points": 160,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8344/1412942570289.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8344/1412942570289.jpg"
+      }
+    },
+    {
+      "id": 1316504,
+      "status": "Open",
+      "summary": "Leaking water valve",
+      "description": "Water main to house leaking in the alley.",
+      "rating": 2,
+      "lat": 37.565528,
+      "lng": -77.437002,
+      "address": "300 Overbrook Rd Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:56:22-04:00",
+      "updated_at": "2014-10-10T07:58:12-04:00",
+      "shortened_url": "http://bit.ly/1nfBae6",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.43700199999999,
+          37.565528
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316504",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316504/comments",
+      "html_url": "https://seeclickfix.com/issues/1316504",
+      "reporter": {
+        "id": 18162,
+        "name": "Dwayne Myers",
+        "witty_title": "Digital Superhero",
+        "civic_points": 1755,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8343/SCF__20141010_075507-445079912.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8343/SCF__20141010_075507-445079912.jpg"
+      }
+    },
+    {
+      "id": 1316503,
+      "status": "Acknowledged",
+      "summary": "Trash/Bulk Pick-ups",
+      "description": "pile branches, yard debris in front of property",
+      "rating": 2,
+      "lat": 37.519681,
+      "lng": -77.49617,
+      "address": "5238 Jahnke Rd Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T08:00:17-04:00",
+      "created_at": "2014-10-10T07:54:17-04:00",
+      "updated_at": "2014-10-10T08:00:17-04:00",
+      "shortened_url": "http://bit.ly/1nfB2eJ",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.49617,
+          37.519681
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316503",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316503/comments",
+      "html_url": "https://seeclickfix.com/issues/1316503",
+      "reporter": {
+        "id": 0,
+        "name": "David Kalzer",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316502,
+      "status": "Acknowledged",
+      "summary": "Sign Violation",
+      "description": "Sign is larger than the 20 square foot on unimproved property according to Huntsville city code.",
+      "rating": 3,
+      "lat": 34.717238,
+      "lng": -86.54948,
+      "address": "503 Balsam Terrace Way Huntsville, Alabama",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T11:26:05-04:00",
+      "created_at": "2014-10-10T07:53:05-04:00",
+      "updated_at": "2014-10-10T11:26:06-04:00",
+      "shortened_url": "http://bit.ly/1nfAUM9",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -86.54948,
+          34.717238
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316502",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316502/comments",
+      "html_url": "https://seeclickfix.com/issues/1316502",
+      "reporter": {
+        "id": 111898,
+        "name": "bennett",
+        "witty_title": "Civic Crusader",
+        "civic_points": 445,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8342/IMG_20141010_064936590_HDR.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8342/IMG_20141010_064936590_HDR.jpg"
+      }
+    },
+    {
+      "id": 1316501,
+      "status": "Closed",
+      "summary": "Dead animals on the roadway",
+      "description": "there is a dead raccoon in the roadway in front of 91 Moore Street ",
+      "rating": 2,
+      "lat": 40.3547289,
+      "lng": -74.6560997,
+      "address": "91 Moore Street  Princeton, New Jersey",
+      "closed_at": "2014-10-10T09:27:05-04:00",
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:45:45-04:00",
+      "updated_at": "2014-10-10T09:27:05-04:00",
+      "shortened_url": "http://bit.ly/1nfAq8O",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -74.6560997,
+          40.3547289
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316501",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316501/comments",
+      "html_url": "https://seeclickfix.com/issues/1316501",
+      "reporter": {
+        "id": 405356,
+        "name": "Access Princeton - D Rogers, Customer Service Coordinator",
+        "witty_title": "Heman",
+        "civic_points": 5515,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316500,
+      "status": "Closed",
+      "summary": "Other City Issue",
+      "description": "Street sign knocked over. ",
+      "rating": 2,
+      "lat": 41.6806106567383,
+      "lng": -70.9206466674805,
+      "address": "911 Belleville Avenue New Bedford, MA 02745, USA",
+      "closed_at": "2014-10-10T09:30:58-04:00",
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:43:22-04:00",
+      "updated_at": "2014-10-10T09:30:58-04:00",
+      "shortened_url": "http://bit.ly/1nfAd5M",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -70.9206466674805,
+          41.6806106567383
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316500",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316500/comments",
+      "html_url": "https://seeclickfix.com/issues/1316500",
+      "reporter": {
+        "id": 360664,
+        "name": "Mike",
+        "witty_title": "Heman",
+        "civic_points": 8725,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8341/1412941382655.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8341/1412941382655.jpg"
+      }
+    },
+    {
+      "id": 1316499,
+      "status": "Open",
+      "summary": "Street light out ",
+      "description": "Street light out of service in front of 655 Hawley Dr. ",
+      "rating": 1,
+      "lat": 41.6997629087878,
+      "lng": -88.2676041,
+      "address": "651 Hawley Drive Oswego, IL 60543, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:41:28-04:00",
+      "updated_at": "2014-10-10T07:41:28-04:00",
+      "shortened_url": "http://bit.ly/1nfA428",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -88.2676041,
+          41.69976290878776
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316499",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316499/comments",
+      "html_url": "https://seeclickfix.com/issues/1316499",
+      "reporter": {
+        "id": 649554,
+        "name": "N219JK",
+        "witty_title": "Street Smart",
+        "civic_points": 65,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316498,
+      "status": "Acknowledged",
+      "summary": "Trash/Bulk Pick-ups",
+      "description": "In front curve side of the property.",
+      "rating": 1,
+      "lat": 37.574355,
+      "lng": -77.426533,
+      "address": "3123 Alvis Avenue Richmond, Virginia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T07:50:23-04:00",
+      "created_at": "2014-10-10T07:41:08-04:00",
+      "updated_at": "2014-10-10T07:50:23-04:00",
+      "shortened_url": "http://bit.ly/1nfA3ev",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.426533,
+          37.574355
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316498",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316498/comments",
+      "html_url": "https://seeclickfix.com/issues/1316498",
+      "reporter": {
+        "id": 0,
+        "name": "Lavita James",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316497,
+      "status": "Open",
+      "summary": "Other Issues not noted above",
+      "description": "Litter",
+      "rating": 1,
+      "lat": 35.8767139649471,
+      "lng": -78.7035699484589,
+      "address": "7233-7399 State Road 1822 Raleigh, NC 27613, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:38:49-04:00",
+      "updated_at": "2014-10-10T07:38:49-04:00",
+      "shortened_url": "http://bit.ly/1nfzVeU",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -78.70356994845892,
+          35.87671396494708
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316497",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316497/comments",
+      "html_url": "https://seeclickfix.com/issues/1316497",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316496,
+      "status": "Acknowledged",
+      "summary": "Sanitation Department",
+      "description": "",
+      "rating": 2,
+      "lat": 27.7887249953784,
+      "lng": -82.6493383193601,
+      "address": "1072 18th Avenue North St. Petersburg, FL 33704, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T09:08:00-04:00",
+      "created_at": "2014-10-10T07:32:08-04:00",
+      "updated_at": "2014-10-10T09:08:00-04:00",
+      "shortened_url": "http://bit.ly/1nfzz8b",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -82.6493383193601,
+          27.7887249953784
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316496",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316496/comments",
+      "html_url": "https://seeclickfix.com/issues/1316496",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316495,
+      "status": "Open",
+      "summary": "Powerline",
+      "description": "There is a line hanging down from the overhead power lines. I don't believe it is electrical.",
+      "rating": 1,
+      "lat": 42.01935,
+      "lng": -71.1453527,
+      "address": "12 Benjamin Drive 02375",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:25:21-04:00",
+      "updated_at": "2014-10-10T07:25:21-04:00",
+      "shortened_url": "http://bit.ly/1nfz91J",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -71.1453527,
+          42.01935
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316495",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316495/comments",
+      "html_url": "https://seeclickfix.com/issues/1316495",
+      "reporter": {
+        "id": 632371,
+        "name": "wwtb12d",
+        "witty_title": "Street Smart",
+        "civic_points": 65,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316494,
+      "status": "Closed",
+      "summary": "Parking Enforcement",
+      "description": "Zone six only no permit",
+      "rating": 1,
+      "lat": 38.8988761942011,
+      "lng": -76.9999160766601,
+      "address": "417 G Street Northeast Washington, DC 20002, USA",
+      "closed_at": "2014-10-10T08:47:13-04:00",
+      "acknowledged_at": "2014-10-10T07:20:29-04:00",
+      "created_at": "2014-10-10T07:19:33-04:00",
+      "updated_at": "2014-10-10T08:47:13-04:00",
+      "shortened_url": "http://bit.ly/1nfyLA5",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -76.9999160766601,
+          38.8988761942011
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316494",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316494/comments",
+      "html_url": "https://seeclickfix.com/issues/1316494",
+      "reporter": {
+        "id": 43024,
+        "name": "Dan Griggs",
+        "witty_title": "\"Jane Jacobs\"",
+        "civic_points": 10820,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316493,
+      "status": "Open",
+      "summary": "Sidewalk Concern",
+      "description": "This is a stretch of about a 1/4 mile between where Montgomery/Marshalee intersect and rockburn park that doesn't have a sidewalk. A sidewalk, or at least a bike lane, would be very helpful here. There are many walkers, joggers and bikers on this stretch of road; the shoulder is maybe a couple inches wide at best and the cars drive dangerously fast, much above the speed limit. Making this stretch of road more pedestrian friendly would be very beneficial, especially with the park, bike trails and schools so close.",
+      "rating": 1,
+      "lat": 39.2142296693458,
+      "lng": -76.7722965770363,
+      "address": "6026-6080 Montgomery Road Elkridge, MD 21075, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:19:07-04:00",
+      "updated_at": "2014-10-10T07:19:10-04:00",
+      "shortened_url": "http://bit.ly/1nfyInT",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -76.7722965770363,
+          39.2142296693458
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316493",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316493/comments",
+      "html_url": "https://seeclickfix.com/issues/1316493",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316492,
+      "status": "Acknowledged",
+      "summary": "Bucket Request",
+      "description": "",
+      "rating": 1,
+      "lat": 39.337736,
+      "lng": -74.582444,
+      "address": "220 W Seaview Ave Linwwod, New Jersey",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T07:20:21-04:00",
+      "created_at": "2014-10-10T07:13:42-04:00",
+      "updated_at": "2014-10-10T07:20:21-04:00",
+      "shortened_url": "http://bit.ly/1nfyk9c",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -74.582444,
+          39.337736
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316492",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316492/comments",
+      "html_url": "https://seeclickfix.com/issues/1316492",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316490,
+      "status": "Open",
+      "summary": "Tall Grass / Weeds",
+      "description": "Going eastbound, you cannot see southbound traffic. The weeds are taller than a person. ",
+      "rating": 1,
+      "lat": 35.6385784847454,
+      "lng": -97.5495351839507,
+      "address": "16501-16521 North Pennsylvania Avenue Edmond, OK 73012, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:06:03-04:00",
+      "updated_at": "2014-10-10T07:06:03-04:00",
+      "shortened_url": "http://bit.ly/1nfxIjJ",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -97.54953518395071,
+          35.63857848474537
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316490",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316490/comments",
+      "html_url": "https://seeclickfix.com/issues/1316490",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316489,
+      "status": "Open",
+      "summary": "Marina / Port / Pier Issues",
+      "description": "Shower head in ladies shower in SX dock needs to be replaced. Water does not come out of all holes.",
+      "rating": 1,
+      "lat": 27.7706915639806,
+      "lng": -82.6293580952187,
+      "address": "301 1st Avenue Southeast St. Petersburg, FL 33701, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:04:20-04:00",
+      "updated_at": "2014-10-10T07:04:20-04:00",
+      "shortened_url": "http://bit.ly/1qvQZIM",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -82.62935809521872,
+          27.77069156398064
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316489",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316489/comments",
+      "html_url": "https://seeclickfix.com/issues/1316489",
+      "reporter": {
+        "id": 606252,
+        "name": "Catherine",
+        "witty_title": "Civic Crusader",
+        "civic_points": 270,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8340/1412939028579.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8340/1412939028579.jpg"
+      }
+    },
+    {
+      "id": 1316488,
+      "status": "Open",
+      "summary": "Pothole",
+      "description": "",
+      "rating": 1,
+      "lat": 35.4781556024983,
+      "lng": -97.4984744993418,
+      "address": "800 Northeast 10th Street Oklahoma City, OK 73104, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T07:04:16-04:00",
+      "updated_at": "2014-10-10T07:04:16-04:00",
+      "shortened_url": "http://bit.ly/1qvQYER",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -97.49847449934177,
+          35.47815560249835
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316488",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316488/comments",
+      "html_url": "https://seeclickfix.com/issues/1316488",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316487,
+      "status": "Open",
+      "summary": "PROPERTY MGMT RESIDENTIAL - Yards\\Premises OR Vacant lot",
+      "description": "Debris from lot is about 18\" into the road - a traffic hazard in a bad curve.  Lot belongs to 765 Pinewood, property that has been unoccupied for at least 13 years.  Lot is between 765 and 2740 Pinewood - numbers make no sense!  Between 4th and 5th houses on left when you turn left from Sheffield.",
+      "rating": 2,
+      "lat": 32.869515,
+      "lng": -83.664204,
+      "address": "2740 Pinewood Dr. Macon, Georgia",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T06:42:01-04:00",
+      "updated_at": "2014-10-10T06:54:26-04:00",
+      "shortened_url": "http://bit.ly/1qvKndt",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -83.664204,
+          32.869515
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316487",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316487/comments",
+      "html_url": "https://seeclickfix.com/issues/1316487",
+      "reporter": {
+        "id": 0,
+        "name": "Norma Thompson",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316486,
+      "status": "Acknowledged",
+      "summary": "Gunshots",
+      "description": "7 gunshots in area ",
+      "rating": 1,
+      "lat": 29.8129147,
+      "lng": -95.4285259,
+      "address": "1500 Wilde Rock Way 77018",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T06:50:17-04:00",
+      "created_at": "2014-10-10T06:41:37-04:00",
+      "updated_at": "2014-10-10T06:50:17-04:00",
+      "shortened_url": "http://bit.ly/1qvKdmu",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -95.4285259,
+          29.8129147
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316486",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316486/comments",
+      "html_url": "https://seeclickfix.com/issues/1316486",
+      "reporter": {
+        "id": 454086,
+        "name": "Djbuttram",
+        "witty_title": "Street Smart",
+        "civic_points": 95,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316485,
+      "status": "Acknowledged",
+      "summary": "Red jeep ",
+      "description": "No movement in 7days",
+      "rating": 2,
+      "lat": 44.959365,
+      "lng": -93.242623,
+      "address": "2330 Minnehaha Ave Minneapolis, Minnesota",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T06:20:16-04:00",
+      "created_at": "2014-10-10T06:13:47-04:00",
+      "updated_at": "2014-10-10T06:20:16-04:00",
+      "shortened_url": "http://bit.ly/1qvBH6M",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -93.242623,
+          44.959365
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316485",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316485/comments",
+      "html_url": "https://seeclickfix.com/issues/1316485",
+      "reporter": {
+        "id": 632961,
+        "name": "Anonymous",
+        "witty_title": "Civic Pride",
+        "civic_points": 105,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8339/SCF__20141006_153610183839023.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8339/SCF__20141006_153610183839023.jpg"
+      }
+    },
+    {
+      "id": 1316484,
+      "status": "Acknowledged",
+      "summary": "Street Signs",
+      "description": "Alderman Bruen would like a DO NOT BLOCK INTERSECTION sign placed at Carlena Terrace. ",
+      "rating": 2,
+      "lat": 42.4940512,
+      "lng": -71.1225778,
+      "address": "Washington Street@ Carlena Terrace Woburn, Massachusetts",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T05:54:30-04:00",
+      "created_at": "2014-10-10T05:53:52-04:00",
+      "updated_at": "2014-10-10T05:54:30-04:00",
+      "shortened_url": "http://bit.ly/1nfsUuE",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -71.1225778,
+          42.4940512
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316484",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316484/comments",
+      "html_url": "https://seeclickfix.com/issues/1316484",
+      "reporter": {
+        "id": 110931,
+        "name": "Tucker Quinn",
+        "witty_title": "Heman",
+        "civic_points": 5195,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316483,
+      "status": "Acknowledged",
+      "summary": "Graffiti Removal",
+      "description": "",
+      "rating": 1,
+      "lat": 38.9328610216642,
+      "lng": -77.0285764320531,
+      "address": "3512 11th Street Northwest Washington, DC 20010, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T05:40:25-04:00",
+      "created_at": "2014-10-10T05:32:20-04:00",
+      "updated_at": "2014-10-10T05:40:25-04:00",
+      "shortened_url": "http://bit.ly/1nfrFvB",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.0285764320531,
+          38.9328610216642
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316483",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316483/comments",
+      "html_url": "https://seeclickfix.com/issues/1316483",
+      "reporter": {
+        "id": 48175,
+        "name": "Angus",
+        "witty_title": "\"Jane Jacobs\"",
+        "civic_points": 11195,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8338/1412933514108.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8338/1412933514108.jpg"
+      }
+    },
+    {
+      "id": 1316482,
+      "status": "Acknowledged",
+      "summary": "Illegal Dumping",
+      "description": "",
+      "rating": 1,
+      "lat": 38.9298599737493,
+      "lng": -77.0300066802528,
+      "address": "1303 Kenyon Street Northwest Washington, DC 20010, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T05:30:33-04:00",
+      "created_at": "2014-10-10T05:28:12-04:00",
+      "updated_at": "2014-10-10T05:30:33-04:00",
+      "shortened_url": "http://bit.ly/1nfrrVl",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.0300066802528,
+          38.9298599737493
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316482",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316482/comments",
+      "html_url": "https://seeclickfix.com/issues/1316482",
+      "reporter": {
+        "id": 48175,
+        "name": "Angus",
+        "witty_title": "\"Jane Jacobs\"",
+        "civic_points": 11195,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8337/1412423193001.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8337/1412423193001.jpg"
+      }
+    },
+    {
+      "id": 1316481,
+      "status": "Acknowledged",
+      "summary": "Sanitation Enforcement",
+      "description": "Uncovered Trash. Rats all over the place. ",
+      "rating": 1,
+      "lat": 38.9316149075111,
+      "lng": -77.0308308615818,
+      "address": "3323 Holmead Place Northwest Washington, DC 20010, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T05:30:28-04:00",
+      "created_at": "2014-10-10T05:28:06-04:00",
+      "updated_at": "2014-10-10T05:30:28-04:00",
+      "shortened_url": "http://bit.ly/1nfrpfY",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.0308308615818,
+          38.9316149075111
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316481",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316481/comments",
+      "html_url": "https://seeclickfix.com/issues/1316481",
+      "reporter": {
+        "id": 48175,
+        "name": "Angus",
+        "witty_title": "\"Jane Jacobs\"",
+        "civic_points": 11195,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8336/1412034262088.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8336/1412034262088.jpg"
+      }
+    },
+    {
+      "id": 1316380,
+      "status": "Open",
+      "summary": "Non-functioning Street Lights",
+      "description": "The streetlight at the intersection is out. I believe the bulb was just replaced a couple weeks ago.",
+      "rating": 1,
+      "lat": 37.5201244020751,
+      "lng": -77.464513,
+      "address": "W 29th St & Stonewall Ave 23225",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T03:28:41-04:00",
+      "updated_at": "2014-10-10T03:28:41-04:00",
+      "shortened_url": "http://bit.ly/1BZRSj5",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.46451299999997,
+          37.52012440207506
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316380",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316380/comments",
+      "html_url": "https://seeclickfix.com/issues/1316380",
+      "reporter": {
+        "id": 35550,
+        "name": "Bob",
+        "witty_title": "City Fixer",
+        "civic_points": 3890,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316379,
+      "status": "Acknowledged",
+      "summary": "Pothole",
+      "description": "The pothole, which appeared recently, is deepening quickly. It's located closer to the neighbor's driveway at 206 Graceland.",
+      "rating": 1,
+      "lat": 29.8084220886231,
+      "lng": -95.3690490722656,
+      "address": "204 Graceland Street Houston, TX 77009, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T03:10:17-04:00",
+      "created_at": "2014-10-10T03:04:21-04:00",
+      "updated_at": "2014-10-10T03:10:18-04:00",
+      "shortened_url": "http://bit.ly/1BZNDnT",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -95.3690490722656,
+          29.8084220886231
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316379",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316379/comments",
+      "html_url": "https://seeclickfix.com/issues/1316379",
+      "reporter": {
+        "id": 0,
+        "name": "Jessica Farrar",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316378,
+      "status": "Acknowledged",
+      "summary": "Graffiti Removal",
+      "description": "Graffiti has been on the wall for months. Have left several requests to have it removed.",
+      "rating": 1,
+      "lat": 38.9002218893673,
+      "lng": -76.9788424742996,
+      "address": "1700-1716 H Street Northeast Washington, DC 20002, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T03:00:33-04:00",
+      "created_at": "2014-10-10T02:58:24-04:00",
+      "updated_at": "2014-10-10T03:00:33-04:00",
+      "shortened_url": "http://bit.ly/1BZMGMb",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -76.9788424742996,
+          38.9002218893673
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316378",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316378/comments",
+      "html_url": "https://seeclickfix.com/issues/1316378",
+      "reporter": {
+        "id": 648748,
+        "name": "Nate",
+        "witty_title": "Street Smart",
+        "civic_points": 90,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316377,
+      "status": "Acknowledged",
+      "summary": "Illegal Dumping",
+      "description": "",
+      "rating": 2,
+      "lat": 38.9002072042032,
+      "lng": -76.9775571,
+      "address": "1740 H Street Northeast Washington, DC 20002, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T03:00:25-04:00",
+      "created_at": "2014-10-10T02:53:54-04:00",
+      "updated_at": "2014-10-10T03:00:26-04:00",
+      "shortened_url": "http://bit.ly/1BZM3Cl",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -76.9775571,
+          38.9002072042032
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316377",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316377/comments",
+      "html_url": "https://seeclickfix.com/issues/1316377",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316376,
+      "status": "Acknowledged",
+      "summary": "Street Issue (Other than Pothole)",
+      "description": "There s no button to press for the street light. ",
+      "rating": 2,
+      "lat": 37.8124545713177,
+      "lng": -122.271454811127,
+      "address": "2200-2298 Northgate Avenue Oakland, CA 94612, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T02:10:20-04:00",
+      "created_at": "2014-10-10T02:09:45-04:00",
+      "updated_at": "2014-10-10T02:35:09-04:00",
+      "shortened_url": "http://bit.ly/1BZE6NE",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -122.271454811127,
+          37.8124545713177
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316376",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316376/comments",
+      "html_url": "https://seeclickfix.com/issues/1316376",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8334/1412920982900.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8334/1412920982900.jpg"
+      }
+    },
+    {
+      "id": 1316375,
+      "status": "Acknowledged",
+      "summary": "no parking loading zone anchor sign missing",
+      "description": "the anchor sign for the sign in the picture is missing and needs to be replaced",
+      "rating": 1,
+      "lat": 38.937828,
+      "lng": -76.990073,
+      "address": "3923 12th St Ne Washington, District of Columbia",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T02:00:25-04:00",
+      "created_at": "2014-10-10T01:59:04-04:00",
+      "updated_at": "2014-10-10T02:00:26-04:00",
+      "shortened_url": "http://bit.ly/10YzOdP",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -76.990073,
+          38.937828
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316375",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316375/comments",
+      "html_url": "https://seeclickfix.com/issues/1316375",
+      "reporter": {
+        "id": 625986,
+        "name": "Jay",
+        "witty_title": "Municipal Avenger",
+        "civic_points": 565,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8333/20141009_165721.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8333/20141009_165721.jpg"
+      }
+    },
+    {
+      "id": 1316371,
+      "status": "Acknowledged",
+      "summary": "Parks",
+      "description": "Lights at Mountain Hawk Park have not been working at night.  Hard to enjoy the park at night or early morning with these lights off. Rest room lights out as well. ",
+      "rating": 1,
+      "lat": 32.6361741949607,
+      "lng": -116.933731895499,
+      "address": "Centennial Trail Chula Vista, CA 91915, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T01:40:18-04:00",
+      "created_at": "2014-10-10T01:30:15-04:00",
+      "updated_at": "2014-10-10T01:40:18-04:00",
+      "shortened_url": "http://bit.ly/10YuIP0",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -116.933731895499,
+          32.6361741949607
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316371",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316371/comments",
+      "html_url": "https://seeclickfix.com/issues/1316371",
+      "reporter": {
+        "id": 648526,
+        "name": "Harry",
+        "witty_title": "Street Smart",
+        "civic_points": 85,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316370,
+      "status": "Acknowledged",
+      "summary": "Traffic Sign Maintenance",
+      "description": "Accident waiting to happen",
+      "rating": 1,
+      "lat": 29.8417058187884,
+      "lng": -95.4070538872414,
+      "address": "501 Hohldale Street Houston, Texas",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T01:30:17-04:00",
+      "created_at": "2014-10-10T01:25:48-04:00",
+      "updated_at": "2014-10-10T01:30:18-04:00",
+      "shortened_url": "http://bit.ly/10YtOC4",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -95.4070538872414,
+          29.8417058187884
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316370",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316370/comments",
+      "html_url": "https://seeclickfix.com/issues/1316370",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316363,
+      "status": "Closed",
+      "summary": "PUBLIC WORKS: Pot hole",
+      "description": "There are so many pot holes getting on 75 here coming from river side drive turning left to get on 75-S bound. Also getting o. To 75S bound from Bass Rd.  Exit please repair both exits its horrible.  ",
+      "rating": 2,
+      "lat": 32.9176804521333,
+      "lng": -83.7071776474321,
+      "address": "Riverside Drive Macon, Georgia",
+      "closed_at": "2014-10-10T10:27:37-04:00",
+      "acknowledged_at": "2014-10-10T10:26:47-04:00",
+      "created_at": "2014-10-10T00:54:06-04:00",
+      "updated_at": "2014-10-10T10:27:37-04:00",
+      "shortened_url": "http://bit.ly/10YmVAG",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -83.7071776474321,
+          32.9176804521333
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316363",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316363/comments",
+      "html_url": "https://seeclickfix.com/issues/1316363",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316357,
+      "status": "Acknowledged",
+      "summary": "Other: Signs",
+      "description": "Stop sign at Cleveland coming down Athol is blocked by street tree growth. ",
+      "rating": 4,
+      "lat": 37.804680286214,
+      "lng": -122.244621519492,
+      "address": "706 Cleveland Street Oakland, CA 94606, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T00:50:17-04:00",
+      "created_at": "2014-10-10T00:46:02-04:00",
+      "updated_at": "2014-10-10T02:58:08-04:00",
+      "shortened_url": "http://bit.ly/10YlKB3",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -122.244621519492,
+          37.804680286214
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316357",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316357/comments",
+      "html_url": "https://seeclickfix.com/issues/1316357",
+      "reporter": {
+        "id": 38625,
+        "name": "Susan raffanti",
+        "witty_title": "City Fixer",
+        "civic_points": 3070,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316355,
+      "status": "Open",
+      "summary": "PUBLIC WORKS: Tree - Limbs",
+      "description": "Please remove trees from hanging over red light can't see as your coming down pass the uhaul center on right cant see red light as you proceed forward.  Trees need to be cut back for a clear visual. As your coming up to north Avenue. \r\nI reported this issue before and its never been addresses",
+      "rating": 1,
+      "lat": 32.849728540666,
+      "lng": -83.62503767856,
+      "address": "660 North Avenue Macon, Georgia",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T00:45:12-04:00",
+      "updated_at": "2014-10-10T07:09:12-04:00",
+      "shortened_url": "http://bit.ly/10YlBOe",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -83.62503767856,
+          32.849728540666
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316355",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316355/comments",
+      "html_url": "https://seeclickfix.com/issues/1316355",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316352,
+      "status": "Open",
+      "summary": "Delayed walk signal",
+      "description": "The walk signal is still flashing (about 10 seconds before turning from a flashing red hand to a full stop red hand) when the oncoming traffic's signal switches to green. This means that people crossing the intersection may be fooled into walking directly into oncoming car traffic (or alternately, that oncoming car traffic will be deluded into driving into still-crossing pedestrian traffic)",
+      "rating": 1,
+      "lat": 40.7580839137038,
+      "lng": -73.8341271970349,
+      "address": "133-11 Roosevelt Avenue New York, New York",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T00:35:55-04:00",
+      "updated_at": "2014-10-10T00:35:55-04:00",
+      "shortened_url": "http://bit.ly/10Yk7n2",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -73.83412719703495,
+          40.75808391370383
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316352",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316352/comments",
+      "html_url": "https://seeclickfix.com/issues/1316352",
+      "reporter": {
+        "id": 648412,
+        "name": "annamatic3000",
+        "witty_title": "Street Smart",
+        "civic_points": 65,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316351,
+      "status": "Acknowledged",
+      "summary": "Street tree maintenance or removal",
+      "description": "Damaged by solid waste or recycling truck",
+      "rating": 1,
+      "lat": 42.2796222,
+      "lng": -83.7573911,
+      "address": "Mullholland Ann Arbor, Michigan",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T00:40:17-04:00",
+      "created_at": "2014-10-10T00:31:41-04:00",
+      "updated_at": "2014-10-10T00:40:17-04:00",
+      "shortened_url": "http://bit.ly/10Yjji4",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -83.7573911,
+          42.2796222
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316351",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316351/comments",
+      "html_url": "https://seeclickfix.com/issues/1316351",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316349,
+      "status": "Open",
+      "summary": "Abandoned defunct ambulance",
+      "description": "It's been here for a few days with the back doors wide open.",
+      "rating": 6,
+      "lat": 37.8109441402744,
+      "lng": -122.272796854377,
+      "address": "634-698 21st St Oakland, California",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T00:30:17-04:00",
+      "created_at": "2014-10-10T00:22:43-04:00",
+      "updated_at": "2014-10-10T11:38:43-04:00",
+      "shortened_url": "http://bit.ly/10Yhul5",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -122.272796854377,
+          37.8109441402744
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316349",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316349/comments",
+      "html_url": "https://seeclickfix.com/issues/1316349",
+      "reporter": {
+        "id": 34563,
+        "name": "Matt of Uptown",
+        "witty_title": "\"Jane Jacobs\"",
+        "civic_points": 31075,
+        "avatar": {
+          "full": "https://seeclickfix.com/files/user_images/0001/3985/2bb03.jpg",
+          "square_100x100": "https://seeclickfix.com/files/user_images/0001/3985/2bb03_square.jpg"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8330/IMG_20141009_204555.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8330/IMG_20141009_204555.jpg"
+      }
+    },
+    {
+      "id": 1316347,
+      "status": "Closed",
+      "summary": "Wasting water",
+      "description": "Thus house sprinklers waste tons of water nightly around 9PM. It just pours down the drain. ",
+      "rating": 1,
+      "lat": 38.543786,
+      "lng": -121.282836,
+      "address": "4383 Middlebury Way California",
+      "closed_at": "2014-10-10T08:54:55-04:00",
+      "acknowledged_at": "2014-10-10T00:10:17-04:00",
+      "created_at": "2014-10-10T00:09:41-04:00",
+      "updated_at": "2014-10-10T08:54:55-04:00",
+      "shortened_url": "http://bit.ly/10YeyoP",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -121.282836,
+          38.543786
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316347",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316347/comments",
+      "html_url": "https://seeclickfix.com/issues/1316347",
+      "reporter": {
+        "id": 437370,
+        "name": "Dave",
+        "witty_title": "Civic Pride",
+        "civic_points": 180,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8329/20141007_221843.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8329/20141007_221843.jpg"
+      }
+    },
+    {
+      "id": 1316346,
+      "status": "Open",
+      "summary": "Abandoned vandalized locked bike",
+      "description": "Abandoned locked bike, blue. No wheels.",
+      "rating": 2,
+      "lat": 38.9258322042435,
+      "lng": -77.0248199,
+      "address": "760 Girard Street Northwest Washington, DC 20001, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-10T00:04:59-04:00",
+      "updated_at": "2014-10-10T09:48:38-04:00",
+      "shortened_url": "http://bit.ly/1s1vbIS",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.0248199,
+          38.92583220424353
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316346",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316346/comments",
+      "html_url": "https://seeclickfix.com/issues/1316346",
+      "reporter": {
+        "id": 361069,
+        "name": "meags",
+        "witty_title": "Street Smart",
+        "civic_points": 75,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316335,
+      "status": "Acknowledged",
+      "summary": "Other issue",
+      "description": "Damaged street tree; please inspect and assess. ",
+      "rating": 1,
+      "lat": 42.2749786376953,
+      "lng": -83.7507247924805,
+      "address": "539 South 1st Street Ann Arbor, MI 48103, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-09T23:50:17-04:00",
+      "created_at": "2014-10-09T23:41:22-04:00",
+      "updated_at": "2014-10-09T23:50:18-04:00",
+      "shortened_url": "http://bit.ly/1s1sjMi",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -83.7507247924805,
+          42.2749786376953
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316335",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316335/comments",
+      "html_url": "https://seeclickfix.com/issues/1316335",
+      "reporter": {
+        "id": 563202,
+        "name": "Sonia",
+        "witty_title": "Civic Pride",
+        "civic_points": 115,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316333,
+      "status": "Acknowledged",
+      "summary": "Dilapidated fencing",
+      "description": "Front fencing falling down...lack of maint.",
+      "rating": 2,
+      "lat": 33.888416,
+      "lng": -117.555709,
+      "address": "424 Teton Place Corona 92879",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-10T10:27:57-04:00",
+      "created_at": "2014-10-09T23:38:13-04:00",
+      "updated_at": "2014-10-10T10:27:57-04:00",
+      "shortened_url": "http://bit.ly/1s1rWkR",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -117.555709,
+          33.888416
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316333",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316333/comments",
+      "html_url": "https://seeclickfix.com/issues/1316333",
+      "reporter": {
+        "id": 430177,
+        "name": "Tina",
+        "witty_title": "Civic Pride",
+        "civic_points": 180,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316330,
+      "status": "Open",
+      "summary": "Signs (Missing, Needed, or Damaged)",
+      "description": "We need permanent \"yield to pedestrians in crosswalk\" signage at all the crosswalks on Delaware Ave. Cars do not stop for pedestrians all along the crosswalk on the avenue.",
+      "rating": 4,
+      "lat": 42.6429513,
+      "lng": -73.7770989,
+      "address": "Delaware Ave At Barclay Albany, New York",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-09T23:33:21-04:00",
+      "updated_at": "2014-10-10T12:20:10-04:00",
+      "shortened_url": "http://bit.ly/1s1rlQ5",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -73.7770989,
+          42.6429513
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316330",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316330/comments",
+      "html_url": "https://seeclickfix.com/issues/1316330",
+      "reporter": {
+        "id": 0,
+        "name": "An anonymous SeeClickFix user",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/anonymous-avatar-150x150.png",
+          "square_100x100": "https://seeclickfix.com/assets/anonymous-avatar-100x100-3d43ecd032b4b72c9a55a95aa141dd28.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316324,
+      "status": "Open",
+      "summary": "Road Repair Needed",
+      "description": "This picture only shows the asphalt as cracked.  However there is about a 3-5 inch drop in the depth.  This is located on Wireless Way just south of the stop sign at Wireless Way and Parkway Commons",
+      "rating": 1,
+      "lat": 35.6118334,
+      "lng": -97.5806407,
+      "address": "13900 Wireless Way Oklahoma City, Oklahoma",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-09T23:22:08-04:00",
+      "updated_at": "2014-10-09T23:22:08-04:00",
+      "shortened_url": "http://bit.ly/1s1q0Zp",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -97.58064069999999,
+          35.6118334
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316324",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316324/comments",
+      "html_url": "https://seeclickfix.com/issues/1316324",
+      "reporter": {
+        "id": 647919,
+        "name": "Cherie",
+        "witty_title": "Civic Pride",
+        "civic_points": 150,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8323/20141009_120022.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8323/20141009_120022.jpg"
+      }
+    },
+    {
+      "id": 1316322,
+      "status": "Open",
+      "summary": "Signs (Missing, Needed, or Damaged)",
+      "description": "It is incredible how dangerous it is to cross Delaware at Bertha in the afternoons when Delaware community school lets out. How about a crossing guard or a better enforcement of traffic laws protecting pedestrians in the crosswalk? Thanks for considering it!",
+      "rating": 3,
+      "lat": 42.6420910473455,
+      "lng": -73.7790813083841,
+      "address": "350 Delaware Avenue Albany, NY 12209, USA",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-09T23:20:19-04:00",
+      "updated_at": "2014-10-10T06:47:14-04:00",
+      "shortened_url": "http://bit.ly/1s1pL0A",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -73.7790813083841,
+          42.6420910473455
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316322",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316322/comments",
+      "html_url": "https://seeclickfix.com/issues/1316322",
+      "reporter": {
+        "id": 0,
+        "name": "M1",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8322/1412911171204.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8322/1412911171204.jpg"
+      }
+    },
+    {
+      "id": 1316319,
+      "status": "Open",
+      "summary": "Overflowing trash can",
+      "description": "Trash can at the corner of buena vista and bruzzone overflowing. Trash cannot go anowhere other than on the ground.  ",
+      "rating": 1,
+      "lat": 37.77784,
+      "lng": -122.278662,
+      "address": "1950 Bruzzone Drive Alameda, California",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-09T23:08:58-04:00",
+      "updated_at": "2014-10-09T23:08:58-04:00",
+      "shortened_url": "http://bit.ly/1s1olDc",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -122.278662,
+          37.77784
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316319",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316319/comments",
+      "html_url": "https://seeclickfix.com/issues/1316319",
+      "reporter": {
+        "id": 0,
+        "name": "Chris D'Orazi",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8321/image.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8321/image.jpg"
+      }
+    },
+    {
+      "id": 1316316,
+      "status": "Open",
+      "summary": "Streetlight in alley cycles on and off",
+      "description": "Streetlight in the alley directly behind 318 S Main goes on and off all night long staying off for several minutes at a time.",
+      "rating": 2,
+      "lat": 38.779133,
+      "lng": -90.4823753,
+      "address": "324 S Main St St Charles, Missouri",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-09T23:01:57-04:00",
+      "updated_at": "2014-10-09T23:54:20-04:00",
+      "shortened_url": "http://bit.ly/1s1nbaU",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -90.4823753,
+          38.779133
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316316",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316316/comments",
+      "html_url": "https://seeclickfix.com/issues/1316316",
+      "reporter": {
+        "id": 648165,
+        "name": "Anonymous",
+        "witty_title": "Street Smart",
+        "civic_points": 90,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316315,
+      "status": "Open",
+      "summary": "Gas lights not working",
+      "description": "More than 20 gas lights not working or working very poorly on South Main St from the 300 to the 1000 block.",
+      "rating": 2,
+      "lat": 38.773948,
+      "lng": -90.4847961,
+      "address": "300-1000 S Main St St Charles, Missouri",
+      "closed_at": null,
+      "acknowledged_at": null,
+      "created_at": "2014-10-09T22:58:35-04:00",
+      "updated_at": "2014-10-09T23:55:40-04:00",
+      "shortened_url": "http://bit.ly/1s1mOwZ",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -90.4847961,
+          38.773948
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316315",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316315/comments",
+      "html_url": "https://seeclickfix.com/issues/1316315",
+      "reporter": {
+        "id": 648165,
+        "name": "Anonymous",
+        "witty_title": "Street Smart",
+        "civic_points": 90,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    },
+    {
+      "id": 1316314,
+      "status": "Acknowledged",
+      "summary": "Traffic Sign Maintenance",
+      "description": "The sign that is on the ground is actually a sign designating the neighborhood is controlled by a Greater East End Management District",
+      "rating": 2,
+      "lat": 29.7208004013296,
+      "lng": -95.3026504516602,
+      "address": "6861 Lawndale Street Houston, TX 77023, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-09T23:00:19-04:00",
+      "created_at": "2014-10-09T22:52:00-04:00",
+      "updated_at": "2014-10-10T09:42:56-04:00",
+      "shortened_url": "http://bit.ly/1s1mdve",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -95.3026504516602,
+          29.7208004013296
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316314",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316314/comments",
+      "html_url": "https://seeclickfix.com/issues/1316314",
+      "reporter": {
+        "id": 0,
+        "name": "Ready2help",
+        "witty_title": "Street Smart",
+        "civic_points": 0,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": "https://seeclickfix.com/files/issue_images/0024/8318/1412906926492.jpg",
+        "image_square_100x100": "https://seeclickfix.com/files/issue_images/0024/8318/1412906926492.jpg"
+      }
+    },
+    {
+      "id": 1316310,
+      "status": "Acknowledged",
+      "summary": "Streetlight Repair",
+      "description": "",
+      "rating": 1,
+      "lat": 38.9296646118164,
+      "lng": -77.0656890869141,
+      "address": "3317 Cleveland Avenue Northwest Washington, DC 20008, USA",
+      "closed_at": null,
+      "acknowledged_at": "2014-10-09T22:40:22-04:00",
+      "created_at": "2014-10-09T22:34:03-04:00",
+      "updated_at": "2014-10-09T22:40:23-04:00",
+      "shortened_url": "http://bit.ly/1s1iYUI",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -77.0656890869141,
+          38.9296646118164
+        ]
+      },
+      "url": "https://seeclickfix.com/api/v2/issues/1316310",
+      "comment_url": "https://seeclickfix.com/api/v2/issues/1316310/comments",
+      "html_url": "https://seeclickfix.com/issues/1316310",
+      "reporter": {
+        "id": 648091,
+        "name": "Thomas See",
+        "witty_title": "Street Smart",
+        "civic_points": 65,
+        "avatar": {
+          "full": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png",
+          "square_100x100": "https://seeclickfix.com/assets/no-avatar-100-043a699f8a77f4f4e922db56192d6661.png"
+        }
+      },
+      "media": {
+        "video_url": null,
+        "image_full": null,
+        "image_square_100x100": null
+      }
+    }
+  ],
+  "metadata": {
+    "pagination": {
+      "page": 3,
+      "page_size": 100,
+      "pages": 2349,
+      "next_page": 4,
+      "previous_page": 2
+    }
+  },
+  "errors": {}
+}
