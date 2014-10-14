@@ -76,6 +76,31 @@ describe ScfReport do
     end
   end
 
+  describe :incident_type_id do 
+    it "should mark theft" do 
+      it_type = IncidentType.create(name: 'Theft')
+      summary = "abandoned bicycles"
+      scf_report = ScfReport.new(external_api_hash: { summary: summary })
+      expect(scf_report.incident_type_id).to eq(it_type.id)
+      # scf_report[:external_api_hash][:summary] = "Sign/map needs to be replaced"
+      # expect(scf_report.incident_type_id).to eq(infra.id)
+    end
+    it "should mark pothole as hazard" do 
+      it_type = IncidentType.create(name: 'Hazard')
+      summary = "Street Issue (other than pothole)"
+      scf_report = ScfReport.new(external_api_hash: { summary: summary })
+      expect(scf_report.incident_type_id).to eq(it_type.id)
+    end
+    it "should mark facilities & infrastructure" do 
+      it_type = IncidentType.create(name: 'Infrastructure issue')
+      summary = "better bicycle facilities needed on 55th St under Hwy 24"
+      scf_report = ScfReport.new(external_api_hash: { summary: summary })
+      expect(scf_report.incident_type_id).to eq(it_type.id)
+      scf_report[:external_api_hash][:summary] = "Sign/map needs to be replaced"
+      expect(scf_report.incident_type_id).to eq(it_type.id)
+    end
+  end
+
   describe :check_if_bike_related do
     it "should be true if there is cycle in the title" do 
       scf_report = ScfReport.new 

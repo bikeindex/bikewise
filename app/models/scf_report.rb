@@ -36,6 +36,23 @@ class ScfReport < ActiveRecord::Base
   end
 
   def incident_type_id
+    it_slug = case external_api_hash[:summary].downcase
+      when /(stolen)|(theft)|(abandoned)/
+        'theft'
+      when /policing issue/
+        'theft'
+      when /pothole/
+        'hazard'
+      when /parking enforcement/
+        'hazard'
+      when /bi(cycle|ke).(facilities)|infrastructure/
+        'infrastructure issue'
+      when /replaced/
+        'infrastructure issue'
+      when /signage/
+        'infrastructure issue'
+      end
+    IncidentType.fuzzy_find_id(it_slug)
   end
 
   def is_open311_report
