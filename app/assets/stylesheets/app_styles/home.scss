@@ -24,6 +24,13 @@ body.home {
 .map {
   margin-top: -40px;
   padding-bottom: 40px;
+  .more-maps {
+    position: absolute;
+    width: 620px;
+    text-align: center;
+    font-size: .9em;
+    color: $gray-light;
+  }
 }
 
 .incidents-text {

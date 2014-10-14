@@ -26,7 +26,7 @@ class ScfReport < ActiveRecord::Base
       latitude: external_api_hash[:lat],
       longitude: external_api_hash[:lng],
       address: external_api_hash[:address],
-      title: external_api_hash[:status],
+      title: external_api_hash[:summary],
       description: external_api_hash[:description],
       image_url: external_api_hash[:media][:image_full],
       image_url_thumb: external_api_hash[:media][:image_square_100x100],

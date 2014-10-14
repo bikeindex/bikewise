@@ -18,6 +18,16 @@
   }
 
   .incident-list {
+    position: relative;
+    .total-count {
+      background: $dev-blue;
+      color: $gray-light;
+      font-size: .8em;
+      position: absolute;
+      top: 0; right: 0;
+      padding: .25em 1em;
+      border-radius: 0 0 0 10px;
+    }
     background: #fff;
     padding: 0;
     min-height: 400px;

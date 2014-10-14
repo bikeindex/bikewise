@@ -16,6 +16,8 @@
     .row
       .col-lg-6.map
         <script src="https://embed.github.com/view/geojson/bikeindex/bikewise/master/geojson_data/recent%20incidents.geojson"></script>
+        %p.more-maps
+          Incidents reported this past month. View a #{link_to "map of all incidents here", "https://github.com/bikeindex/bikewise/blob/master/geojson_data/all.geojson"}.
       .col-lg-6.incidents-text
         %h2
           Viewing reports
@@ -30,7 +32,7 @@
     %h2
       Information for programmers and data scientists
     %p
-      Bikewise is open source, it has an open API and it was designed to be useful to developers and data scientists.
+      Bikewise is open source, it has an open API, and it was designed to be useful to developers and data scientists.
     %h3
       View the #{link_to "documentation", developer_url} or the #{link_to "source code", "https://github.com/bikeindex/bikewise"}.
     / %p

@@ -46,6 +46,8 @@ $(document).ready ->
 
 
 incidents_list = """
+  <div class="total-count">{{meta.total_count}} matching incidents</div>
+
   <ul>
     {{#incidents}}
       <li>
