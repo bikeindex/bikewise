@@ -22,7 +22,7 @@ class BinxReport < ActiveRecord::Base
     hash = {
       latitude: external_api_hash[:stolen_record][:latitude],
       longitude: external_api_hash[:stolen_record][:longitude],
-      address: external_api_hash[:stolen_record][:location],
+      address: external_api_hash[:stolen_record][:location].gsub(/\A(,\s?)+/,''),
       title: "Stolen #{external_api_hash[:title]}",
       description: external_api_hash[:stolen_record][:theft_description],
       image_url: external_api_hash[:photo],

@@ -1,12 +1,12 @@
-# [BikeWise.org](https://bikewise.org)
+# [Bikewise.org](https://bikewise.org)
 
-A new BikeWise is under development and the data is still in migration.
+A new Bikewise is under development and the data is still in migration.
 
-The updated version of BikeWise (this version) is available at [BikeWise.BikeIndex.org](https://bikewise.bikeindex.org). It will move to [BikeWise.org](https://bikewise.org) once everything has been sorted out.
+The updated version of Bikewise (this version) is available at [Bikewise.BikeIndex.org](https://bikewise.bikeindex.org). It will move to [Bikewise.org](https://bikewise.org) once everything has been sorted out.
 
 ## API useage
 
-BikeWise has a versioned open RESTful API.
+Bikewise has a versioned open RESTful API.
 
 There are two endpoints: *locations* and *incidents* ([api/v1/locations](https://bikewise.bikeindex.org/api/v1/locations&updated_since=yesterday), [api/v1/incidents](https://bikewise.bikeindex.org/api/v1/incidents))
 
@@ -57,7 +57,7 @@ Here is the incident for that location:
 ```
 
 
-[CORS is enabled](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), so cross origin requests aren't an issue. Use BikeWise from the browser or server/mobile/party-time.
+[CORS is enabled](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), so cross origin requests aren't an issue. Use Bikewise from the browser or server/mobile/party-time.
 
 The API is versioned in the URL path because [pragmatism](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#versioning).
 
@@ -109,7 +109,7 @@ You can also show an individual incident (particularly useful when you get the i
 
 ### Creating incidents
 
-You can add incidents to BikeWise. Post a hash to [api/v1/incidents](https://bikewise.bikeindex.org/api/v1/incidents) that looks like this:
+You can add incidents to Bikewise. Post a hash to [api/v1/incidents](https://bikewise.bikeindex.org/api/v1/incidents) that looks like this:
 
 ```
 {
@@ -118,7 +118,7 @@ You can add incidents to BikeWise. Post a hash to [api/v1/incidents](https://bik
   "occurred_at": 1413129174,
   "incident_type": "theft",
   "create_open311_report": false,
-  "description": "This is a report that was submitted directly to BikeWise.org",
+  "description": "This is a report that was submitted directly to Bikewise.org",
   "title": "Some new incident",
   "media": {
     "image_url": "https://seeclickfix.com/files/issue_images/0024/8363/1411756212949.jpg",

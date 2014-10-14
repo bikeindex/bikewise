@@ -44,6 +44,7 @@ describe BinxReport do
     it "should have the incident_attrs" do
       incident_type = FactoryGirl.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
+      hash['bikes']['stolen_record']['location'] = ", , AZ, 85003"
       binx_report = BinxReport.find_or_new_from_external_api(hash)
       expect(binx_report.processed).to be_false
       binx_report.process_hash
@@ -51,6 +52,7 @@ describe BinxReport do
       hash = binx_report.incident_attrs
       expected_keys = [:latitude, :longitude, :address, :title, :description, :occurred_at, :incident_type_id, :image_url, :image_url, :create_open311_report]
       expect(expected_keys - hash.keys).to eq([])
+      expect(hash[:address]).to eq('AZ, 85003')
       expect(hash[:latitude]).to eq(41.92031)
       expect(hash[:longitude]).to eq(-87.715781)
       expect(hash[:image_url]).to be_present

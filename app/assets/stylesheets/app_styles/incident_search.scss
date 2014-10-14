@@ -15,6 +15,8 @@
   .checkbox-inline {
     font-size: 16px;
     font-weight: 200;
+    margin-left: 0;
+    margin-right: 10px;
   }
 
   .incident-list {
@@ -42,12 +44,13 @@
       margin-top: .5em;
       min-height: 100px;
       h4 {
-        font-weight: 200;
-        span { font-weight: 400; }
+        margin: 0 0 5px;
+        font-weight: 400;
+        span { font-weight: 200; }
       }
-      &:nth-of-type(2n) {
-        background: $dev-blue-lighter;
-      }
+      &:first-of-type { margin-top: 20px; }
+      &:nth-of-type(2n) { background: $dev-blue-lighter; }
+      p { margin-bottom: 5px; }
       img {
         display: block;
         position: absolute;
@@ -57,6 +60,10 @@
         width: 100px;
         height: auto;
       }
+    }
+    .less-strong {
+      font-size: .9em;
+      color: $gray-light;
     }
   }
   .no-incidents { padding: 20px 10px; }
@@ -74,5 +81,8 @@
 
 @media (min-width: 1000px) {
   body.home .incident-search { margin-top: 80px; }
-  .incident-type-checks { padding-top: 15px}
+  .incident-type-checks {
+    padding-top: 15px;
+    margin-bottom-bottom: 0;
+  }
 }

@@ -2,7 +2,6 @@ appendIncidents = (data) ->
   $("#incidents_list").html(Mustache.render(incidents_list, data))
   if $('#body_display').length > 0
     $("#body_display").text(JSON.stringify(data,undefined,2))
-  # $("#incidents_list").fadeIn('fast')
   # $("#incidents_list").append(JSON.stringify(data.incidents[0],undefined,2))
   formatDates()
 
@@ -40,7 +39,6 @@ $(document).ready ->
   getResults(5)
   $('#home_search').submit (e) ->
     e.preventDefault()
-    # $("#incidents_list").fadeOut('fast')
     getResults()
   picker = new Pikaday(field: $("#occurred_before")[0])
 
@@ -51,12 +49,11 @@ incidents_list = """
   <ul>
     {{#incidents}}
       <li>
-        <h4><span class="ts2process">{{occurred_at}}</span> - {{title}}</h4>
+        <h4><a href="{{source.html_url}}" target="_blank">{{title}}</a> - <span class="ts2process">{{occurred_at}}</span></h4>
         <p>{{description}}</p>
         <p>
           {{address}}
-          <em>First reported on
-          <a href="{{source.html_url}}" target="_blank">{{source.name}}</a></em>
+          <span class='less-strong'>first reported on {{source.name}}</span>
         </p>
         <img src="{{media.image_url_thumb}}">
       </li>

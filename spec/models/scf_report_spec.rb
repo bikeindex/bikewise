@@ -91,6 +91,17 @@ describe ScfReport do
       scf_report = ScfReport.new(external_api_hash: { summary: summary })
       expect(scf_report.incident_type_id).to eq(it_type.id)
     end
+    it "should mark dangerous descriptions as hazard" do
+      it_type = IncidentType.create(name: 'Hazard')
+      summary = "Abandoned"
+      description = "blocking part of the bicycle lane"
+      scf_report = ScfReport.new(external_api_hash: { summary: summary, description: description })
+      expect(scf_report.incident_type_id).to eq(it_type.id)
+      scf_report[:external_api_hash][:description] = "safety hazard"
+      expect(scf_report.incident_type_id).to eq(it_type.id)
+      scf_report[:external_api_hash][:summary] = "someone could get hurt"
+      expect(scf_report.incident_type_id).to eq(it_type.id)
+    end
     it "should mark facilities & infrastructure" do 
       it_type = IncidentType.create(name: 'Infrastructure issue')
       summary = "better bicycle facilities needed on 55th St under Hwy 24"

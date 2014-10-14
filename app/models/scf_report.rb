@@ -16,8 +16,11 @@ class ScfReport < ActiveRecord::Base
   end
 
   def check_if_bike_related
-    return true if external_api_hash[:status].match(/bi(cycle|ke)/i).present?
-    return true if external_api_hash[:description].match(/bi(cycle|ke)/i).present?
+    return false unless external_api_hash.present?
+    biky = /bi(cycle|ke)/i
+    return true if external_api_hash[:summary].present? && external_api_hash[:summary].match(biky).present?
+    return true if external_api_hash[:status].present? && external_api_hash[:status].match(biky).present?
+    return true if external_api_hash[:description].present? && external_api_hash[:description].match(biky).present?
     false
   end
 
@@ -36,22 +39,36 @@ class ScfReport < ActiveRecord::Base
   end
 
   def incident_type_id
-    it_slug = case external_api_hash[:summary].downcase
-      when /(stolen)|(theft)|(abandoned)/
-        'theft'
-      when /policing issue/
-        'theft'
-      when /pothole/
-        'hazard'
-      when /parking enforcement/
-        'hazard'
-      when /bi(cycle|ke).(facilities)|infrastructure/
-        'infrastructure issue'
-      when /replaced/
-        'infrastructure issue'
-      when /signage/
-        'infrastructure issue'
+    if external_api_hash[:description].present?
+      it_slug = case external_api_hash[:description].downcase
+        when /block.{1,20}bi(cycle|ke).lane/
+          'hazard'
+        when /safety (hazard)|(issue)/
+          'hazard'
+        when /someone (could)|(will) get hurt/
+          'hazard'
       end
+    end
+    unless it_slug.present?
+      it_slug = case external_api_hash[:summary].downcase
+        when /(stolen)|(theft)|(abandoned)/
+          'theft'
+        when /policing issue/
+          'theft'
+        when /(pothole)|(hazard)/
+          'hazard'
+        when /parking enforcement/
+          'hazard'
+        when /bi(cycle|ke).(facilities)|infrastructure/
+          'infrastructure issue'
+        when /(replaced)|(traffic flow evaluation)/
+          'infrastructure issue'
+        when /signage/
+          'infrastructure issue'
+        when /(speed)|(repair)/
+          'hazard'
+      end
+    end
     IncidentType.fuzzy_find_id(it_slug)
   end
 

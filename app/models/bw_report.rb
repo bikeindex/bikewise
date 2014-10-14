@@ -1,6 +1,6 @@
 class BwReport < ActiveRecord::Base
   include Reportable
-  #   bw -> BikeWise
+  #   bw -> Bikewise
   # 
   # 
   def self.id_from_external_hash(hash)
@@ -42,7 +42,7 @@ class BwReport < ActiveRecord::Base
 
   def source_hash
     {
-      name: "BikeWise.org",
+      name: "Bikewise.org",
       html_url: nil,
       api_url: nil
     }

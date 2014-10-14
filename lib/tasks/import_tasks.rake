@@ -38,3 +38,10 @@ task :process_reports => :environment do
     report_ids.each { |id| ProcessReportsWorker.perform_async(klass, id) }
   end
 end
+
+desc "Process unprocessed reports"
+task :process_all_reports => :environment do
+  Incident.all.each do |incident|
+    incident.incident_reports.each { |r| ProcessReportsWorker.perform_async(r.report.class.name, r.id) }
+  end
+end
