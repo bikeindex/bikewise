@@ -26,7 +26,6 @@ class Incident < ActiveRecord::Base
   using: {tsearch: {dictionary: "english", prefix: true}}
 
   default_scope { order('occurred_at DESC') } 
-  scope :posted, -> { where('bike_index_url IS NOT NULL') }
 
   before_save :set_type_name
   def set_type_name
