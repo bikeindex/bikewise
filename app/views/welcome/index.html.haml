@@ -3,26 +3,38 @@
     .row
       .col-md-8
         %h1
-          Let's make biking safer
+          Help make biking safer
         %p
           Bikewise is a place to learn about and report bike crashes, hazards, and thefts.
         %p
-          By sharing our experiences with each other, with researchers, and with relevant agencies, we help make biking safer and more fun. You can help us by adding your reports.
+          You can help by reporting issues you see.
+        %p
+          By sharing our experiences with each other and with researchers and relevant agencies, we make biking safer and more fun.
+
 .map-container
   .container
-    .map
-      <script src="https://embed.github.com/view/geojson/bikeindex/bikewise/master/geojson_data/recent%20incidents.geojson"></script>
+    .row
+      .col-lg-6.map
+        <script src="https://embed.github.com/view/geojson/bikeindex/bikewise/master/geojson_data/recent%20incidents.geojson"></script>
+      .col-lg-6.incidents-text
+        %h2
+          Viewing reports
+        %p
+          Bikewise provides a way to find biking related incidents like Crashes, Hazards, Infrastructure issues, and Thefts
+        / %p
+        /   You can search by incident type, location, or text in the incident.
+    = render "/layouts/incident_search"
 
 .developer-info
   .container
     %h2
-      Developer information
+      Information for programmers and data scientists
+    %p
+      Bikewise is open source, it has an open API and it was designed to be useful to developers and data scientists.
     %h3
-      View the #{link_to "documentation page", developer_url}.
-    %p
-      Bikewise is open source and it provides an open API.
-    %p
-      Current GeoJSON data is pushed to the #{link_to "geojson_data", "https://github.com/bikeindex/bikewise/tree/master/geojson_data"} folder in the github repository every day. The data is curled from the #{link_to "locations", api_v1_locations_url} endpoint, GitHub generates maps from it.      
-    %p
-      You can also check out the code on
-      #{link_to "GitHub", "https://github.com/bikeindex/bikewise"}.
+      View the #{link_to "documentation", developer_url} or the #{link_to "source code", "https://github.com/bikeindex/bikewise"}.
+    / %p
+    /   Current GeoJSON data is pushed to the #{link_to "geojson_data", "https://github.com/bikeindex/bikewise/tree/master/geojson_data"} folder in the repository every day. This data is curled from the #{link_to "locations", api_v1_locations_url} endpoint, GitHub generates maps from it.
+    / %p
+    /   You can also check out the code on
+    /   #{link_to "GitHub", "https://github.com/bikeindex/bikewise"}.

@@ -43,8 +43,8 @@ Here is the incident for that location:
   "description": "Parking Garage Bike Rack Reward: 20",
   "address": "La Jolla/Utc, CA, 92122",
   "type": "Theft",
-  "occurred_at": "2014-02-18T00:00:00.000-06:00",
-  "updated_at": "2014-10-13T09:22:43.823-05:00",
+  "occurred_at": 1392703200,
+  "updated_at": 1413210163,
   "url": "https://bikewise.bikeindex.org/api/v1/incidents/1451",
   "source": {
     "name": "BikeIndex.org",
@@ -83,21 +83,25 @@ You can also search for incidents. All these properties can be combined with the
 | `occurred_since` | Incidents that occurred after this [timestamp](https://en.wikipedia.org/wiki/Unix_time) (integer). | Shows from all time |
 | `occurred_before` | Incidents that occurred before this timestamp (integer). | Shows from all time |
 | `updated_since` | Incidents created or updated since this timestamp (integer) - *you can pass `yesterday` instead of a timestamp here*. | Shows from all time |
-| `incident_type` | Incidents of matching types. Split with commas. Possible types are 'Crash', 'Hazard' and 'Theft'. | Shows all types |
+| `incident_type` | Incidents of matching types. Split with commas. Possible types are 'Crash', 'Hazard', 'Infrastructure issue' and 'Theft'. | Shows all types |
 
 
 ---
 
 Above here, the two endpoints perform essentially the same. 
 
-The following are the ways they're special little snowflakes.
+The following are the ways they're different.
+
+### Locations response data
+
+While querying both locations and incidents is the same, locations returns a GeoJSON "FeatureCollection" with features matching all the incidents.
+
+By default it returns the first 100 matching your query. If you pass `all=true` it will return all.
 
 
 ### Pagination
 
 Incidents uses meta for pagination. You can include page number (`page`) and incidents per page (`per_page`) in your query - [api/v1/incidents?page=2&per_page_42](https://bikewise.bikeindex.org/api/v1/incidents?page=2&per_page_42).
-
-Locations is too raw and gritty for that bullshit. Locations returns the first 100 matching your query. Unless you pass `all=true`, in which case it will return all.
 
 
 ### Showing incidents

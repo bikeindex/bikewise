@@ -1,0 +1,58 @@
+.incident-search {
+  .btn { font-size: 18px; }
+  .panel-body { background: #f7f7f9; }
+  // border-radius: 4px 4px 0 0;
+  // margin-bottom: 0;
+  form { padding-top: 10px; }
+//   background: #F5F7F7;
+//   // background-color: #f7f7f9;
+//   // border: 1px solid #e1e1e8;
+//   padding: 20px 10px;
+//   border: none;
+//   box-shadow: none;
+//   // background: none;
+//   margin-top: 40px;
+  .checkbox-inline {
+    font-size: 16px;
+    font-weight: 200;
+  }
+
+  .incident-list {
+    background: #fff;
+    padding: 0;
+    min-height: 400px;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+    li {
+      position: relative;
+      padding: 10px 120px 10px 20px;
+      margin-top: .5em;
+      min-height: 100px;
+      h4 {
+        font-weight: 200;
+        span { font-weight: 400; }
+      }
+      &:nth-of-type(2n) {
+        background: $dev-blue-lighter;
+      }
+      img {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        margin-top: -50px;
+        width: 100px;
+        height: auto;
+      }
+    }
+  }
+  .no-incidents { padding: 20px 10px; }
+}
+
+@media (min-width: 1000px) {
+  .incident-search { margin-top: 80px; }
+  .incident-type-checks { padding-top: 15px}
+}

@@ -27,11 +27,10 @@ module Api
           incidents = incidents.where("occurred_at <= ?", date)
         end
         if params[:incident_types].present?
-          ids = []
-          params[:incident_types].split(',').each do |name|
-            ids << IncidentType.fuzzy_find_id(i)
-          end
-          incidents = incidents.where("incident_type_id IN (?)", ids.reject(&:empty?))
+          incident_types = params[:incident_types]
+          incident_types = incident_types.split(',') unless incident_types.kind_of?(Array)
+          ids = incident_types.map{ |k| IncidentType.fuzzy_find_id(k) }
+          incidents = incidents.where("incident_type_id IN (?)", ids)
         end
         if params[:location].present?
           width = params[:location_width].present? ? params[:location_width] : 50

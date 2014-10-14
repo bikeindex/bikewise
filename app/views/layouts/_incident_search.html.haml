@@ -1,0 +1,36 @@
+.incident-search.panel.panel-default
+  .panel-body
+    %form#home_search{ role: 'form', data: {target: "#{BASE_URL}/api/v1/incidents"}}
+      .row
+        .col-md-8
+          .form-group
+            %label.sr-only{ for: 'text_search'}
+              Search for incidents
+            = text_field_tag "query", '', class: 'form-control', placeholder: 'Search incident descriptions'
+
+          / .form-group.incident-type-checks
+          /   - IncidentType.all.each do |incident_type|
+          /     %label.checkbox-inline
+          /       = check_box_tag 'incident_types[]', incident_type.slug
+          /       = incident_type.name
+        .col-md-4
+          .form-group
+            .form-group
+              %label.sr-only{ for: 'location'}
+                Occurring near
+              = text_field_tag "location", '', class: 'form-control', placeholder: 'Occurring near'
+            / %label.sr-only{ for: 'text_search'}
+            /   Happened after
+            / = text_field_tag "occurred_since", '', class: 'form-control', placeholder: 'Happened after'
+          .form-group
+            = submit_tag "Find incidents", class: 'btn btn-primary'
+        / .form-group
+        /   %label.sr-only{ for: 'text_search'}
+        /     Happened since
+        /   %input#text_search.form-control{ type: 'text', placeholder: 'Happened since' }
+        / .form-group
+        /   %label.sr-only{ for: 'text_search'}
+        /     Updated since
+        /   %input#text_search.form-control{ type: 'text', placeholder: 'Updated since' }
+
+  #incidents_list.incident-list.panel-footer

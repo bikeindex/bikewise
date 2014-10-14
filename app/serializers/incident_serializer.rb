@@ -25,4 +25,12 @@ class IncidentSerializer < ActiveModel::Serializer
     "#{BASE_URL}/api/v1/incidents/#{object.id}"
   end
 
+  def occurred_at
+    object.occurred_at.to_i
+  end
+
+  def updated_at
+    object.updated_at.to_i
+  end
+
 end
