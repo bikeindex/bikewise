@@ -7,6 +7,7 @@ describe Incident do
     it { should have_many :binx_reports }
     it { should have_many :scf_reports }
     it { should serialize :source }
+    it { should serialize :additional_sources }
   end
 
   describe :as_geojson do 
@@ -21,6 +22,23 @@ describe Incident do
       expect(result.first[:properties][:id]).to eq(i1.id)
       expect(result.first[:geometry][:coordinates][1]).to eq(i1.latitude)
       expect(result.first[:geometry][:coordinates][0]).to eq(i1.longitude)
+    end
+  end
+
+  describe :store_type_name_and_sources do 
+    it "should set the type name and source" do 
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/see_click_fix_issue_bike_related.json')))
+      scf_report = ScfReport.find_or_new_from_external_api(hash)
+      incident = Incident.create
+      incident.incident_reports.create(report: scf_report, is_incident_source: true)
+      expect(incident.reload.incident_reports.first.report).to eq(scf_report)
+      incident.store_type_name_and_sources
+      expect(incident.source).to eq(scf_report.source_hash)
+      expect(incident.source_type).to eq('ScfReport')
+      expect(incident.additional_sources).to eq([])
+    end
+    it "should have before_save_callback_method defined for store_type_name_and_sources" do
+      Incident._save_callbacks.select { |cb| cb.kind.eql?(:before) }.map(&:raw_filter).include?(:store_type_name_and_sources).should == true
     end
   end
 

@@ -6,7 +6,6 @@ module Reportable
 
   included do
     serialize :external_api_hash
-    serialize :source
     validates_uniqueness_of :external_api_id, allow_nil: true
     has_one :incident_report, as: :report
     has_one :incident, through: :incident_report

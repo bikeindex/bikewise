@@ -13,4 +13,5 @@ class IncidentReport < ActiveRecord::Base
     self.is_open311_report = report.is_open311_report
     true
   end
+
 end

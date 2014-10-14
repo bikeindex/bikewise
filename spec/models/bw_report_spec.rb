@@ -18,7 +18,7 @@ describe BwReport do
       bw_report.process_hash
       expect(bw_report.external_api_updated_at).to be_present
       expect(bw_report.id).to_not be_present
-      expect(bw_report.source[:name]).to eq('Bikewise.org')
+      expect(bw_report.source_hash[:name]).to eq('Bikewise.org')
     end
 
     it "should have the incident_attrs" do
@@ -76,7 +76,8 @@ describe BwReport do
       expect(incident.description).to be_present
       expect(incident.incident_type_id).to eq(incident_type.id)
       expect(incident.id).to be_present
-      expect(incident.source[:name]).to match('Bikewise')
+      expect(incident.source).to eq(bw_report.source_hash)
+      expect(incident.source_type).to eq('BwReport')
     end
 
   end

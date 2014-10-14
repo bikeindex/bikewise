@@ -12,7 +12,6 @@ class ScfReport < ActiveRecord::Base
   def set_attrs_from_hash
     self.should_create_incident = check_if_bike_related
     self.external_api_updated_at = Time.parse(external_api_hash[:updated_at])
-    self.source = source_hash
   end
 
   def check_if_bike_related
@@ -39,15 +38,14 @@ class ScfReport < ActiveRecord::Base
   end
 
   def incident_type_id
-    if external_api_hash[:description].present?
-      it_slug = case external_api_hash[:description].downcase
-        when /block.{1,20}bi(cycle|ke).lane/
-          'hazard'
-        when /safety (hazard)|(issue)/
-          'hazard'
-        when /someone (could)|(will) get hurt/
-          'hazard'
-      end
+    text = "#{external_api_hash[:description]} #{external_api_hash[:summary]}".downcase
+    it_slug = case text
+      when /block.{1,20}bi(cycle|ke).{1,10}(lane)|(traffic)/
+        'hazard'
+      when /safety (hazard)|(issue)/
+        'hazard'
+      when /someone (could)|(will) get hurt/
+        'hazard'
     end
     unless it_slug.present?
       it_slug = case external_api_hash[:summary].downcase
@@ -66,6 +64,13 @@ class ScfReport < ActiveRecord::Base
         when /signage/
           'infrastructure issue'
         when /(speed)|(repair)/
+          'hazard'
+      end
+    end
+    unless it_slug.present?
+      # lowest priority/most likely to match
+      it_slug = case text
+        when /danger/
           'hazard'
       end
     end

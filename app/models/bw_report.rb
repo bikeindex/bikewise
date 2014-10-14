@@ -9,7 +9,6 @@ class BwReport < ActiveRecord::Base
 
   def set_attrs_from_hash
     self.external_api_updated_at = Time.now
-    self.source = source_hash
   end
 
   def incident_attrs

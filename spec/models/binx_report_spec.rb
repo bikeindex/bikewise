@@ -21,9 +21,9 @@ describe BinxReport do
       expect(binx_report.external_api_updated_at).to be_present
       expect(binx_report.binx_id).to be_present
       expect(binx_report.id).to_not be_present
-      expect(binx_report.source[:name]).to eq('BikeIndex.org')
-      expect(binx_report.source[:html_url]).to eq("https://bikeindex.org/bikes/3414")
-      expect(binx_report.source[:api_url]).to eq("https://bikeindex.org/api/v1/bikes/3414")
+      expect(binx_report.source_hash[:name]).to eq('BikeIndex.org')
+      expect(binx_report.source_hash[:html_url]).to eq("https://bikeindex.org/bikes/3414")
+      expect(binx_report.source_hash[:api_url]).to eq("https://bikeindex.org/api/v1/bikes/3414")
     end
 
     it "should find and update a binx_report from an api hash and not break the second time" do
@@ -110,6 +110,8 @@ describe BinxReport do
       expect(incident.description).to be_present
       expect(incident.type_name).to eq('Theft')
       expect(incident.incident_type_id).to eq(incident_type.id)
+      expect(incident.source).to eq(binx_report.source_hash)
+      expect(incident.source_type).to eq('BinxReport')
     end
 
     it "should not create an incident if there isn't both lat & long" do

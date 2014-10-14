@@ -15,7 +15,6 @@ class BinxReport < ActiveRecord::Base
     self.external_api_hash = external_api_hash[:bikes] if external_api_hash[:bikes].present?
     self.binx_id = external_api_hash[:id]
     self.external_api_updated_at = Time.parse(external_api_hash[:registration_updated_at])
-    self.source = source_hash
   end
 
   def incident_attrs

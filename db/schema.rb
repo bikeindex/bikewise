@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141011190549) do
+ActiveRecord::Schema.define(version: 20141014201947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20141011190549) do
     t.datetime "external_api_checked_at"
     t.boolean  "processed",               default: false, null: false
     t.boolean  "should_create_incident",  default: true
-    t.text     "source"
     t.integer  "binx_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -36,7 +35,6 @@ ActiveRecord::Schema.define(version: 20141011190549) do
     t.datetime "external_api_checked_at"
     t.boolean  "processed",               default: false, null: false
     t.boolean  "should_create_incident",  default: true
-    t.text     "source"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -93,6 +91,9 @@ ActiveRecord::Schema.define(version: 20141011190549) do
     t.boolean  "open311_is_closed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "source_type"
+    t.text     "source"
+    t.text     "additional_sources"
   end
 
   add_index "incidents", ["country_id"], name: "index_incidents_on_country_id", using: :btree
@@ -106,7 +107,6 @@ ActiveRecord::Schema.define(version: 20141011190549) do
     t.datetime "external_api_checked_at"
     t.boolean  "processed",               default: false, null: false
     t.boolean  "should_create_incident",  default: true
-    t.text     "source"
     t.boolean  "is_acknowledged"
     t.datetime "acknowledged_at"
     t.boolean  "is_closed"

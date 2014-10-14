@@ -29,9 +29,9 @@ describe ScfReport do
       expect(scf_report.external_api_id).to be_present
       expect(scf_report.external_api_updated_at).to be_present
       expect(scf_report.should_create_incident).to be_true
-      expect(scf_report.source[:name]).to eq('SeeClickFix.com')
-      expect(scf_report.source[:html_url]).to eq("https://seeclickfix.com/issues/1316783")
-      expect(scf_report.source[:api_url]).to eq("https://seeclickfix.com/api/v2/issues/1316783")
+      expect(scf_report.source_hash[:name]).to eq('SeeClickFix.com')
+      expect(scf_report.source_hash[:html_url]).to eq("https://seeclickfix.com/issues/1316783")
+      expect(scf_report.source_hash[:api_url]).to eq("https://seeclickfix.com/api/v2/issues/1316783")
     end
 
     it "should find and update a scf_report from an api hash without saving" do
@@ -94,12 +94,15 @@ describe ScfReport do
     it "should mark dangerous descriptions as hazard" do
       it_type = IncidentType.create(name: 'Hazard')
       summary = "Abandoned"
-      description = "blocking part of the bicycle lane"
+      description = "blocking part of the BIKE lane"
       scf_report = ScfReport.new(external_api_hash: { summary: summary, description: description })
       expect(scf_report.incident_type_id).to eq(it_type.id)
-      scf_report[:external_api_hash][:description] = "safety hazard"
+      scf_report[:external_api_hash][:description] = "safety HAZArd"
       expect(scf_report.incident_type_id).to eq(it_type.id)
-      scf_report[:external_api_hash][:summary] = "someone could get hurt"
+      scf_report[:external_api_hash][:description] = ""
+      scf_report[:external_api_hash][:summary] = "someone COULD get hurt"
+      expect(scf_report.incident_type_id).to eq(it_type.id)
+      scf_report[:external_api_hash][:summary] = "blocking foot and bike TraFFIC"
       expect(scf_report.incident_type_id).to eq(it_type.id)
     end
     it "should mark facilities & infrastructure" do 
@@ -158,6 +161,8 @@ describe ScfReport do
       expect(incident.title).to be_present
       expect(incident.type_name).to eq('Unconfirmed')
       expect(incident.description).to be_present
+      expect(incident.source).to eq(scf_report.source_hash)
+      expect(incident.source_type).to eq('ScfReport')
     end
 
     xit "should not change the source or the incident_type if incident already exists" do 
