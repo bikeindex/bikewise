@@ -5,5 +5,6 @@ class WelcomeController < ApplicationController
 
   def developer
     @bodyclass = 'dev'
+    @show_dev = true
   end
 end

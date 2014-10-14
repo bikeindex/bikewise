@@ -1,5 +1,7 @@
 appendIncidents = (data) ->
   $("#incidents_list").html(Mustache.render(incidents_list, data))
+  if $('#body_display').length > 0
+    $("#body_display").text(JSON.stringify(data,undefined,2))
   # $("#incidents_list").fadeIn('fast')
   # $("#incidents_list").append(JSON.stringify(data.incidents[0],undefined,2))
   formatDates()
@@ -23,8 +25,8 @@ formatDates = ->
 
 getResults = (per_page=10) ->
   params = $('#home_search').serialize()
-  url = $('#home_search').attr('data-target') + "?#{params}&per_page=#{per_page}"
-  console.log(url)
+  url = $('#home_search').attr('data-target') + "?#{params}"
+  url += "&per_page=#{per_page}" unless url.match('per_page')
   $.ajax
     type: "GET"
     url: url
@@ -32,6 +34,7 @@ getResults = (per_page=10) ->
       appendIncidents(data)
     error: ->
       console.log(data)
+  $('#url_display').text(url) if $('#url_display').length > 0
 
 $(document).ready ->
   getResults(5)
@@ -39,6 +42,8 @@ $(document).ready ->
     e.preventDefault()
     # $("#incidents_list").fadeOut('fast')
     getResults()
+  picker = new Pikaday(field: $("#occurred_before")[0])
+
 
 incidents_list = """
   <ul>

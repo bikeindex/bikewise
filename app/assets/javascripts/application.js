@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require mustache
+//= require pikaday
 //= require internal_search

@@ -1,0 +1,30 @@
+%header.dev-header#devland_page
+  %h1
+    BikeWise API documentation
+
+.dev-sidebyside
+  .desc-side
+    %h2
+      Searching for incidents
+    %p
+      You can check out how the API works by using the form to search for different things.
+    = render "/layouts/incident_search"
+  .data-side
+    / %p
+    /   Because #{link_to "CORS", "https://en.wikipedia.org/wiki/Cross-origin_resource_sharing"} is turned on, you can run this javascript from any browser and it will work correctly. You don't need to be concerned about Cross-Origin issues.
+    %h3
+      URL including parameters
+    %pre#url_display
+    
+    %h3
+      Response body
+    %pre#body_display
+.readme
+  .markdown-body
+    %h2
+      This is the readme
+    %p
+      it's in the process of being converted over to better documentation
+    %hr
+    
+    = render "readme"

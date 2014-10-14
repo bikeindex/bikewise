@@ -1,5 +1,5 @@
 .incident-search {
-  .btn { font-size: 18px; }
+  .btn { font-size: 18px; width: 100%; }
   .panel-body { background: #f7f7f9; }
   // border-radius: 4px 4px 0 0;
   // margin-bottom: 0;
@@ -52,7 +52,17 @@
   .no-incidents { padding: 20px 10px; }
 }
 
+.dev-fields-search {
+  &.form-inline {
+    padding-left: 15px;
+    padding-right: 15px;
+    .form-group { padding-left: .5em; }
+    input.form-control { width: 60px; }
+  }
+  &#page_data .form-group { float:right; }
+}
+
 @media (min-width: 1000px) {
-  .incident-search { margin-top: 80px; }
+  body.home .incident-search { margin-top: 80px; }
   .incident-type-checks { padding-top: 15px}
 }

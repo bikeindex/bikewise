@@ -4,8 +4,6 @@ A new BikeWise is under development and the data is still in migration.
 
 The updated version of BikeWise (this version) is available at [BikeWise.BikeIndex.org](https://bikewise.bikeindex.org). It will move to [BikeWise.org](https://bikewise.org) once everything has been sorted out.
 
-This documentation is not be perfect, and I apologize.
-
 ## API useage
 
 BikeWise has a versioned open RESTful API.
@@ -143,11 +141,7 @@ This is a [Rails 4.1](http://rubyonrails.org/) app run on [Ruby 2.1](http://www.
 
 Immediate Goals:
 
-- Make a homepage
-
 - Improve documentation. Make it interactive-y and stuff
-
-- Add [GitHub maps for GeoJSON export](https://help.github.com/articles/mapping-geojson-files-on-github/) (and automate data export to GitHub)
 
 - Submit open311 reports
 
