@@ -2,17 +2,15 @@
   .panel-body
     %form#home_search{ role: 'form', data: {target: "#{BASE_URL}/api/v1/incidents"}}
       / - if @show_dev
-      /   .row
-      /     .col-sm-6
-      /       .form-group
-      /         %label.sr-only{ for: 'text_search'}
-      /           Updated since
-      /         = text_field_tag "updated_since", '', class: 'form-control', placeholder: 'Updated since'
-      /     .col-sm-6
-      /       .form-group
-      /         %label.sr-only{ for: 'occurred_before'}
-      /           Occurred before
-      /         = datetime_field_tag "occurred_before", '', class: 'form-control', placeholder: 'Occurred before'
+      / .row.form-inline.dev-fields-search.bottomed
+      /   .form-group
+      /     %label{ for: 'text_search'}
+      /       Updated since
+      /     = text_field_tag "updated_since", '', class: 'form-control', placeholder: 'mm/dd/yy'
+      /   .form-group
+      /     %label{ for: 'occurred_before'}
+      /       Occurred before
+      /     = datetime_field_tag "occurred_before", '', class: 'form-control', placeholder: 'mm/dd/yy'
 
       .row
         .col-md-8
@@ -36,12 +34,12 @@
             = submit_tag "Find incidents", class: 'btn btn-primary'
       - if @show_dev
         .row.form-inline.dev-fields-search#page_data
-          .form-group
+          .form-group.narrow-field
             %label{ for: 'per_page' }
               Per page
             = number_field_tag "per_page", '', class: 'form-control', placeholder: 'Number per page', value: 4
 
-          .form-group
+          .form-group.narrow-field
             %label{ for: 'page' }
               Page number
             = number_field_tag "page", '', class: 'form-control', placeholder: 'Page number', value: 1

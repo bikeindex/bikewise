@@ -9,7 +9,7 @@
         %p
           You can help by reporting issues you see.
         %p
-          By sharing our experiences with each other and with researchers and relevant agencies, we make biking safer and more fun.
+          By sharing our experiences with each other and with researchers and relevant agencies, we can make bicycling safer and more fun.
 
 .map-container
   .container
@@ -17,24 +17,39 @@
       .col-lg-6.map
         <script src="https://embed.github.com/view/geojson/bikeindex/bikewise/master/geojson_data/recent%20incidents.geojson"></script>
         %p.more-maps
-          Incidents reported this past month. View a #{link_to "map of all incidents here", "https://github.com/bikeindex/bikewise/blob/master/geojson_data/all.geojson"}.
-      .col-lg-6.incidents-text
+          Incidents reported this month. View a #{link_to "map of all incidents here", "https://github.com/bikeindex/bikewise/blob/master/geojson_data/all.geojson"}.
+      .col-lg-6.maps-text
         %h2
-          Viewing reports
+          Submit a report!
         %p
-          Bikewise provides a way to find biking related incidents like Crashes, Hazards, Infrastructure issues, and Thefts
-        / %p
-        /   You can search by incident type, location, or text in the incident.
+          Have you seen or been involved in a crash? Had your bike stolen? Encountered a hazard or a bike infrastructure issue?
+        %p
+          Tell us about it!
+
+    .submit-incident#bw_incident_submit
+      = render "/layouts/incident_submit"
+
+.search-container
+  .container
+    .not-in-search-container
+
+      %h2
+        Viewing reports
+      %p
+        Bikewise provides a way to find biking related incidents like Crashes, Hazards, Infrastructure issues, and Thefts
     = render "/layouts/incident_search"
 
 .developer-info
   .container
-    %h2
-      Information for programmers and data scientists
-    %p
-      Bikewise is open source, it has an open API, and it was designed to be useful to developers and data scientists.
-    %h3
-      View the #{link_to "documentation", developer_url} or the #{link_to "source code", "https://github.com/bikeindex/bikewise"}.
+    .dev-icon
+      = image_tag "/computer.svg"
+    .dev-text
+      %h2
+        Designed for programmers and data scientists
+      %h3
+        View the #{link_to "API documentation", developer_url} or the #{link_to "source code", "https://github.com/bikeindex/bikewise"}.
+      %p
+        Bikewise was built to be useful tool for developers and data scientists. Take advantage of it!
     / %p
     /   Current GeoJSON data is pushed to the #{link_to "geojson_data", "https://github.com/bikeindex/bikewise/tree/master/geojson_data"} folder in the repository every day. This data is curled from the #{link_to "locations", api_v1_locations_url} endpoint, GitHub generates maps from it.
     / %p

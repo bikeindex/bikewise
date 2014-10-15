@@ -1,0 +1,30 @@
+#bw-int-wrap
+  %form#bw_int_form{ role: 'form', data: {target: "#{BASE_URL}/api/v1/incidents"}}
+    = hidden_field_tag :occurred_at, Time.now.to_i
+    .input-row
+      .i-group.incident-type
+        %label{ for: 'incident_type'}
+          Submit a report to Bikewise.org
+        = select_tag 'incident_type', options_for_select(IncidentType.confirmed.collect{ |i| [i.name, i.slug] }), prompt: 'What are you reporting?'
+      .i-group#binx-expl.scndary-group
+        %p
+          Register your stolen bike - It will show up on Bikewise once it's approved
+      / .i-group#int-occur.scndary-group
+      /   %label{ for: 'input_time'}
+      /   %input#input_time{ type: 'text', placeholder: 'mm/dd/yyyy' }
+    #binx_embed
+    #int_fields
+      .input-row
+        .i-group
+          %label{ for: 'title'}
+            Incident title
+          = text_field_tag "title", '', placeholder: 'Brief summary', required: true
+        .i-group
+          %label{ for: 'address'}
+            Where did it occur
+          = text_field_tag "address", '', placeholder: 'intersection or address', required: true
+      .input-row
+        .i-description
+          = text_area_tag "description", '', placeholder: 'description of incident', required: true
+        .submit
+          = submit_tag "Add report", class: 'btn btn-primary'

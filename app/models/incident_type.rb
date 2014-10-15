@@ -5,6 +5,8 @@ class IncidentType < ActiveRecord::Base
   validates_uniqueness_of :slug
   has_many :incidents
 
+  scope :confirmed, -> { where.not(slug: 'unconfirmed') }
+
   before_validation :slugify
   def slugify
     self.slug = Slugifyer.slugify(name) unless slug.present?

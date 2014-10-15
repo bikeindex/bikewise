@@ -1,6 +1,6 @@
 appendIncidents = (data) ->
   $("#incidents_list").html(Mustache.render(incidents_list, data))
-  if $('#body_display').length > 0
+  if $('#dev_display').length > 0
     $("#body_display").text(JSON.stringify(data,undefined,2))
   # $("#incidents_list").append(JSON.stringify(data.incidents[0],undefined,2))
   formatDates()
@@ -33,7 +33,13 @@ getResults = (per_page=10) ->
       appendIncidents(data)
     error: ->
       console.log(data)
-  $('#url_display').text(url) if $('#url_display').length > 0
+  if $('#dev_display').length > 0
+    $('#url_display').text(url)
+    $('#url_parameters').text('')
+    for param in params.split('&')
+      if param.split('=')[1].length > 0
+        dparam = decodeURI(param).replace('=', ' = ')
+        $('#url_parameters').append(dparam + "\n") 
 
 $(document).ready ->
   getResults(5)

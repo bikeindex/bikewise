@@ -9,7 +9,7 @@ body.home {
 
 .home-intro {
   padding: 40px 0 80px;
-  background: #5499C7;
+  background: $home-bg;
   color: white;
   h1 { margin-bottom: 1em; }
   p { font-size: 20px; }
@@ -19,7 +19,9 @@ body.home {
   .home-intro { padding: 150px 0 100px; }
 }
 
-.map-container { padding-bottom: 40px; }
+.map-container {
+  padding-bottom: 40px;
+}
 
 .map {
   margin-top: -40px;
@@ -33,7 +35,7 @@ body.home {
   }
 }
 
-.incidents-text {
+.maps-text {
   padding-top: 40px;
   h2 { margin-bottom: 1em; }
 }
@@ -44,26 +46,65 @@ body.home {
     float: right;
     margin-top: -80px;
   }
-  .incidents-text { padding-top: 100px; }
+  .maps-text { padding-top: 100px; }
 }
 
-body.home .home-incident-search {
-  padding-top: 30px;
+
+// 
+// 
+// 
+// 
+
+
+.submit-incident {
+  padding: 40px 0 60px;
+}
+
+// 
+// 
+// 
+// 
+
+body.home .incident-search {
+  margin-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  .incident-list li:last-of-type { padding-bottom: 5px; }
+}
+
+.search-container {
+  background: #16A085;
+  padding-top: 60px;
+  .not-in-search-container { color: white; }
 }
 
 
 .developer-info {
-  margin-top: -10px;
-  
+  padding: 40px 0;
+  .dev-icon {
+    position: relative;
+    width: 25%;
+    float: left;
+    padding: 0 15px;
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  .dev-text {
+    float: right;
+    width: 75%;
+    padding: 0 15px;
+  }
   h3 {
     font-weight: 200;
     margin-top: 30px;
   }
   p { margin-top: 40px; }
-  // background: rgb(198,222,246);
-  border-top: 1px solid $dev-blue-dark;
-  background: $dev-blue;
-  padding: 40px 0 80px;
 }
 
-.form-group label { font-weight: 200; font-size: 16px; }
+@media (min-width: 900px) {
+  .developer-info { padding: 80px 0; }
+}
+

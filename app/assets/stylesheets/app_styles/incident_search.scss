@@ -1,26 +1,27 @@
 .incident-search {
-  .btn { font-size: 18px; width: 100%; }
-  .panel-body { background: #f7f7f9; }
-  // border-radius: 4px 4px 0 0;
-  // margin-bottom: 0;
+  border: none;
+  box-shadow: none;
+
+  .btn {
+    font-size: $body-font-size;
+    width: 100%;
+  }
+  .panel-body {
+    background: $bw-panel-bg;
+    border-radius: 4px 4px 0 0;
+  }
   form { padding-top: 10px; }
-//   background: #F5F7F7;
-//   // background-color: #f7f7f9;
-//   // border: 1px solid #e1e1e8;
-//   padding: 20px 10px;
-//   border: none;
-//   box-shadow: none;
-//   // background: none;
-//   margin-top: 40px;
   .checkbox-inline {
     font-size: 16px;
     font-weight: 200;
     margin-left: 0;
     margin-right: 10px;
+    color: $asbestos;
   }
 
   .incident-list {
     position: relative;
+    border-top: none;
     .total-count {
       background: $dev-blue;
       color: $gray-light;
@@ -48,7 +49,7 @@
         font-weight: 400;
         span { font-weight: 200; }
       }
-      &:first-of-type { margin-top: 20px; }
+      &:first-of-type { padding-top: 25px; margin-top: 0; }
       &:nth-of-type(2n) { background: $dev-blue-lighter; }
       p { margin-bottom: 5px; }
       img {
@@ -74,13 +75,15 @@
     padding-left: 15px;
     padding-right: 15px;
     .form-group { padding-left: .5em; }
-    input.form-control { width: 60px; }
+    .form-control { width: 180px; }
+    .narrow-field .form-control { width: 60px; }
   }
   &#page_data .form-group { float:right; }
 }
 
 @media (min-width: 1000px) {
-  body.home .incident-search { margin-top: 80px; }
+  body.home .incident-search { margin-top: 60px; }
+  .dev-fields-search.bottomed { padding-bottom: 10px; float: right; }
   .incident-type-checks {
     padding-top: 15px;
     margin-bottom-bottom: 0;

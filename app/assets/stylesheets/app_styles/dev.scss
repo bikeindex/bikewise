@@ -12,10 +12,12 @@ header {
     padding: 10px;
     font-family: Monaco, 'Open Sans', sans-serif;
     background: $dev-code-bg;
-    color: #dae4f2;
+    color: $dev-code-text;
     text-shadow: 0 1px 0 rgba(0,0,0,.7px);
     font-weight: 400;
     h1, h2, h3, h4, h5 { color: white; }
+    h2 { margin: 0 0 1em; }
+    h3, h4 { margin: 10px 0 0; }
     pre {
       background: none;
       border: none;
@@ -35,7 +37,7 @@ header {
       float: left;
     }
     .data-side {
-      padding: 160px 20px;
+      padding: 60px 20px;
       float: left;
       width: 50%;
       margin-left: 2%;

@@ -1,4 +1,4 @@
-%header.dev-header#devland_page
+%header.dev-header#dev_display
   %h1
     = link_to "Bikewise", root_url
     API documentation
@@ -13,12 +13,22 @@
   .data-side
     / %p
     /   Because #{link_to "CORS", "https://en.wikipedia.org/wiki/Cross-origin_resource_sharing"} is turned on, you can run this javascript from any browser and it will work correctly. You don't need to be concerned about Cross-Origin issues.
-    %h3
-      URL including parameters
+    %h2
+      API parameters and response
+    %h4
+      Base url
+    %pre#base_url
+      = api_v1_incidents_url
+    %h4
+      Parameters
+    %pre#url_parameters
+
+    %h4
+      Encoded url
     %pre#url_display
     
-    %h3
-      Response body
+    %h4
+      Response
     %pre#body_display
 .readme
   .markdown-body

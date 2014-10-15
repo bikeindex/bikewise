@@ -14,14 +14,26 @@ module Api
       end
 
       def create
-        report = BwReport.find_or_new_from_external_api(JSON.parse(params[:incident]))
-        report.process_hash
-        if report.save
-          ProcessReportsWorker.perform_async('BwReport', report.id)
-          msg = { success: 'Added the incident' }
-          render json: msg
+        if params[:incident].present?
+          # if params[:incident].kind_of?(Hash)
+          #   puts "A HASH!?"
+          #   report = params[:incident]
+          # else
+            report = JSON.parse(params[:incident])
+          # end
+          
+          report = BwReport.find_or_new_from_external_api(report)
+          report.process_hash
+          if report.save
+            ProcessReportsWorker.perform_async('BwReport', report.id)
+            msg = { success: 'Added the incident' }
+            render json: msg and return
+          else
+            msg = { errors: report.errors.full_messages.to_sentence }
+            render json: msg, status: :unprocessable_entity and return
+          end
         else
-          msg = { errors: report.errors.full_messages.to_sentence }
+          msg = { errors: 'You have to submit an incident' }
           render json: msg, status: :unprocessable_entity and return
         end
       end

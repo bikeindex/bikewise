@@ -22,17 +22,38 @@ $header-font: 'Open Sans', sans-serif;
 
 $body-font: 'Open Sans', sans-serif;
 
+$home-bg: #5499C7;
+
 $body-font-weight: 300;
+$body-font-size: 18px;
 $small-font-size: 14px;
 
 $form-font-weight: 400;
 $form-font-size: 16px;
 $form-font-family: $body-font;
 
+
+$dev-code-bg: rgb(41,46,51);
+$dev-code-text: #dae4f2;
+
+$dev-blue-darker: #C6E2F5;
+$dev-blue-dark: #CCE5F6;
+$dev-blue: #E5F2FA;
+$dev-blue-light: #F7FBFE;
+$dev-blue-lighter: #FBFDFE;
+
+$bw-panel-bg: #ECEEEE;
+$asbestos: #7F8C8D;
+
+
 body {
   font-family: $body-font;
   font-weight: 300;
-  font-size: 18px;
+  font-size: $body-font-size;
+  .form-control {
+    box-shadow: none;
+    border: none; 
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -41,6 +62,30 @@ h1, h2, h3, h4, h5 {
 }
 
 .form-control { font-size: 16px; }
+.form-group label { font-weight: 200; font-size: 16px; }
+
+.global-footer {
+  background: $dev-code-bg;
+  box-shadow: 0 -2px 0 rgba($dev-code-bg, .5);
+  color: rgba($dev-code-text, .8);
+  padding: 40px 0 30px;
+
+  a { color: rgba(white, .9); }
+  h5 {
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+  }
+  p { 
+    margin: .5em 0 0;
+    text-align: center;
+    font-size: 14px;
+    color: rgba($dev-code-text, .4);
+    a { color: rgba(white, .6); }
+  }
+}
+
+.btn-primary { background-color: #3E8DC0; border-color: #3E8DC0; }
 
 // @mixin h3-font-size {
 //   font-size: 22px;
@@ -58,10 +103,3 @@ h1, h2, h3, h4, h5 {
 // @media (max-width: $s-breakpoint) {
 //   h1 { font-size: 23px; }
 // }
-$dev-code-bg: rgb(41,46,51);
-
-$dev-blue-darker: #C6E2F5;
-$dev-blue-dark: #CCE5F6;
-$dev-blue: #E5F2FA;
-$dev-blue-light: #F7FBFE;
-$dev-blue-lighter: #FBFDFE;

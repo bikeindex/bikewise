@@ -57,6 +57,7 @@ describe BwReport do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/bw_report_hash.json')))
       bw_report = BwReport.find_or_new_from_external_api(hash)
       bw_report.process_hash
+      bw_report
       expect(bw_report.incident).to_not be_present
       incident = bw_report.create_or_update_incident
       bw_report.reload

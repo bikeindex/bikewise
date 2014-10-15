@@ -15,12 +15,16 @@ class BwReport < ActiveRecord::Base
     hash = {
       title: external_api_hash[:title],
       description: external_api_hash[:description],
-      image_url: external_api_hash[:media][:image_url],
-      image_url_thumb: external_api_hash[:media][:image_url_thumb],
+      image_url: '',
+      image_url_thumb: '',
       create_open311_report: external_api_hash[:create_open311_report],
       occurred_at: occurred_at,
       incident_type_id: incident_type_id,
     }
+    if external_api_hash[:media].present?
+      hash[:image_url] = external_api_hash[:media][:image_url]
+      hash[:image_url_thumb] = external_api_hash[:media][:image_url_thumb]
+    end
     if external_api_hash[:address].present?
       hash[:address] = external_api_hash[:address]
     end
