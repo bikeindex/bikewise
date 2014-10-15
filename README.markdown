@@ -4,6 +4,11 @@ A new Bikewise is under development and the data is still in migration.
 
 The updated version of Bikewise (this version) is available at [Bikewise.BikeIndex.org](https://bikewise.bikeindex.org). It will move to [Bikewise.org](https://bikewise.org) once everything has been sorted out.
 
+**[Check out the documentation page](https://bikewise.bikeindex.org/developer)**
+
+---
+
+
 ## API useage
 
 Bikewise has a versioned open RESTful API.
