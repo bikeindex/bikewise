@@ -23,7 +23,8 @@
     position: relative;
     border-top: none;
     .total-count {
-      background: $dev-blue;
+      z-index: 10;
+      background: rgba($dev-blue, .8);
       color: $gray-light;
       font-size: .8em;
       position: absolute;
