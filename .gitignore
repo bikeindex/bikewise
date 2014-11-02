@@ -12,3 +12,9 @@ spec/cassettes/*
 
 # Ignore .env
 .env
+
+# Ignore rvm stuff
+.rvmrc
+.ruby-gemset
+.ruby-version
+.powenv
