@@ -1,0 +1,71 @@
+@mixin binx-button($bg, $bg-hover, $step-color, $text) {
+  @include transition(background ease-out .1s);
+  border: none;
+  background: $bg;
+  color: $text;
+  padding: .5em 1em;
+  font-weight: 400;
+
+  $step: .006em;
+  box-shadow: -.01em .01em 0px $step-color,
+  -$step $step 0 $step-color,
+  -$step*2  $step*2  0 $step-color,
+  -$step*3  $step*3  0 $step-color,
+  -$step*4  $step*4  0 $step-color,
+  -$step*5  $step*5  0 $step-color,
+  -$step*6  $step*6  0 $step-color,
+  -$step*7  $step*7  0 $step-color,
+  -$step*8  $step*8  0 $step-color,
+  -$step*9  $step*9  0 $step-color,
+  -$step*10 $step*10 0 $step-color,
+  -$step*11 $step*11 0 $step-color,
+  -$step*12 $step*12 0 $step-color,
+  -$step*13 $step*13 0 $step-color,
+  -$step*14 $step*14 0 $step-color,
+  -$step*15 $step*15 0 $step-color;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    @include transition(background ease-out .1s);
+    background: $bg-hover;
+    color: $text;
+  }
+  
+  &:active { background: $bg; }
+}
+
+.binxbtn-lg {
+  padding: .25em 1em;
+  font-size: 20px;
+}
+
+.btn.binxbtn {
+  @include binx-button($green, #62D994, $green-dark, white);
+  font-size: $body-font-size;
+  font-family: $body-font;
+  &.binxbtn-lg { @extend .binxbtn-lg; }
+}
+
+.btn.binxbtn-primary {
+  @include binx-button($blue, #67B2E4, #2574A0, white);
+  font-size: $body-font-size;
+  font-family: $body-font; 
+  &.binxbtn-lg { @extend .binxbtn-lg; }
+}
+
+.btn.binxbtn-default {
+  @include binx-button($gray-lighter, $gray-lightest, lighten($gray-light, 2%), $text-color);
+  font-size: $body-font-size;
+  font-family: $body-font; 
+  &.binxbtn-lg { @extend .binxbtn-lg; }
+}
+
+.btn.binxbtn-danger {
+  @include binx-button($peach-light, $peach-lighter, $red-dark, white);
+  font-size: $body-font-size;
+  font-family: $body-font; 
+  &.binxbtn-lg { @extend .binxbtn-lg; }
+}

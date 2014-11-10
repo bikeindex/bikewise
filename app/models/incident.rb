@@ -11,6 +11,7 @@ class Incident < ActiveRecord::Base
   has_many :bw_reports, through: :incident_reports, source: :report, source_type: 'BwReport'
 
   belongs_to :country 
+  belongs_to :user
   belongs_to :incident_type
 
   serialize :source

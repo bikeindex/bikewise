@@ -24,6 +24,10 @@ gem 'geocoder'
 
 gem 'honeybadger'
 
+gem 'devise'
+gem 'devise-bootstrap-views'
+gem "omniauth-bike-index"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

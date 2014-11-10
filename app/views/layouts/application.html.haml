@@ -10,14 +10,21 @@
 
   %body{class: @bodyclass}
     / %header
-    /   .navbar.navbar-default
-    /     .container
-    /       .navbar-header
-    /         %a.logo{ href: root_url }
-    /           %img{ src: '/assets/logo.png' }
-    /       .navbar-text.navbar-left
-    /         Bicycle incident reporting
-
+    .navbar
+      .container
+        / .navbar-header
+        /   %a.logo{ href: root_url }
+        /     %img{ src: '/assets/logo.png' }
+        / .navbar-text.navbar-left
+        /   Bicycle incident reporting
+        .navbar-text.navbar-right
+          - if current_user.present?
+            %a
+              = current_user.email
+            / # = link_to current_user.email, edit_user_url(current_user), class: 'user-link'
+            = link_to "log out", destroy_user_session_path, method: :delete, class: 'signout-link'
+          - else
+            = link_to "Sign in", user_omniauth_authorize_path(:bike_index)
 
     = yield
     %footer.global-footer

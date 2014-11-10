@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014201947) do
+ActiveRecord::Schema.define(version: 20141027142117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,11 +94,13 @@ ActiveRecord::Schema.define(version: 20141014201947) do
     t.string   "source_type"
     t.text     "source"
     t.text     "additional_sources"
+    t.integer  "user_id"
   end
 
   add_index "incidents", ["country_id"], name: "index_incidents_on_country_id", using: :btree
   add_index "incidents", ["incident_type_id"], name: "index_incidents_on_incident_type_id", using: :btree
   add_index "incidents", ["latitude", "longitude"], name: "index_incidents_on_latitude_and_longitude", using: :btree
+  add_index "incidents", ["user_id"], name: "index_incidents_on_user_id", using: :btree
 
   create_table "scf_reports", force: true do |t|
     t.integer  "external_api_id"
@@ -111,6 +113,27 @@ ActiveRecord::Schema.define(version: 20141014201947) do
     t.datetime "acknowledged_at"
     t.boolean  "is_closed"
     t.datetime "closed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email",                    default: "",    null: false
+    t.string   "encrypted_password",       default: "",    null: false
+    t.string   "binx_id"
+    t.text     "binx_bike_ids"
+    t.text     "additional_emails"
+    t.text     "email_confirmation_token"
+    t.string   "provider"
+    t.text     "uid"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",            default: 0,     null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.boolean  "admin",                    default: false, null: false
+    t.text     "access_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

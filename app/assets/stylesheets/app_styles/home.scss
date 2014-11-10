@@ -1,10 +1,28 @@
 body.home {
   // background: rgb(198,222,246);
+  .navbar {
+    background: $home-bg;
+    a {
+      color: rgba(white, .8);
+      &:hover { color: rgba(white, .9); }
+    }
+  }
 }
 
 .navbar {
+  border-radius: 0;
+  padding-top: 5px;
   .logo img { height: 50px; }
   margin-bottom: 0;
+  .navbar-text a {
+    &:hover { text-decoration: none; }
+    &.signout-link {
+      color: rgba(black, .2);
+      margin-left: .5em;
+      display: inline-block;
+      &:hover { color: rgba(black, .4); }
+    }
+  }
 }
 
 .home-intro {
