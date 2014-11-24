@@ -18,3 +18,5 @@ spec/cassettes/*
 .ruby-gemset
 .ruby-version
 .powenv
+
+bikewise_data/*

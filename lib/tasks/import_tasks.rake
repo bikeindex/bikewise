@@ -1,4 +1,4 @@
-desc "initial import from SeeClickFix"
+desc "import from SeeClickFix"
 task :seeclickfix_import => :environment do
   import = ImportStatus.find_or_create_by(source: 'seeclickfix')
   import.info_hash[:imported_pages] = [] unless import.info_hash[:imported_pages].present? 
@@ -19,7 +19,7 @@ task :seeclickfix_import => :environment do
   import.save
 end
 
-desc "initial import from BikeIndex"
+desc "import from BikeIndex"
 task :bikeindex_import => :environment do
   import = ImportStatus.find_or_create_by(source: 'bikeindex')
   integration = BikeIndexIntegration.new 
@@ -44,4 +44,27 @@ task :process_existing_reports => :environment do
   IncidentReport.all.each do |ir|
     ProcessReportsWorker.perform_async(ir.report_type, ir.report_id)
   end
+end
+
+desc "import from Bikewise data dump"
+task :bikewise_import => :environment do 
+  source = "crash.csv"
+  og_path = File.join(Rails.root,"/bikewise_data/#{source}")
+  line_number = 1
+  CSV.foreach(og_path, {headers: true, col_sep: "\t"}) do |row|
+    r = row.to_hash
+    puts r
+    line_number += 1
+    raise StandardError if line_number > 100
+    # bike_hash = {
+    #   input_hash: row.to_hash,
+    #   source: source,
+    #   organization_slug: organization_slug,
+    #   access_token: access_token,
+    #   line_number: $.
+    # }
+    # puts bike_hash
+    # Bike.create(bike_hash)
+  end
+
 end

@@ -31,7 +31,7 @@ getResults = (per_page=10) ->
     url: url
     success: (data, textStatus, jqXHR) ->
       appendIncidents(data)
-    error: ->
+    error: (data) ->
       console.log(data)
   if $('#dev_display').length > 0
     $('#url_display').text(url)

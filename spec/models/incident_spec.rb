@@ -3,6 +3,8 @@ require 'spec_helper'
 describe Incident do
   describe :validations do
     it { should belong_to :incident_type }
+    it { should belong_to :country }
+    it { should belong_to :user }
     it { should have_many :incident_reports }
     it { should have_many :binx_reports }
     it { should have_many :scf_reports }
@@ -26,7 +28,7 @@ describe Incident do
   end
 
   describe :store_type_name_and_sources do 
-    it "should set the type name and source" do 
+    it "should set the type name and source" do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/see_click_fix_issue_bike_related.json')))
       scf_report = ScfReport.find_or_new_from_external_api(hash)
       incident = Incident.create

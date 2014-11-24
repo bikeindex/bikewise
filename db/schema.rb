@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027142117) do
+ActiveRecord::Schema.define(version: 20141124233434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,41 @@ ActiveRecord::Schema.define(version: 20141027142117) do
     t.datetime "updated_at"
   end
 
+  create_table "crashes", force: true do |t|
+    t.integer  "location_select_id"
+    t.boolean  "rain"
+    t.boolean  "snow"
+    t.boolean  "fog"
+    t.boolean  "wind"
+    t.boolean  "lights"
+    t.boolean  "helmet"
+    t.integer  "lighting"
+    t.integer  "visibility"
+    t.integer  "condition_select_id"
+    t.text     "conditions_description"
+    t.integer  "injury_severity"
+    t.text     "injury_description"
+    t.integer  "crash_select_id"
+    t.integer  "vehicle_select_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "crashes", ["condition_select_id"], name: "index_crashes_on_condition_select_id", using: :btree
+  add_index "crashes", ["crash_select_id"], name: "index_crashes_on_crash_select_id", using: :btree
+  add_index "crashes", ["location_select_id"], name: "index_crashes_on_location_select_id", using: :btree
+  add_index "crashes", ["vehicle_select_id"], name: "index_crashes_on_vehicle_select_id", using: :btree
+
+  create_table "hazards", force: true do |t|
+    t.string   "location_description"
+    t.integer  "hazard_select_id"
+    t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "hazards", ["hazard_select_id"], name: "index_hazards_on_hazard_select_id", using: :btree
+
   create_table "import_statuses", force: true do |t|
     t.string   "source"
     t.datetime "checked_updates_at"
@@ -71,6 +106,8 @@ ActiveRecord::Schema.define(version: 20141027142117) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "type_property_id"
+    t.string   "type_property_type"
   end
 
   create_table "incidents", force: true do |t|
@@ -95,12 +132,29 @@ ActiveRecord::Schema.define(version: 20141027142117) do
     t.text     "source"
     t.text     "additional_sources"
     t.integer  "user_id"
+    t.integer  "experience_level"
+    t.integer  "age"
+    t.text     "name"
+    t.string   "gender"
   end
 
   add_index "incidents", ["country_id"], name: "index_incidents_on_country_id", using: :btree
   add_index "incidents", ["incident_type_id"], name: "index_incidents_on_incident_type_id", using: :btree
   add_index "incidents", ["latitude", "longitude"], name: "index_incidents_on_latitude_and_longitude", using: :btree
   add_index "incidents", ["user_id"], name: "index_incidents_on_user_id", using: :btree
+
+  create_table "legacy_bw_reports", force: true do |t|
+    t.string   "external_api_id"
+    t.text     "external_api_hash"
+    t.datetime "external_api_updated_at"
+    t.datetime "external_api_checked_at"
+    t.boolean  "processed",               default: false, null: false
+    t.boolean  "should_create_incident",  default: true
+    t.text     "source"
+    t.integer  "legacy_bw_user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "scf_reports", force: true do |t|
     t.integer  "external_api_id"
@@ -117,6 +171,25 @@ ActiveRecord::Schema.define(version: 20141027142117) do
     t.datetime "updated_at"
   end
 
+  create_table "selections", force: true do |t|
+    t.string   "name"
+    t.string   "select_type"
+    t.boolean  "user_created"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "thefts", force: true do |t|
+    t.integer  "locking_select_id"
+    t.integer  "locking_defeat_select_id"
+    t.boolean  "has_police_report"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "thefts", ["locking_defeat_select_id"], name: "index_thefts_on_locking_defeat_select_id", using: :btree
+  add_index "thefts", ["locking_select_id"], name: "index_thefts_on_locking_select_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "email",                    default: "",    null: false
     t.string   "encrypted_password",       default: "",    null: false
@@ -124,8 +197,6 @@ ActiveRecord::Schema.define(version: 20141027142117) do
     t.text     "binx_bike_ids"
     t.text     "additional_emails"
     t.text     "email_confirmation_token"
-    t.string   "provider"
-    t.text     "uid"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",            default: 0,     null: false
     t.datetime "current_sign_in_at"
@@ -133,9 +204,12 @@ ActiveRecord::Schema.define(version: 20141027142117) do
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.boolean  "admin",                    default: false, null: false
-    t.text     "access_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "experience_level"
+    t.integer  "birth_year"
+    t.text     "name"
+    t.string   "gender"
   end
 
 end

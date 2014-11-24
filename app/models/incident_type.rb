@@ -4,6 +4,7 @@ class IncidentType < ActiveRecord::Base
   validates_presence_of :slug
   validates_uniqueness_of :slug
   has_many :incidents
+  belongs_to :type_property, polymorphic: true
 
   scope :confirmed, -> { where.not(slug: 'unconfirmed') }
 

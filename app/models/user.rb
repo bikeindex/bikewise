@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  # Attributes :access_token, :binx_id, :additional_emails, :admin
+  # Attributes :binx_id, :additional_emails, :admin, email
   #            :email_confirmation_token, :binx_bike_ids
+  #            :experience_level, :birth_year, :name, :gender
   # 
   # 
   devise :database_authenticatable, :registerable, :rememberable,
@@ -13,11 +14,16 @@ class User < ActiveRecord::Base
   serialize :binx_bike_ids
   has_many :incidents
 
+  def display_id
+    [name, email].compact.first
+  end
+
   def self.from_omniauth(auth)
     where(binx_id: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.binx_id = auth.uid
-      user.access_token = auth.uid
+      user.name = auth.info.name
+      user.binx_bike_ids = auth.info.bike_ids
       user.password = Devise.friendly_token[0,20]
     end
   end
