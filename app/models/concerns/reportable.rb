@@ -33,6 +33,7 @@ module Reportable
     u_incident.attributes = incident_attrs
     u_incident.incident_type_id = incident_type_id
     u_incident.save
+    after_incident_actions if self.methods.include?(:after_incident_actions)
     u_incident
   end
 

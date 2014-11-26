@@ -1,14 +1,18 @@
 class Incident < ActiveRecord::Base
-  # Attributes: incident_type_id, status, description, title, occurred_at
+  # Attributes: incident_type_id, status, description, title, occurred_at, user_id
   #             address, latitude, longitude, country_id
   #             image_url, image_url_thumb
   #             create_open311_report, has_open311_report,
   #             open311_is_acknowledged, open311_is_closed
+  #             age, name, experience_level_select_id, gender_select_id
 
   has_many :incident_reports
   has_many :binx_reports, through: :incident_reports, source: :report, source_type: 'BinxReport'
   has_many :scf_reports, through: :incident_reports, source: :report, source_type: 'ScfReport'
   has_many :bw_reports, through: :incident_reports, source: :report, source_type: 'BwReport'
+
+  belongs_to :experience_level_select, class_name: "Selection"
+  belongs_to :gender_select, class_name: "Selection"
 
   belongs_to :country 
   belongs_to :user

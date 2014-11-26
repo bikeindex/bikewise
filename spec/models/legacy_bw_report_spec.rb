@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe LegacyBwReport do
   describe :validations do
-    # it { should validate_presence_of :binx_id }
 
     # Incidentable attributes
     it { should have_one :incident_report }
@@ -83,8 +82,37 @@ describe LegacyBwReport do
   #   end
   # end
 
-  describe :create_typeable do 
-    it "creates typeable"
+  describe :create_crash do 
+    before :all do 
+      @hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/legacy_bw_report_hash_crash.json')))
+      @bw_report = LegacyBwReport.find_or_new_from_external_api(@hash)
+      @bw_report.save
+      @bw_report.reload.create_or_update_incident
+      @bw_report.reload
+      @incident = @bw_report.incident
+    end
+
+    it "creates crash with the selects" do 
+      expect(@incident.incident_type.type_property_type).to eq('Crash')
+      crash = @incident.incident_type.type_property
+      ['location', 'condition', 'crash', 'vehicle', 'lighting', 'visibility', 'injury_severity', 'geometry'].each do |type|
+        expect(crash.send("#{type}_select")).to be_present
+      end
+      expect(crash.geometry_select.name).to eq(@bw_report.geometry_from_hash)
+    end
+
+    it "sets the correct incident attrs" do 
+      expect(@incident.experience_level_select.name).to eq(@hash['cyclist_experience'])
+      expect(@incident.gender_select.name).to eq('male')
+      expect(@incident.age).to eq(@hash['cyclist_age'].to_i)
+      expect(@incident.description.length).to be > 50
+      expect(@incident.latitude.present?).to be_true
+      expect(@incident.longitude.present?).to be_true
+      expect(@incident.address.present?).to be_true
+      expect(@incident.title.present?).to be_true
+      expect(@incident.incident_type_id).to be > 0
+    end
+
   end
 
 end

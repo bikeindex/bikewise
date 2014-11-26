@@ -54,11 +54,12 @@ ActiveRecord::Schema.define(version: 20141124233434) do
     t.boolean  "wind"
     t.boolean  "lights"
     t.boolean  "helmet"
-    t.integer  "lighting"
-    t.integer  "visibility"
+    t.integer  "injury_severity_select_id"
+    t.integer  "lighting_select_id"
+    t.integer  "visibility_select_id"
     t.integer  "condition_select_id"
+    t.integer  "geometry_select_id"
     t.text     "conditions_description"
-    t.integer  "injury_severity"
     t.text     "injury_description"
     t.integer  "crash_select_id"
     t.integer  "vehicle_select_id"
@@ -68,8 +69,12 @@ ActiveRecord::Schema.define(version: 20141124233434) do
 
   add_index "crashes", ["condition_select_id"], name: "index_crashes_on_condition_select_id", using: :btree
   add_index "crashes", ["crash_select_id"], name: "index_crashes_on_crash_select_id", using: :btree
+  add_index "crashes", ["geometry_select_id"], name: "index_crashes_on_geometry_select_id", using: :btree
+  add_index "crashes", ["injury_severity_select_id"], name: "index_crashes_on_injury_severity_select_id", using: :btree
+  add_index "crashes", ["lighting_select_id"], name: "index_crashes_on_lighting_select_id", using: :btree
   add_index "crashes", ["location_select_id"], name: "index_crashes_on_location_select_id", using: :btree
   add_index "crashes", ["vehicle_select_id"], name: "index_crashes_on_vehicle_select_id", using: :btree
+  add_index "crashes", ["visibility_select_id"], name: "index_crashes_on_visibility_select_id", using: :btree
 
   create_table "hazards", force: true do |t|
     t.string   "location_description"
@@ -122,8 +127,8 @@ ActiveRecord::Schema.define(version: 20141124233434) do
     t.text     "description"
     t.string   "type_name"
     t.datetime "occurred_at"
-    t.boolean  "create_open311_report",   default: false, null: false
-    t.boolean  "has_open311_report",      default: false, null: false
+    t.boolean  "create_open311_report",      default: false, null: false
+    t.boolean  "has_open311_report",         default: false, null: false
     t.boolean  "open311_is_acknowledged"
     t.boolean  "open311_is_closed"
     t.datetime "created_at"
@@ -132,13 +137,15 @@ ActiveRecord::Schema.define(version: 20141124233434) do
     t.text     "source"
     t.text     "additional_sources"
     t.integer  "user_id"
-    t.integer  "experience_level"
+    t.integer  "experience_level_select_id"
     t.integer  "age"
     t.text     "name"
-    t.string   "gender"
+    t.integer  "gender_select_id"
   end
 
   add_index "incidents", ["country_id"], name: "index_incidents_on_country_id", using: :btree
+  add_index "incidents", ["experience_level_select_id"], name: "index_incidents_on_experience_level_select_id", using: :btree
+  add_index "incidents", ["gender_select_id"], name: "index_incidents_on_gender_select_id", using: :btree
   add_index "incidents", ["incident_type_id"], name: "index_incidents_on_incident_type_id", using: :btree
   add_index "incidents", ["latitude", "longitude"], name: "index_incidents_on_latitude_and_longitude", using: :btree
   add_index "incidents", ["user_id"], name: "index_incidents_on_user_id", using: :btree
@@ -174,7 +181,7 @@ ActiveRecord::Schema.define(version: 20141124233434) do
   create_table "selections", force: true do |t|
     t.string   "name"
     t.string   "select_type"
-    t.boolean  "user_created"
+    t.boolean  "user_created", default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
