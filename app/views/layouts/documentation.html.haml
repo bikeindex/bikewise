@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title Bikewise
+    = stylesheet_link_tag    'documentation', media: 'all'
+    = javascript_include_tag "documentation"
+    = csrf_meta_tags
+    <link rel="shortcut icon" href="/fav.ico" />
+
+  %body
+    / %header
+    = yield

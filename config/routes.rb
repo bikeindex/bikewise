@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'developer', to: 'welcome#developer'
 
+  resources :documentation, only: [:index]
+
   mount API::Base => '/api'
 
   authenticate :user, lambda { |u| u.admin? } do

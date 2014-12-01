@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.7'
+gem 'rails', '4.1.8'
 gem 'pg'
 
 gem 'sass-rails', '~> 4.0.3'
@@ -45,6 +45,8 @@ gem 'kaminari'
 gem 'grape'
 gem 'grape-active_model_serializers'
 gem 'grape-kaminari'
+gem 'grape-swagger'
+gem 'swagger-ui_rails'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'haml'

@@ -24,13 +24,13 @@ class Selection < ActiveRecord::Base
   scope :default, -> { where(user_created: false) }
   scope :user_created, -> { where(user_created: true) }
 
-  scope :hazards, -> { where(select_type: 'hazard') }
-  scope :lockings, -> { where(select_type: 'locking') }
-  scope :locking_defeats, -> { where(select_type: 'locking_defeat') }
-  scope :conditions, -> { where(select_type: 'condition') }
-  scope :locations, -> { where(select_type: 'location') }
-  scope :crashs, -> { where(select_type: 'crash') }
-  scope :vehicles, -> { where(select_type: 'vehicle') }
+  scope :hazard, -> { where(select_type: 'hazard') }
+  scope :locking, -> { where(select_type: 'locking') }
+  scope :locking_defeat, -> { where(select_type: 'locking_defeat') }
+  scope :condition, -> { where(select_type: 'condition') }
+  scope :location, -> { where(select_type: 'location') }
+  scope :crash, -> { where(select_type: 'crash') }
+  scope :vehicle, -> { where(select_type: 'vehicle') }
   scope :lighting, -> { where(select_type: 'lighting') }
   scope :visibility, -> { where(select_type: 'visibility') }
   scope :injury_severity, -> { where(select_type: 'injury_severity') }
