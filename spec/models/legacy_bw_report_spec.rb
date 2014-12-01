@@ -21,66 +21,21 @@ describe LegacyBwReport do
       expect(bw_report.source_hash[:name]).to eq('Bikewise.org')
     end
 
-    # it "should have the incident_attrs" do
-    #   incident_type = FactoryGirl.create(:incident_type_theft)
-    #   hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/bw_report_hash.json')))
-    #   bw_report = BwReport.find_or_new_from_external_api(hash)
-    #   bw_report.process_hash
-    #   bw_report.stub(:incident_type_id).and_return(69)
-    #   hash = bw_report.incident_attrs
+    it "should have the incident_attrs" do
+      incident_type = FactoryGirl.create(:incident_type_theft)
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/legacy_bw_report_hash_crash.json')))
+      bw_report = LegacyBwReport.find_or_new_from_external_api(hash)
+      bw_report.process_hash
+      bw_report.stub(:incident_type_id).and_return(69)
+      hash = bw_report.incident_attrs
+      expected_keys = [:latitude, :longitude, :address, :title, :description, :occurred_at, :incident_type_id]
+      expect(expected_keys - hash.keys).to eq([])
+      expect(hash[:latitude].length).to be > 5
+      expect(hash[:longitude].length).to be > 5
+      expect(hash[:description].length).to be > 100
+    end
 
-    #   expected_keys = [:latitude, :longitude, :address, :title, :description, :occurred_at, :incident_type_id, :image_url, :image_url, :create_open311_report]
-    #   expect(expected_keys - hash.keys).to eq([])
-    #   expect(hash[:latitude]).to eq(41.92031)
-    #   expect(hash[:longitude]).to eq(-87.715781)
-    #   expect(hash[:image_url]).to be_present
-    #   expect(hash[:image_url_thumb]).to be_present
-    #   expect(hash[:post_to_scf]).to be_false
-    #   expect(hash[:description]).to match("This is a report.")
-    # end
-
-    # it "should return always be processed, because there isn't a reason for us to call it unless it's updated" do 
-    #   hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/bw_report_hash.json')))
-    #   bw_report = BwReport.find_or_new_from_external_api(hash)
-    #   expect(bw_report.processed).to be_false
-    #   bw_report.process_hash
-    #   bw_report.save
-    #   expect(bw_report.processed).to be_true
-    #   bw_report = BwReport.find_or_new_from_external_api(hash)
-    #   expect(bw_report).to be_present
-    # end
   end
-
-  # describe :create_or_update_incident do
-  #   it "should create an incident" do
-  #     incident_type = FactoryGirl.create(:incident_type_theft)
-  #     hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/bw_report_hash.json')))
-  #     bw_report = BwReport.find_or_new_from_external_api(hash)
-  #     bw_report.process_hash
-  #     bw_report
-  #     expect(bw_report.incident).to_not be_present
-  #     incident = bw_report.create_or_update_incident
-  #     bw_report.reload
-  #     expect(bw_report.incident_report).to be_present
-  #     expect(bw_report.incident).to be_present
-  #     expect(bw_report.incident.id).to eq(incident.id)
-  #     expect(bw_report.incident_report.is_incident_source).to be_true
-
-  #     hash = bw_report.incident_attrs
-  #     expect(incident.latitude).to eq(hash[:latitude])
-  #     expect(incident.longitude).to eq(hash[:longitude])
-  #     expect(incident.occurred_at).to eq(hash[:occurred_at])
-  #     expect(incident.create_open311_report).to be_false
-  #     expect(incident.title).to be_present
-  #     expect(incident.description).to be_present
-  #     expect(incident.description).to be_present
-  #     expect(incident.description).to be_present
-  #     expect(incident.incident_type_id).to eq(incident_type.id)
-  #     expect(incident.id).to be_present
-  #     expect(incident.source).to eq(bw_report.source_hash)
-  #     expect(incident.source_type).to eq('BwReport')
-  #   end
-  # end
 
   describe :create_crash do 
     before :all do 

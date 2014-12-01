@@ -27,6 +27,7 @@ class LegacyBwReport < ActiveRecord::Base
       age: external_api_hash[:cyclist_age],
       experience_level_select_id: xp,
       gender_select_id: gender,
+      occurred_at: Time.parse(external_api_hash[:crash_date]),
       incident_type_id: incident_type_id
     }
   end
@@ -107,6 +108,10 @@ class LegacyBwReport < ActiveRecord::Base
   def crash_geometry
     file = File.join(Rails.root,'public', 'legacy_bw_geometry.json')
     JSON.parse(File.read(file))
+  end
+
+  def hash_updated_at(hash)
+    external_api_hash[:edit_date] || external_api_hash[:create_date]
   end
 
 end

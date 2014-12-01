@@ -42,6 +42,9 @@ gem 'sidekiq-unique-jobs'
 gem 'pg_search'
 
 gem 'kaminari'
+gem 'grape'
+gem 'grape-active_model_serializers'
+gem 'grape-kaminari'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'haml'
@@ -61,6 +64,7 @@ group :development, :test do
   gem 'guard-rspec', '4.2.8'
   gem 'guard-livereload'
   gem 'database_cleaner'
+  gem 'json_spec'
 end
 
 group :test do

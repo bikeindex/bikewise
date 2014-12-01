@@ -1,11 +1,13 @@
 rspec_opts = {
-  failed_mode: :focus
+  failed_mode: :focus,
+  cmd: "bundle exec rspec"
 }
 
-guard :rspec, cmd: "bundle exec rspec" do
+guard :rspec, rspec_opts do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
+  watch(%r{^app/controllers/api/v1/(.+)\.rb$})        { |m| "spec/api/v1/#{m[1]}_spec.rb"}
 
   # Rails example
   watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
