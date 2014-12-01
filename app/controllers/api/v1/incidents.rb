@@ -3,7 +3,7 @@ module API
     class Incidents < Grape::API
       include API::V1::Defaults
       resource :incidents do
-        desc "Return paginated incidents, either the"
+        desc "Return paginated incidents matching parameters"
         get do
           incidents = find_incidents
           page = params[:page]

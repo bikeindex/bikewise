@@ -3,7 +3,7 @@ module API
     class Locations < Grape::API
       include API::V1::Defaults
       resource :locations do
-        desc "Return paginated incidents, either the"
+        desc "Return paginated incidents matching passed parameters"
         get do
           incidents = find_incidents
           incidents = incidents.limit(100) unless params[:all]
