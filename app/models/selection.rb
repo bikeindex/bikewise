@@ -36,5 +36,9 @@ class Selection < ActiveRecord::Base
   scope :injury_severity, -> { where(select_type: 'injury_severity') }
   scope :experience_level, -> { where(select_type: 'experience_level') }
   scope :gender, -> { where(select_type: 'gender') }
+
+  def self.possible_types
+    Selection.all.pluck(:select_type).uniq
+  end
       
 end

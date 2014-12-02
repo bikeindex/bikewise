@@ -17,4 +17,11 @@ describe Selection do
     it { should have_many :incident_gender_selects }
   end
 
+  describe :possible_types do 
+    it "plucks possible types" do 
+      Selection.create(name: 'foo', select_type: 'foo')
+      Selection.create(name: 'bar', select_type: 'foo')
+      expect(Selection.possible_types.include?('foo')).to be_true
+    end
+  end
 end
