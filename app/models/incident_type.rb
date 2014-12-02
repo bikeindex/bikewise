@@ -21,4 +21,8 @@ class IncidentType < ActiveRecord::Base
     end
   end
 
+  def self.possible_types
+    IncidentType.all.pluck(:name)
+  end
+
 end
