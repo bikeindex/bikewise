@@ -1,6 +1,6 @@
 module API
   module V1
-    class Types < Grape::API
+    class Types < API::V1::Root
       include API::V1::Defaults
       resource :types do 
         desc "Return the selection types for the given type"

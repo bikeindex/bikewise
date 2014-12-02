@@ -5,7 +5,7 @@ describe 'Incidents API V1' do
     @incident = Incident.create
   end
   
-  it "succeeds with one" do
+  it "responds on index" do
     pagination = '{"page":1,"per_page":10,"next_page":null,"prev_page":null,"pages":1,"total_count":1}'
     get '/api/v1/incidents'
     response.code.should == '200'
@@ -13,7 +13,7 @@ describe 'Incidents API V1' do
     expect(JSON.parse(response.body)['incidents'][0]['id']).to eq(@incident.id)
   end
 
-  it "succeeds with one" do
+  it "returns one with one" do
     get "/api/v1/incidents/#{@incident.id}"
     response.code.should == '200'
     expect(JSON.parse(response.body)['incident']['id']).to eq(@incident.id)

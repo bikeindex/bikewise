@@ -9,6 +9,10 @@ class IncidentSerializer < ActiveModel::Serializer
     :url,
     :source,
     :media
+  
+  # has_one :crash,
+  #   :theft,
+  #   :hazard
 
   def type
     object.type_name

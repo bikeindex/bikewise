@@ -2,7 +2,7 @@ module API
   module V1
     class Locations < Grape::API
       include API::V1::Defaults
-      resource :locations do
+      namespace :locations do
         desc "Return paginated incidents matching passed parameters"
         get do
           incidents = find_incidents

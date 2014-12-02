@@ -46,7 +46,6 @@ gem 'grape'
 gem 'grape-active_model_serializers'
 gem 'grape-kaminari'
 gem 'grape-swagger'
-gem 'swagger-ui_rails'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'haml'

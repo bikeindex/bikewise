@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :documentation, only: [:index]
 
-  mount API::Base => '/api'
+  mount API::Root => '/api'
 
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
