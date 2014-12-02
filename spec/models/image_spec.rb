@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Image do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe :validations do
+    it { should belong_to :incident }
+  end
+
+
 end
