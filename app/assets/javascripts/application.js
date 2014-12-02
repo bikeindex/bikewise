@@ -17,4 +17,3 @@
 //= require pikaday
 //= require internal_search
 //= require incident_submit
-//= require swagger-ui

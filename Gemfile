@@ -52,6 +52,12 @@ gem 'haml'
 
 gem 'httparty'
 
+gem 'carrierwave', '~> 0.9.0'
+gem 'carrierwave_backgrounder'
+gem "mini_magick" # a smaller implementation of rmagick, required for rqrcode
+gem 'fog'
+gem 'nokogiri', '~> 1.6.5'
+
 group :development, :test do
   gem 'foreman'
   gem 'rerun'

@@ -94,8 +94,8 @@ class LegacyBwReport < ActiveRecord::Base
       crash_params.merge!({ "#{select[:type]}_select_id" => selection_id(select) })
     end
     crash = Crash.create(crash_params)
-    incident.incident_type.type_property = crash
-    incident.incident_type.save
+    incident.type_properties = crash
+    incident.save
   end
 
   def selection_id(params)  

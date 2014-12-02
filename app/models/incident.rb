@@ -10,17 +10,20 @@ class Incident < ActiveRecord::Base
   has_many :binx_reports, through: :incident_reports, source: :report, source_type: 'BinxReport'
   has_many :scf_reports, through: :incident_reports, source: :report, source_type: 'ScfReport'
   has_many :bw_reports, through: :incident_reports, source: :report, source_type: 'BwReport'
+  has_many :images
 
   belongs_to :experience_level_select, class_name: "Selection"
   belongs_to :gender_select, class_name: "Selection"
 
-  belongs_to :country 
+  belongs_to :country
   belongs_to :user
   belongs_to :incident_type
 
   serialize :source
   serialize :additional_sources
   geocoded_by :address
+
+  belongs_to :type_properties, polymorphic: true
 
   after_validation :geocode, unless: ->(obj){ obj.latitude.present? && obj.longitude.present? }
 

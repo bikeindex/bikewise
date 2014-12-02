@@ -12,6 +12,7 @@ describe Crash do
     it { should belong_to :injury_severity_select }
 
     # Incident_typeable attributes
+    it { should have_one :incident }
     it { should have_one :incident_type }
   end
 

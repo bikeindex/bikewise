@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124233434) do
+ActiveRecord::Schema.define(version: 20141202221909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,14 @@ ActiveRecord::Schema.define(version: 20141124233434) do
 
   add_index "hazards", ["hazard_select_id"], name: "index_hazards_on_hazard_select_id", using: :btree
 
+  create_table "images", force: true do |t|
+    t.string   "image"
+    t.string   "name"
+    t.integer  "incident_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "import_statuses", force: true do |t|
     t.string   "source"
     t.datetime "checked_updates_at"
@@ -111,8 +119,6 @@ ActiveRecord::Schema.define(version: 20141124233434) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "type_property_id"
-    t.string   "type_property_type"
   end
 
   create_table "incidents", force: true do |t|
@@ -141,6 +147,8 @@ ActiveRecord::Schema.define(version: 20141124233434) do
     t.integer  "age"
     t.text     "name"
     t.integer  "gender_select_id"
+    t.integer  "type_properties_id"
+    t.string   "type_properties_type"
   end
 
   add_index "incidents", ["country_id"], name: "index_incidents_on_country_id", using: :btree

@@ -48,8 +48,8 @@ describe LegacyBwReport do
     end
 
     it "creates crash with the selects" do 
-      expect(@incident.incident_type.type_property_type).to eq('Crash')
-      crash = @incident.incident_type.type_property
+      expect(@incident.type_properties_type).to eq('Crash')
+      crash = @incident.type_properties
       ['location', 'condition', 'crash', 'vehicle', 'lighting', 'visibility', 'injury_severity', 'geometry'].each do |type|
         expect(crash.send("#{type}_select")).to be_present
       end

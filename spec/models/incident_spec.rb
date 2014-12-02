@@ -3,11 +3,13 @@ require 'spec_helper'
 describe Incident do
   describe :validations do
     it { should belong_to :incident_type }
+    it { should belong_to :type_properties }
     it { should belong_to :country }
     it { should belong_to :user }
     it { should have_many :incident_reports }
     it { should have_many :binx_reports }
     it { should have_many :scf_reports }
+    it { should have_many :images }
     it { should serialize :source }
     it { should serialize :additional_sources }
   end

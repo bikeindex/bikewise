@@ -3,16 +3,14 @@ class IncidentSerializer < ActiveModel::Serializer
     :title,
     :description,
     :address,
-    :type,
     :occurred_at,
     :updated_at,
     :url,
     :source,
-    :media
-  
-  # has_one :crash,
-  #   :theft,
-  #   :hazard
+    :media,
+    :type 
+
+  has_one :type_properties
 
   def type
     object.type_name

@@ -2,6 +2,8 @@ module API
   module V1
     class Incidents < API::V1::Root
       include API::V1::Defaults
+      include API::V1::IncidentFinder
+      include Grape::Kaminari
       resource :incidents do
         desc "Return paginated incidents matching parameters"
         get do

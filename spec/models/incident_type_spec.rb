@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe IncidentType do
   describe :validations do
-    it { should belong_to :type_property }
     it { should have_many :incidents }
     # it { should validate_presence_of :slug }
     # it { should validate_uniqueness_of :slug }
