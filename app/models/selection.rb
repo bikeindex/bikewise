@@ -38,7 +38,7 @@ class Selection < ActiveRecord::Base
   scope :gender, -> { where(select_type: 'gender') }
 
   def self.possible_types
-    Selection.all.pluck(:select_type).uniq
+    # Selection.all.pluck(:select_type).uniq
   end
       
 end

@@ -22,7 +22,7 @@ class IncidentType < ActiveRecord::Base
   end
 
   def self.possible_types
-    IncidentType.all.pluck(:name)
+    # IncidentType.all.pluck(:name)
   end
 
 end
