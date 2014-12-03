@@ -1,6 +1,6 @@
 # [Bikewise.org](https://bikewise.org)
 
-A new Bikewise is under development and the data is still in migration.
+A new Bikewise is under development and the data is still in migration. STILL
 
 The updated version of Bikewise (this version) is available at [Bikewise.BikeIndex.org](https://bikewise.bikeindex.org). It will move to [Bikewise.org](https://bikewise.org) once everything has been sorted out.
 
