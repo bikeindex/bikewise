@@ -1,4 +1,4 @@
-git pull --rebase public master
+git pull --rebase origin master
 date=$(expr $(date +%s) - 2592000) 
 curl "https://bikewise.bikeindex.org/api/v1/locations?all=true&occurred_since=$date" -k -o 'geojson_data/recent incidents.geojson'
 curl "https://bikewise.bikeindex.org/api/v1/locations?all=true" -o geojson_data/all.geojson -k 

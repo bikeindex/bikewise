@@ -1,5 +1,4 @@
 appendIncidents = (data) ->
-  console.log(data)
   $("#incidents_list").html(Mustache.render(incidents_list, data))
   if $('#dev_display').length > 0
     $("#body_display").text(JSON.stringify(data,undefined,2))
