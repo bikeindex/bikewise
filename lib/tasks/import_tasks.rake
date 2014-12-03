@@ -65,7 +65,6 @@ end
 
 task :bikewise_photo_import => :environment do 
   files = ["crash", "hazard"]
-  source = files.first
   files.each do |source|
     og_path = File.join(Rails.root,"/bikewise_data/#{source}_photos.csv")
     line_number = 0
@@ -76,8 +75,7 @@ task :bikewise_photo_import => :environment do
       i = report.incident.id
       puts "Incident: #{i} -> #{r['file']}"
       url = "http://www.bikewise.org/static/uploads/#{r['file']}"
-      Image.create(incident_id: i, remote_image_url: url)
-      raise StandardError if line_number > 5
+      Image.create(incident_id: i, remote_image_url: url) unless Image.where(incident_id: i).present?
     end
   end
 end

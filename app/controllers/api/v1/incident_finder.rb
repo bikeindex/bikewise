@@ -15,6 +15,11 @@ module API
               end
               incidents = incidents.where("updated_at >= ?", date)
             end
+            if params[:email].present?
+              user = User.where(email: params[:email]).first
+              pp user.incidents
+              incidents = user.incidents if user.present?
+            end
             if params[:occurred_since].present?
               date = Time.at(params[:occurred_since].to_i).utc.to_datetime
               incidents = incidents.where("occurred_at >= ?", date)

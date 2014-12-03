@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
          :trackable, :validatable, 
          :omniauthable, :omniauth_providers => [:bike_index]
 
+  attr_accessor :legacy_bw_email
   # validates_presence_of :binx_id
   # validates_uniqueness_of :binx_id
   validates_uniqueness_of :binx_id, :allow_blank => true, :allow_nil => true
@@ -41,6 +42,20 @@ class User < ActiveRecord::Base
         user.email = data["email"] if user.email.blank?
       end
     end
+  end
+
+  before_save :migrate_legacy_bw_user
+  def migrate_legacy_bw_user
+    return true if legacy_bw_id.present? || legacy_bw_email.blank?
+    legacy_u = User.where.not(id: id).where(email: legacy_bw_email).first
+    return true unless legacy_u.present?
+    self.legacy_bw_id = legacy_u.legacy_bw_id
+    self.legacy_bw_hash = legacy_u.hash 
+    self.name = legacy_u.name unless name.present?
+    self.birth_year = legacy_u.birth_year unless birth_year.present?
+    legacy_u.incidents.each { |i| i.update_attribute :user_id, id }
+    legacy_u.destroy
+    true
   end
 
   def self.find_or_new_from_legacy_hash(h)

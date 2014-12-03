@@ -11,31 +11,27 @@ class CrashSerializer < ActiveModel::Serializer
     :lighting_type,
     :visibility_type,
     :injury_severity_type,
-    :location_type,
     :crash_type,
     :vehicle_type
 
 
     def condition_type
-      object.condition_select.name
+      object.condition_select.name if object.condition_select
     end
     def lighting_type
-      object.lighting_select.name
+      object.lighting_select.name if object.lighting_select
     end
     def visibility_type
-      object.visibility_select.name
+      object.visibility_select.name if object.visibility_select
     end
     def injury_severity_type
-      object.injury_severity_select.name
-    end
-    def location_type
-      object.location_select.name
+      object.injury_severity_select.name if object.injury_severity_select
     end
     def crash_type
-      object.crash_select.name
+      object.crash_select.name if object.crash_select
     end
     def vehicle_type
-      object.vehicle_select.name
+      object.vehicle_select.name if object.vehicle_select
     end
 
 end

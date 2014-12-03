@@ -65,6 +65,9 @@ window.addIncident = ->
         # console.log(textStatus)
 
 $(document).ready ->
+  # $('#bw-int-wrap #incident_type').selectize({
+  #     sortField: 'text'
+  # });
   $('#bw-int-wrap #incident_type').on 'change', ->
     selectIncidentType($('#bw-int-wrap #incident_type').val())
 

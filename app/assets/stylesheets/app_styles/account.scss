@@ -1,0 +1,33 @@
+body.account {
+  // background: rgb(198,222,246);
+  .navbar {
+    background: $home-bg;
+    a {
+      color: rgba(white, .8);
+      &:hover { color: rgba(white, .9); }
+    }
+  }
+}
+
+.account-edit {
+  padding: 40px 0 80px;
+  background: $home-bg;
+  color: white;
+  h1 { margin-bottom: 1em; }
+  p { font-size: 20px; }
+  label { color: rgba(white, .65); }
+}
+
+@media (min-width: 900px) {
+  .account-edit { padding: 150px 0 100px; }
+}
+
+.account-incident-list {
+  padding: 40px 0;
+  background: $gray-lighterer;
+}
+
+@media (min-width: 900px) {
+  .account-incident-list { padding: 80px 0; }
+}
+

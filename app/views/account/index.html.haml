@@ -1,0 +1,65 @@
+.account-edit
+  .container
+    .row
+      .col-md-12
+        %h1
+          Hello #{current_user.display_id}, update your account here
+
+    .form
+      = form_for @account, as: :user, url: account_path(@account) do |f|
+
+        .row
+          .col-md-6
+            .form-group
+              = f.label :email, 'Your email'
+              %p.form-control-static
+                = @account.email
+          .col-md-6
+            .form-group
+              = f.label :name, 'Your name'
+              = f.text_field :name, class: 'form-control'
+          .col-md-6
+            .form-group
+              - if @account.legacy_bw_id.present?
+                = f.label :legacy_bw_email, 'Connected with old Bikewise account'
+                %p.form-control-static
+                  True
+              - else
+                = f.label :legacy_bw_email, 'Had an account on the old Bikewise site? Enter the email you used here'
+                = f.email_field :legacy_bw_email, class: 'form-control'
+          .col-md-6
+            .form-group
+              = f.label :birth_year, 'Year you were born'
+              = f.number_field :birth_year, class: 'form-control'
+
+            / .form-group
+            /   = f.label :current_password, class: '' do 
+            /     Current Password
+            /     %em
+            /       we need your current password to confirm your changes
+            /   = f.password_field :current_password, class: 'form-control'
+            / .form-group
+            /   = f.label :password, class: '' do
+            /     Updated password
+            /     %em
+            /       leave blank if you don't want to change it
+            /   = f.password_field :password, :autocomplete => "off", class: 'form-control'
+
+            / .form-group
+            /   = f.label :password_confirmation, 'Password update confirmation'
+            /   = f.password_field :password_confirmation, class: 'form-control'
+
+        .row
+          .col-md-12 
+            = f.submit 'Update account', class: 'btn btn-success pull-right'
+            / # = link_to "Logout", destroy_user_session_path, method: :delete, class: 'pull-right btn btn-default'
+
+.account-incident-list
+  .container
+    .row
+      .col-md-12
+        %h1
+          Incidents you've reported
+    .row
+      .col-md-12
+        = render partial: "/layouts/incident_search", locals: { users_incidents: true, pages: true }

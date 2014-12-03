@@ -1,9 +1,10 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: 'users/registrations', sessions: 'users/sessions' }
 
   resources :users, only: [:edit, :update]
+  resources :account, only: [:index, :edit, :update]
   root 'welcome#index'
   get 'developer', to: 'welcome#developer'
 

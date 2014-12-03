@@ -16,4 +16,5 @@
 //= require mustache
 //= require pikaday
 //= require internal_search
+//= require selectivize
 //= require incident_submit

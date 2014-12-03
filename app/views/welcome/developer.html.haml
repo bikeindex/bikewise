@@ -9,7 +9,7 @@
       Searching for incidents
     %p
       You can check out how the API works by using the form to search and viewing the parameters we use.
-    = render "/layouts/incident_search"
+    = render partial: "/layouts/incident_search", locals: { pages: true }
   .data-side
     / %p
     /   Because #{link_to "CORS", "https://en.wikipedia.org/wiki/Cross-origin_resource_sharing"} is turned on, you can run this javascript from any browser and it will work correctly. You don't need to be concerned about Cross-Origin issues.

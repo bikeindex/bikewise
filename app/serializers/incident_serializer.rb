@@ -8,12 +8,18 @@ class IncidentSerializer < ActiveModel::Serializer
     :url,
     :source,
     :media,
+    :location_type,
+    :location_description,
     :type 
 
   has_one :type_properties
 
   def type
     object.type_name
+  end
+
+  def location_type
+    object.location_select.name if object.location_select
   end
 
   def media

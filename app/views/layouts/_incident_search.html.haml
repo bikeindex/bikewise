@@ -1,6 +1,8 @@
+- users_incidents ||= false
+- pages ||= false
 .incident-search.panel.panel-default
   .panel-body
-    %form#home_search{ role: 'form', data: {target: "#{BASE_URL}/api/v1/incidents"}}
+    %form#internal_incident_search{ role: 'form', data: {target: "#{BASE_URL}/api/v1/incidents"}}
       / - if @show_dev
       / .row.form-inline.dev-fields-search.bottomed
       /   .form-group
@@ -11,7 +13,8 @@
       /     %label{ for: 'occurred_before'}
       /       Occurred before
       /     = datetime_field_tag "occurred_before", '', class: 'form-control', placeholder: 'mm/dd/yy'
-
+      - if users_incidents
+        = hidden_field_tag :email, current_user.email
       .row
         .col-md-8
           .form-group
@@ -32,7 +35,7 @@
               = text_field_tag "location", '', class: 'form-control', placeholder: 'Occurring near'
           .form-group
             = submit_tag "Find incidents", class: 'btn btn-primary'
-      - if @show_dev
+      - if pages
         .row.form-inline.dev-fields-search#page_data
           .form-group.narrow-field
             %label{ for: 'per_page' }

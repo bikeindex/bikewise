@@ -60,6 +60,28 @@ describe User do
     end
   end
 
-  # <OmniAuth::AuthHash credentials=#<OmniAuth::AuthHash expires=true expires_at=1417578639 refresh_token="4d608d8f918747aff2c9cd403ee6b5d9db659dd04a101c28f4983a7d28bb5e01" token="c69d1aa254d9982884beeb395c2963ec358fe7071fec5270581b27bb22ab8c9d"> extra=#<OmniAuth::AuthHash raw_info=#<OmniAuth::AuthHash access_token=#<OmniAuth::AuthHash application="Bikewise" scope=["read_bikes", "read_user", "write_user", "write_bikes", "read_bikewise", "write_bikewise", "read_organization_membership"]> bike_ids=[6, 35, 65, 2, 32, 29367] id="85" memberships=[#<OmniAuth::AuthHash organization_access_token="36f69976c072df53511065725ff52f89" organization_name="Bike Index Administrators" organization_slug="bikeindex" user_is_organization_admin=true>, #<OmniAuth::AuthHash organization_access_token="f4f83681b8c7f18c7da88602a58f9c6b" organization_name="BikeWise" organization_slug="bikewise" user_is_organization_admin=true>] user=#<OmniAuth::AuthHash email="seth@bikeindex.org" image="https://bikeindex.s3.amazonaws.com/uploads/Us/85/Seth-Herr.jpg" name="Seth Herr" twitter="sethherr" username="seth">>> info=#<OmniAuth::AuthHash::InfoHash bike_ids=[6, 35, 65, 2, 32, 29367] email="seth@bikeindex.org" image="https://bikeindex.s3.amazonaws.com/uploads/Us/85/Seth-Herr.jpg" name="Seth Herr" twitter="sethherr" username="seth"> provider=:bike_index uid="85">
+  describe :migrate_legacy_bw_user do 
+    before :each do 
+      @user = User.create(email: 'legacy@bw.com', legacy_bw_id: 99, password: 'foo888888', name: 'Georgey', birth_year: 1999)
+      @user2 = User.create(email: 'legacy+stuff@bw.com', password: 'foo888888', name: 'George')
+    end
+    it "is true if email isn't present" do
+      expect(@user2.migrate_legacy_bw_user).to be_true
+    end
+    it "is true if legacy legacy_bw_id already exists" do
+      @user2.legacy_bw_id = 999
+      @user2.legacy_bw_email = 'legacy@bw.com'
+      expect(@user2.migrate_legacy_bw_user).to be_true
+    end
+    it "migrates in legacy bw user if one is found" do
+      @user2.legacy_bw_email = @user.email
+      @user2.migrate_legacy_bw_user
+      expect(User.where(id: @user.id)).to_not be_present
+      expect(@user2.email).to eq('legacy+stuff@bw.com')
+      expect(@user2.name).to eq('George')
+      expect(@user2.birth_year).to eq(1999)
+    end
+  end
+
   
 end
