@@ -50,16 +50,47 @@ describe LegacyBwReport do
     it "creates crash with the selects" do
       expect(@incident.type_properties_type).to eq('Crash')
       crash = @incident.type_properties
-      ['location', 'condition', 'crash', 'vehicle', 'lighting', 'visibility', 'injury_severity', 'geometry'].each do |type|
+      ['condition', 'crash', 'vehicle', 'lighting', 'visibility', 'injury_severity', 'geometry'].each do |type|
         expect(crash.send("#{type}_select")).to be_present
       end
-      expect(crash.geometry_select.name).to eq(@bw_report.geometry_from_hash)
+      expect(crash.geometry_select.name).to eq(@bw_report.geometry_from_hash.downcase)
     end
 
     it "sets the correct incident attrs" do 
       expect(@incident.experience_level_select.name).to eq(@hash['cyclist_experience'])
       expect(@incident.gender_select.name).to eq('male')
+      expect(@incident.location_select.name).to eq(@hash['location_type'])
+      expect(@incident.location_description).to eq(@hash['location_desc'])
       expect(@incident.age).to eq(@hash['cyclist_age'].to_i)
+      expect(@incident.description.length).to be > 50
+      expect(@incident.latitude.present?).to be_true
+      expect(@incident.longitude.present?).to be_true
+      expect(@incident.address.present?).to be_true
+      expect(@incident.title.present?).to be_true
+      expect(@incident.incident_type_id).to be > 0
+    end
+  end
+
+  describe :create_hazard do 
+    before :all do 
+      @hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/legacy_bw_report_hash_hazard.json')))
+      @bw_report = LegacyBwReport.find_or_new_from_external_api(@hash)
+      @bw_report.save
+      @bw_report.reload.create_or_update_incident
+      @bw_report.reload
+      @incident = @bw_report.incident
+    end
+
+    it "creates hazard with the selects" do
+      expect(@incident.type_properties_type).to eq('Hazard')
+      hazard = @incident.type_properties
+      expect(hazard.hazard_select.name).to eq(@hash['hazard_type'])
+      expect(hazard.priority_select.name).to eq(@hash['priority'])
+    end
+
+    it "sets the correct incident attrs" do 
+      expect(@incident.location_select.name).to eq(@hash['location_type'])
+      expect(@incident.location_description).to eq(@hash['location_desc'])
       expect(@incident.description.length).to be > 50
       expect(@incident.latitude.present?).to be_true
       expect(@incident.longitude.present?).to be_true

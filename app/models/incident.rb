@@ -14,6 +14,7 @@ class Incident < ActiveRecord::Base
 
   belongs_to :experience_level_select, class_name: "Selection"
   belongs_to :gender_select, class_name: "Selection"
+  belongs_to :location_select, class_name: "Selection"
 
   belongs_to :country
   belongs_to :user

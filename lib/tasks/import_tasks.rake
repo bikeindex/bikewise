@@ -49,19 +49,17 @@ end
 desc "import from Bikewise data dump"
 task :bikewise_import => :environment do 
   source = "crash.csv"
+  source = "hazard.csv"
   og_path = File.join(Rails.root,"/bikewise_data/#{source}")
   line_number = 0
   CSV.foreach(og_path, {headers: true, col_sep: "\t"}) do |row|
-    # line_number += 1
+    line_number += 1
+    puts row.to_hash
     report = LegacyBwReport.find_or_new_from_external_api(row.to_hash)
     raise StandardError, "No report for #{line_number}" unless report.save
     report.reload.create_or_update_incident
     puts "#{report.external_api_id}:  #{report.incident.title}"
-    # puts row.to_hash
-    # puts r
-    # raise StandardError if line_number > 100
   end
-
 end
 
 desc "import users Bikewise data dump"

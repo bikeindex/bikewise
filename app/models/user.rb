@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
          :trackable, :validatable, 
          :omniauthable, :omniauth_providers => [:bike_index]
 
-  validates_presence_of :binx_id
-  validates_uniqueness_of :binx_id
-  # validates_uniqueness_of :binx_id, :allow_blank => true, :allow_nil => true
+  # validates_presence_of :binx_id
+  # validates_uniqueness_of :binx_id
+  validates_uniqueness_of :binx_id, :allow_blank => true, :allow_nil => true
   serialize :binx_bike_ids
   serialize :legacy_bw_hash
   has_many :incidents
@@ -23,13 +23,16 @@ class User < ActiveRecord::Base
   end
 
   def self.from_omniauth(auth)
-    where(binx_id: auth.uid).first_or_create do |user|
-      user.email = auth.info.email
-      user.binx_id = auth.uid
-      user.name = auth.info.name
-      user.binx_bike_ids = auth.info.bike_ids
-      user.password = Devise.friendly_token[0,20]
-    end
+    user = where(binx_id: auth.uid).first
+    return user if user.present?
+    e = auth.info.email
+    user = User.where(email: e).first || User.new(email: e)
+    user.update_attributes(binx_id: auth.uid,
+      name: auth.info.name,
+      binx_bike_ids: auth.info.bike_ids,
+      password: Devise.friendly_token[0,20]
+    )
+    user
   end
 
   def self.new_with_session(params, session)

@@ -4,12 +4,12 @@ class Selection < ActiveRecord::Base
   validates_uniqueness_of :name, scope: [:select_type]
 
   has_many :hazard_selects, class_name: 'Hazard', foreign_key: :hazard_select_id
+  has_many :hazard_priority_selects, class_name: 'Hazard', foreign_key: :priority_select_id
 
   has_many :locking_selects, class_name: 'Theft', foreign_key: :locking_select_id
   has_many :locking_defeat_selects, class_name: 'Theft', foreign_key: :locking_defeat_select_id
 
   has_many :condition_selects, class_name: 'Crash', foreign_key: :condition_select_id
-  has_many :location_selects, class_name: 'Crash', foreign_key: :location_select_id
   has_many :crash_selects, class_name: 'Crash', foreign_key: :crash_select_id
   has_many :vehicle_selects, class_name: 'Crash', foreign_key: :vehicle_select_id
   has_many :geometry_selects, class_name: 'Crash', foreign_key: :geometry_select_id
@@ -18,6 +18,7 @@ class Selection < ActiveRecord::Base
   has_many :visibility_selects, class_name: 'Crash', foreign_key: :visibility_select_id
   has_many :injury_severity_selects, class_name: 'Crash', foreign_key: :injury_severity_select_id
 
+  has_many :incident_location_selects, class_name: 'Incident', foreign_key: :location_select_id
   has_many :incident_experience_level_selects, class_name: 'Incident', foreign_key: :experience_level_select_id
   has_many :incident_gender_selects, class_name: 'Incident', foreign_key: :experience_level_select_id
 
@@ -42,6 +43,16 @@ class Selection < ActiveRecord::Base
 
   def self.possible_types
     self.all.pluck(:select_type).uniq
+  end
+
+  def self.fuzzy_find_or_create(h)
+    hash = ActiveSupport::HashWithIndifferentAccess.new(h)
+    select_hash = {
+      select_type: hash[:select_type].downcase.strip.gsub(/\s+/,'_'),
+      name: hash[:name].downcase.strip.gsub(/\s+/, ' '),
+      user_created: hash[:user_created]
+    }
+    Selection.find_or_create_by(select_hash)
   end
       
 end

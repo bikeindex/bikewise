@@ -12,12 +12,11 @@ class LegacyBwReport < ActiveRecord::Base
   def set_attrs_from_hash
     date = external_api_hash[:edit_date] || external_api_hash[:create_date]
     self.external_api_updated_at = Time.parse(date)
-    self.legacy_bw_user_id = external_api_hash[:create_by]
   end
 
   def incident_attrs
-    gender = selection_id({type: 'gender', name: gender_from_hash})
-    xp = selection_id({type: 'experience_level', name: external_api_hash[:cyclist_experience]})
+    occurred = external_api_hash[:crash_date] || external_api_hash[:create_date]    
+    location_select_id = selection_id({type: 'location', name: external_api_hash[:location_type]})
     hash = {
       latitude: external_api_hash[:lat],
       longitude: external_api_hash[:lng],
@@ -25,10 +24,14 @@ class LegacyBwReport < ActiveRecord::Base
       title: title_from_hash,
       description: external_api_hash[:main_desc],
       age: external_api_hash[:cyclist_age],
-      experience_level_select_id: xp,
-      gender_select_id: gender,
-      occurred_at: Time.parse(external_api_hash[:crash_date]),
-      incident_type_id: incident_type_id
+      country_id: Country.fuzzy_iso_find_id(external_api_hash[:country]),
+      experience_level_select_id: xp_from_hash,
+      gender_select_id: gender_from_hash,
+      occurred_at: Time.parse(occurred),
+      incident_type_id: incident_type_id,
+      location_select_id: location_select_id,
+      location_description: external_api_hash[:location_desc],
+      user_id: user_id_from_hash
     }
   end
 
@@ -45,10 +48,22 @@ class LegacyBwReport < ActiveRecord::Base
   end
 
   def gender_from_hash
+    return nil unless external_api_hash[:cyclist_gender]
     gender = external_api_hash[:cyclist_gender]
     gender = "male" if gender.downcase.strip == 'm'
     gender = "female" if gender.downcase.strip == 'f'
-    gender
+    selection_id({type: 'gender', name: gender})
+  end
+
+  def xp_from_hash
+    return nil unless external_api_hash[:cyclist_experience].present?
+    selection_id({type: 'experience_level', name: external_api_hash[:cyclist_experience]})
+  end
+
+  def user_id_from_hash
+    self.legacy_bw_user_id = external_api_hash[:create_by]
+    user = User.where(legacy_bw_id: legacy_bw_user_id).first
+    user.id if user.present?
   end
 
   def title_from_hash
@@ -80,12 +95,10 @@ class LegacyBwReport < ActiveRecord::Base
       conditions_description: external_api_hash[:conditions_desc],
       injury_description: external_api_hash[:injury_desc]
     }
-    
     [
       {type: 'lighting', name: external_api_hash[:lighting]},
       {type: 'visibility', name: external_api_hash[:visibility]},
       {type: 'injury_severity', name: external_api_hash[:injury_severity]},
-      {type: 'location', name: external_api_hash[:location_type]},
       {type: 'condition', name: external_api_hash[:road_conditions]},
       {type: 'geometry', name: geometry_from_hash, alt: external_api_hash[:geometry_other]},
       {type: 'crash', name: external_api_hash[:crash_type], alt: external_api_hash[:crash_type_other] },
@@ -98,11 +111,28 @@ class LegacyBwReport < ActiveRecord::Base
     incident.save
   end
 
-  def selection_id(params)  
-    if params[:alt_name].present?
-      return Selection.find_or_create_by(select_type: params[:type], name: params[:alt_name]).id
-    end
-    Selection.find_or_create_by(select_type: params[:type], name: params[:name], user_created: false).id
+  def create_hazard
+    self.reload
+    h_select = {type: 'hazard', name: external_api_hash[:hazard_type], alt: external_api_hash[:hazard_type_other]}
+    p_select = {type: 'priority', name: external_api_hash[:priority]}
+    hazard_params = {
+      hazard_select_id: selection_id(h_select),
+      priority_select_id: selection_id(p_select)
+    }
+    hazard = Hazard.create(hazard_params)
+    incident.type_properties = hazard
+    incident.save
+  end
+
+  def selection_id(params)
+    select = {
+      select_type: params[:type],
+      name: params[:name],
+      user_created: false
+    }
+    select.merge!({user_created: true, name: params[:alt_name]}) if params[:alt_name].present?
+    return nil unless select[:name].present?
+    Selection.fuzzy_find_or_create(select).id
   end
 
   def crash_geometry

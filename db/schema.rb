@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202235332) do
+ActiveRecord::Schema.define(version: 20141203170357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 20141202235332) do
   end
 
   create_table "crashes", force: true do |t|
-    t.integer  "location_select_id"
     t.boolean  "rain"
     t.boolean  "snow"
     t.boolean  "fog"
@@ -72,14 +71,12 @@ ActiveRecord::Schema.define(version: 20141202235332) do
   add_index "crashes", ["geometry_select_id"], name: "index_crashes_on_geometry_select_id", using: :btree
   add_index "crashes", ["injury_severity_select_id"], name: "index_crashes_on_injury_severity_select_id", using: :btree
   add_index "crashes", ["lighting_select_id"], name: "index_crashes_on_lighting_select_id", using: :btree
-  add_index "crashes", ["location_select_id"], name: "index_crashes_on_location_select_id", using: :btree
   add_index "crashes", ["vehicle_select_id"], name: "index_crashes_on_vehicle_select_id", using: :btree
   add_index "crashes", ["visibility_select_id"], name: "index_crashes_on_visibility_select_id", using: :btree
 
   create_table "hazards", force: true do |t|
-    t.string   "location_description"
     t.integer  "hazard_select_id"
-    t.integer  "priority"
+    t.integer  "priority_select_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -149,6 +146,8 @@ ActiveRecord::Schema.define(version: 20141202235332) do
     t.integer  "gender_select_id"
     t.integer  "type_properties_id"
     t.string   "type_properties_type"
+    t.text     "location_description"
+    t.integer  "location_select_id"
   end
 
   add_index "incidents", ["country_id"], name: "index_incidents_on_country_id", using: :btree

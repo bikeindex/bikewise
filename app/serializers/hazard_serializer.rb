@@ -1,6 +1,5 @@
 class HazardSerializer < ActiveModel::Serializer
-  attributes :location_description,
-    :priority,
+  attributes :priority,
     :hazard_type
 
   def hazard_type
