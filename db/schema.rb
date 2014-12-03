@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202221909) do
+ActiveRecord::Schema.define(version: 20141202235332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -206,25 +206,27 @@ ActiveRecord::Schema.define(version: 20141202221909) do
   add_index "thefts", ["locking_select_id"], name: "index_thefts_on_locking_select_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "email",                    default: "",    null: false
-    t.string   "encrypted_password",       default: "",    null: false
+    t.string   "email",                      default: "",    null: false
+    t.string   "encrypted_password",         default: "",    null: false
     t.string   "binx_id"
     t.text     "binx_bike_ids"
-    t.text     "additional_emails"
-    t.text     "email_confirmation_token"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",            default: 0,     null: false
+    t.integer  "sign_in_count",              default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.boolean  "admin",                    default: false, null: false
+    t.boolean  "admin",                      default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "experience_level"
     t.integer  "birth_year"
     t.text     "name"
     t.string   "gender"
+    t.text     "email_confirmation_token"
+    t.text     "legacy_bw_hash"
+    t.integer  "legacy_bw_id"
+    t.integer  "experience_level_select_id"
+    t.integer  "gender_select_id"
   end
 
 end

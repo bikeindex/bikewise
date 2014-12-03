@@ -47,7 +47,7 @@ describe LegacyBwReport do
       @incident = @bw_report.incident
     end
 
-    it "creates crash with the selects" do 
+    it "creates crash with the selects" do
       expect(@incident.type_properties_type).to eq('Crash')
       crash = @incident.type_properties
       ['location', 'condition', 'crash', 'vehicle', 'lighting', 'visibility', 'injury_severity', 'geometry'].each do |type|
@@ -67,7 +67,6 @@ describe LegacyBwReport do
       expect(@incident.title.present?).to be_true
       expect(@incident.incident_type_id).to be > 0
     end
-
   end
 
 end

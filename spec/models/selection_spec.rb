@@ -15,6 +15,8 @@ describe Selection do
     it { should have_many :injury_severity_selects }
     it { should have_many :incident_experience_level_selects }
     it { should have_many :incident_gender_selects }
+    it { should have_many :user_experience_level_selects }
+    it { should have_many :user_gender_selects }
   end
 
   describe :possible_types do 

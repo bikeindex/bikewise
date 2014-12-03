@@ -20,5 +20,12 @@ describe IncidentType do
     end
   end
 
+  describe :possible_types do 
+    it "plucks possible types" do 
+      IncidentType.create(name: 'foo')
+      expect(IncidentType.possible_types.include?('foo')).to be_true
+    end
+  end
+
   
 end

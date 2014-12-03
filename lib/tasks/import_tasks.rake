@@ -63,3 +63,20 @@ task :bikewise_import => :environment do
   end
 
 end
+
+desc "import users Bikewise data dump"
+task :bikewise_user_import => :environment do 
+  source = "user.csv"
+  og_path = File.join(Rails.root,"/bikewise_data/#{source}")
+  line_number = 0
+  CSV.foreach(og_path, {headers: true, col_sep: "\t"}) do |row|
+    line_number += 1
+    h = row.to_hash
+    # puts h
+    next if h['email'].present? && h['email'].strip.match(/(to DELETE)|(deleted?\z)/i)
+    user = User.find_or_new_from_legacy_hash(h)
+    raise StandardError, "User error for #{line_number} - #{user.errors.messages}" unless user.save
+    puts "#{user.legacy_bw_id}:  is now #{user.id}"
+  end
+
+end

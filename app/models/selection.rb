@@ -21,6 +21,9 @@ class Selection < ActiveRecord::Base
   has_many :incident_experience_level_selects, class_name: 'Incident', foreign_key: :experience_level_select_id
   has_many :incident_gender_selects, class_name: 'Incident', foreign_key: :experience_level_select_id
 
+  has_many :user_experience_level_selects, class_name: 'User', foreign_key: :experience_level_select_id
+  has_many :user_gender_selects, class_name: 'User', foreign_key: :experience_level_select_id
+
   scope :default, -> { where(user_created: false) }
   scope :user_created, -> { where(user_created: true) }
 
@@ -38,7 +41,7 @@ class Selection < ActiveRecord::Base
   scope :gender, -> { where(select_type: 'gender') }
 
   def self.possible_types
-    # Selection.all.pluck(:select_type).uniq
+    self.all.pluck(:select_type).uniq
   end
       
 end

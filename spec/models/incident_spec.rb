@@ -6,6 +6,8 @@ describe Incident do
     it { should belong_to :type_properties }
     it { should belong_to :country }
     it { should belong_to :user }
+    it { should belong_to :gender_select }
+    it { should belong_to :experience_level_select }
     it { should have_many :incident_reports }
     it { should have_many :binx_reports }
     it { should have_many :scf_reports }
@@ -21,6 +23,7 @@ describe Incident do
       i1 = Incident.create(latitude: -33.891827, longitude: 151.199568, incident_type_id: in_type.id)
       i2 = Incident.create(latitude: -1.891827, longitude: 151.199568, incident_type_id: in_type.id)
       i3 = Incident.create(latitude: -69.891827, longitude: 151.199568, incident_type_id: in_type.id)
+      Incident.all.reload
       result = Incident.as_geojson
       expect(result.first[:type]).to eq('Feature')
       expect(result.first[:properties][:type]).to eq(i1.type_name)
