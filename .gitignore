@@ -13,6 +13,9 @@ spec/cassettes/*
 # Ignore .env
 .env
 
+# Ignore local uploads
+public/uploads
+
 # Ignore rvm stuff
 .rvmrc
 .ruby-gemset

@@ -48,17 +48,37 @@ end
 
 desc "import from Bikewise data dump"
 task :bikewise_import => :environment do 
-  source = "crash.csv"
-  source = "hazard.csv"
-  og_path = File.join(Rails.root,"/bikewise_data/#{source}")
-  line_number = 0
-  CSV.foreach(og_path, {headers: true, col_sep: "\t"}) do |row|
-    line_number += 1
-    puts row.to_hash
-    report = LegacyBwReport.find_or_new_from_external_api(row.to_hash)
-    raise StandardError, "No report for #{line_number}" unless report.save
-    report.reload.create_or_update_incident
-    puts "#{report.external_api_id}:  #{report.incident.title}"
+  files = ["crash", "hazard"]
+  files.each do |source|
+    og_path = File.join(Rails.root,"/bikewise_data/#{source}csv")
+    line_number = 0
+    CSV.foreach(og_path, {headers: true, col_sep: "\t"}) do |row|
+      line_number += 1
+      # puts row.to_hash
+      report = LegacyBwReport.find_or_new_from_external_api(row.to_hash)
+      raise StandardError, "No report for #{line_number}" unless report.save
+      report.reload.create_or_update_incident
+      puts "#{report.external_api_id} -> #{report.incident.id}:  #{report.incident.title}"
+    end
+  end
+end
+
+task :bikewise_photo_import => :environment do 
+  files = ["crash", "hazard"]
+  source = files.first
+  files.each do |source|
+    og_path = File.join(Rails.root,"/bikewise_data/#{source}_photos.csv")
+    line_number = 0
+    CSV.foreach(og_path, {headers: true, col_sep: "\t"}) do |row|
+      line_number += 1
+      r = row.to_hash
+      report = LegacyBwReport.find_by(external_api_id: "#{source}#{r[source]}")
+      i = report.incident.id
+      puts "Incident: #{i} -> #{r['file']}"
+      url = "http://www.bikewise.org/static/uploads/#{r['file']}"
+      Image.create(incident_id: i, remote_image_url: url)
+      raise StandardError if line_number > 5
+    end
   end
 end
 
