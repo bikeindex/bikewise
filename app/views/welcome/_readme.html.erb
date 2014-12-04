@@ -1,6 +1,6 @@
 <p>Bikewise has a versioned open RESTful API.</p>
 
-<p>There are two endpoints: <em>locations</em> and <em>incidents</em> (<a href="https://bikewise.bikeindex.org/api/v1/locations&amp;updated_since=yesterday">api/v1/locations</a>, <a href="https://bikewise.bikeindex.org/api/v1/incidents">api/v1/incidents</a>)</p>
+<p>There are two endpoints: <em>locations</em> and <em>incidents</em> (<a href="https://bikewise.org/api/v1/locations&amp;updated_since=yesterday">api/v1/locations</a>, <a href="https://bikewise.org/api/v1/incidents">api/v1/incidents</a>)</p>
 
 <p><em>Locations</em> provides a valid GeoJSON response, while <em>incidents</em> provides the information about incidents. Both use the same search methods described below. They both reference the same thing - locations are incident locations, but in valid <a href="http://geojson.org/">GeoJSON</a>. The Incident endpoint returns a FeatureCollection of points with IDs that match Incidents.</p>
 
@@ -33,11 +33,11 @@
   "type": "Theft",
   "occurred_at": 1392703200,
   "updated_at": 1413210163,
-  "url": "https://bikewise.bikeindex.org/api/v1/incidents/1451",
+  "url": "https://bikewise.org/api/v1/incidents/1451",
   "source": {
     "name": "BikeIndex.org",
-    "html_url": "https://bikeindex.org/bikes/6638",
-    "api_url": "https://bikeindex.org/api/v1/bikes/6638"
+    "html_url": "https://bikewise.org/bikes/6638",
+    "api_url": "https://bikewise.org/api/v1/bikes/6638"
   },
   "media": {
     "image_url": null,
@@ -135,17 +135,17 @@
 <h3>
 <a name="user-content-pagination" class="anchor" href="#pagination" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pagination</h3>
 
-<p>Incidents uses meta for pagination. You can include page number (<code>page</code>) and incidents per page (<code>per_page</code>) in your query - <a href="https://bikewise.bikeindex.org/api/v1/incidents?page=2&amp;per_page_42">api/v1/incidents?page=2&amp;per_page_42</a>.</p>
+<p>Incidents uses meta for pagination. You can include page number (<code>page</code>) and incidents per page (<code>per_page</code>) in your query - <a href="https://bikewise.org/api/v1/incidents?page=2&amp;per_page_42">api/v1/incidents?page=2&amp;per_page_42</a>.</p>
 
 <h3>
 <a name="user-content-showing-incidents" class="anchor" href="#showing-incidents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Showing incidents</h3>
 
-<p>You can also show an individual incident (particularly useful when you get the id from the location) - <a href="https://bikewise.bikeindex.org/api/v1/locations/42">api/v1/locations/42</a>.</p>
+<p>You can also show an individual incident (particularly useful when you get the id from the location) - <a href="https://bikewise.org/api/v1/locations/42">api/v1/locations/42</a>.</p>
 
 <h3>
 <a name="user-content-creating-incidents" class="anchor" href="#creating-incidents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating incidents</h3>
 
-<p>You can add incidents to Bikewise. Post a hash to <a href="https://bikewise.bikeindex.org/api/v1/incidents">api/v1/incidents</a> that looks like this:</p>
+<p>You can add incidents to Bikewise. Post a hash to <a href="https://bikewise.org/api/v1/incidents">api/v1/incidents</a> that looks like this:</p>
 
 <pre><code>{
   "latitude": 41.92031,

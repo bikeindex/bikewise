@@ -1,10 +1,8 @@
 # [Bikewise.org](https://bikewise.org)
 
-A new Bikewise is under development and the data is still in migration. STILL
+The updated version of Bikewise (this version) is available now live at [Bikewise.org](https://bikewise.org). It's still under development with more changes to come soon!
 
-The updated version of Bikewise (this version) is available at [Bikewise.BikeIndex.org](https://bikewise.bikeindex.org). It will move to [Bikewise.org](https://bikewise.org) once everything has been sorted out.
-
-**[Check out the documentation page](https://bikewise.bikeindex.org/developer)**
+**[Check out the documentation page](https://bikewise.org/documentation)**
 
 ---
 
@@ -13,7 +11,7 @@ The updated version of Bikewise (this version) is available at [Bikewise.BikeInd
 
 Bikewise has a versioned open RESTful API.
 
-There are two endpoints: *locations* and *incidents* ([api/v1/locations](https://bikewise.bikeindex.org/api/v1/locations&updated_since=yesterday), [api/v1/incidents](https://bikewise.bikeindex.org/api/v1/incidents))
+There are two endpoints: *locations* and *incidents* ([api/v1/locations](https://bikewise.org/api/v1/locations&updated_since=yesterday), [api/v1/incidents](https://bikewise.org/api/v1/incidents))
 
 *Locations* provides a valid GeoJSON response, while *incidents* provides the information about incidents. Both use the same search methods described below. They both reference the same thing - locations are incident locations, but in valid [GeoJSON](http://geojson.org/). The Incident endpoint returns a FeatureCollection of points with IDs that match Incidents.
 
@@ -48,7 +46,7 @@ Here is the incident for that location:
   "type": "Theft",
   "occurred_at": 1392703200,
   "updated_at": 1413210163,
-  "url": "https://bikewise.bikeindex.org/api/v1/incidents/1451",
+  "url": "https://bikewise.org/api/v1/incidents/1451",
   "source": {
     "name": "BikeIndex.org",
     "html_url": "https://bikeindex.org/bikes/6638",
@@ -104,17 +102,17 @@ By default it returns the first 100 matching your query. If you pass `all=true` 
 
 ### Pagination
 
-Incidents uses meta for pagination. You can include page number (`page`) and incidents per page (`per_page`) in your query - [api/v1/incidents?page=2&per_page_42](https://bikewise.bikeindex.org/api/v1/incidents?page=2&per_page_42).
+Incidents uses meta for pagination. You can include page number (`page`) and incidents per page (`per_page`) in your query - [api/v1/incidents?page=2&per_page_42](https://bikewise.org/api/v1/incidents?page=2&per_page_42).
 
 
 ### Showing incidents
 
-You can also show an individual incident (particularly useful when you get the id from the location) - [api/v1/locations/42](https://bikewise.bikeindex.org/api/v1/locations/42).
+You can also show an individual incident (particularly useful when you get the id from the location) - [api/v1/locations/42](https://bikewise.org/api/v1/locations/42).
 
 
 ### Creating incidents
 
-You can add incidents to Bikewise. Post a hash to [api/v1/incidents](https://bikewise.bikeindex.org/api/v1/incidents) that looks like this:
+You can add incidents to Bikewise. Post a hash to [api/v1/incidents](https://bikewise.org/api/v1/incidents) that looks like this:
 
 ```
 {

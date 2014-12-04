@@ -6,10 +6,12 @@ describe 'Incidents API V1' do
   end
   
   it "responds on index" do
-    pagination = '{"page":1,"per_page":10,"next_page":null,"prev_page":null,"pages":1,"total_count":1}'
-    get '/api/v1/incidents'
+    Incident.create
+    get '/api/v1/incidents?per_page=1'
+    expect(response.header['Total']).to eq('2')
+    pagination_link = "<http://www.example.com/api/v1/incidents?page=2&per_page=1>; rel=\"last\", <http://www.example.com/api/v1/incidents?page=2&per_page=1>; rel=\"next\""
+    expect(response.header['Link']).to eq(pagination_link)
     response.code.should == '200'
-    expect(response.body).to include_json(pagination)
     expect(JSON.parse(response.body)['incidents'][0]['id']).to eq(@incident.id)
   end
 
