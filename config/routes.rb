@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'developer', to: 'welcome#developer'
 
-  resources :documentation, only: [:index]
+  resources :documentation, only: [:index] do 
+    collection do 
+      get :api_v1
+      get :api_v2
+    end
+  end
 
   mount API::Root => '/api'
 

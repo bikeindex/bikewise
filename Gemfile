@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.9'
+gem 'rails', '4.1.10'
 gem 'pg'
 
 gem 'sass-rails', '~> 4.0.3'
@@ -43,18 +43,22 @@ gem 'pg_search'
 
 gem 'kaminari'
 gem 'grape'
-gem 'grape-active_model_serializers'
+gem 'grape-active_model_serializers', git: "https://github.com/jrhe/grape-active_model_serializers"
 gem 'grape-swagger'
 gem 'api-pagination'
+gem 'swagger-ui_rails'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'haml'
 
 gem 'httparty'
 
+gem 'kramdown'
+gem 'haml-kramdown'
+
 gem 'carrierwave', '~> 0.9.0'
 gem 'carrierwave_backgrounder'
-gem "mini_magick" # a smaller implementation of rmagick, required for rqrcode
+gem "mini_magick"
 gem 'fog'
 gem 'nokogiri', '~> 1.6.5'
 

@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require mustache
-//= require pikaday
+//= require external_scripts/mustache
+//= require external_scripts/pikaday
+//= require external_scripts/selectivize
 //= require internal_search
-//= require selectivize
 //= require incident_submit

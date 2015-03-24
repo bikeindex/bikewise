@@ -24,15 +24,15 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.infer_base_class_for_anonymous_controllers = false
 
-  config.before :suite do
-    DatabaseCleaner.clean
-  end
+  # config.before :suite do
+  #   DatabaseCleaner.clean
+  # end
 
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
+  # config.before(:each) do
+  #   DatabaseCleaner.start
+  # end
 
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
+  # config.after(:each) do
+  #   DatabaseCleaner.clean
+  # end
 end

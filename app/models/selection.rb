@@ -42,7 +42,7 @@ class Selection < ActiveRecord::Base
   scope :gender, -> { where(select_type: 'gender') }
 
   def self.possible_types
-    self.all.pluck(:select_type).uniq
+    all.pluck(:select_type).uniq
   end
 
   def self.fuzzy_find_or_create(h)

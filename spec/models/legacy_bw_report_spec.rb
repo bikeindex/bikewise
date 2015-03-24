@@ -38,7 +38,7 @@ describe LegacyBwReport do
   end
 
   describe :create_crash do 
-    before :all do 
+    before :each do 
       @hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/legacy_bw_report_hash_crash.json')))
       @bw_report = LegacyBwReport.find_or_new_from_external_api(@hash)
       @bw_report.save
@@ -72,7 +72,7 @@ describe LegacyBwReport do
   end
 
   describe :create_hazard do 
-    before :all do 
+    before :each do 
       @hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/legacy_bw_report_hash_hazard.json')))
       @bw_report = LegacyBwReport.find_or_new_from_external_api(@hash)
       @bw_report.save
