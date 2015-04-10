@@ -41,10 +41,6 @@ class Selection < ActiveRecord::Base
   scope :experience_level, -> { where(select_type: 'experience_level') }
   scope :gender, -> { where(select_type: 'gender') }
 
-  def self.possible_types
-    all.pluck(:select_type).uniq
-  end
-
   def self.fuzzy_find_or_create(h)
     hash = ActiveSupport::HashWithIndifferentAccess.new(h)
     select_hash = {

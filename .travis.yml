@@ -7,4 +7,4 @@ before_script:
 - psql -c 'create database bikewise_test' -U postgres
 env:
   global:
-    secure: BgIy8fbK84zYqjWgsk/zWk53Jgq5359smZ07hjae8XNT3dfD441nazcIBjOye6amCA6ddJiix+5gzcii8NWsIsOREtdM77xCxRIxtw6nbTTf2tTk4KwHWrHsq2xrLNNvOVksISOzw2NFLpZ7JmCLGrgAjABoVUEDFobn432l5cc=
+    secure: iTxhupaRvHb6/PnacSp47jV42U/slDTwGRwghHVBkKLoUmaEHoWB+qBhHDk2q3YVWnOEs4eQ7DjhBWkdq1OUEvnxall3UAop3576eDlQOFdaOXnazlWlXJDfIPdzlkVXtO6LQUJK5FC5b8/ntpasN7O8g6550AssynCbcGAdbw4=

@@ -210,6 +210,7 @@ ActiveRecord::Schema.define(version: 20150409234457) do
     t.string   "encrypted_password",         default: "",    null: false
     t.string   "binx_id"
     t.text     "binx_bike_ids"
+    t.text     "email_confirmation_token"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",              default: 0,     null: false
     t.datetime "current_sign_in_at"
@@ -222,7 +223,6 @@ ActiveRecord::Schema.define(version: 20150409234457) do
     t.integer  "birth_year"
     t.text     "name"
     t.string   "gender"
-    t.text     "email_confirmation_token"
     t.text     "legacy_bw_hash"
     t.integer  "legacy_bw_id"
     t.integer  "experience_level_select_id"

@@ -26,7 +26,7 @@ module API
       
         desc "Return selections for a given type"
         params do
-          requires :select_type, type: String, desc: 'Selection type', values: Selection.possible_types
+          requires :select_type, type: String, desc: 'Selection type', values: SELECTION_TYPES
           optional :include_user_created, type: Boolean, default: false, desc: 'Include user submitted types (instead of only default types)'
         end
         get ':select_type' do 

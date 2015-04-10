@@ -14,7 +14,7 @@ module API
           params :find_incident_params do 
             optional :occurred_before, type: Integer, desc: "End of period"
             optional :occurred_after, type: Integer, desc: "Start of period"
-            optional :incident_type, type: String, values: IncidentType.all.pluck(:slug), desc: "Only incidents of specific type"
+            optional :incident_type, type: String, values: INCIDENT_TYPES, desc: "Only incidents of specific type"
             optional :proximity, type: String, desc: "Center of location for proximity search", documentation: { example: '45.521728,-122.67326'}
             optional :proximity_square, type: Integer, desc: "Size of the proximity search", default: 100
             optional :query, type: String, desc: "Full text search of incidents"
