@@ -3,19 +3,22 @@ require 'spec_helper'
 describe BikeIndexIntegration do
   describe :create_or_update_binx_report do 
     it "should create a bike" do 
-      VCR.use_cassette('bike_index_create_bike') do
-        integration = BikeIndexIntegration.new 
-        expect(BinxReport.count).to eq(0)
-        integration.create_or_update_binx_report(3414)
-        expect(BinxReport.count).to eq(1)
-        binx_report = BinxReport.last
-        expect(binx_report.processed).to be_false
-        binx_report.process_hash
-        expect(binx_report.external_api_hash[:title]).to match("2014 Jamis Allegro Comp Disc")
-        expect(binx_report.binx_id).to eq(3414)
-        expect(binx_report.external_api_id).to eq(146)
-        expect(binx_report.external_api_updated_at).to be_present
-        expect(binx_report.external_api_checked_at).to be_present
+      if ENV['BIKEINDEX_ACCESS_TOKEN'].present?
+        VCR.use_cassette('bike_index_create_bike') do
+          integration = BikeIndexIntegration.new 
+          expect(BinxReport.count).to eq(0)
+          integration.create_or_update_binx_report(3414)
+          expect(BinxReport.count).to eq(1)
+          binx_report = BinxReport.last
+          binx_report.reload
+          expect(binx_report.processed).to be_false
+          binx_report.process_hash
+          expect(binx_report.external_api_hash[:title]).to match("2014 Jamis Allegro Comp Disc")
+          expect(binx_report.binx_id).to eq(3414)
+          expect(binx_report.external_api_id).to eq(146)
+          expect(binx_report.external_api_updated_at).to be_present
+          expect(binx_report.external_api_checked_at).to be_present
+        end
       end
     end
 
