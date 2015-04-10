@@ -19,10 +19,10 @@ describe Incident do
   describe :as_geojson do 
     it "should make it work" do 
       in_type = FactoryGirl.create(:incident_type_theft)
-      in_type.reload
-      i1 = Incident.create(latitude: -33.891827, longitude: 151.199568, incident_type_id: in_type.id)
-      i2 = Incident.create(latitude: -1.891827, longitude: 151.199568, incident_type_id: in_type.id)
-      i3 = Incident.create(latitude: -69.891827, longitude: 151.199568, incident_type_id: in_type.id)
+      t = Time.now
+      i1 = Incident.create(latitude: -33.891827, longitude: 151.199568, incident_type_id: in_type.id, occurred_at: t)
+      i2 = Incident.create(latitude: -1.891827, longitude: 151.199568, incident_type_id: in_type.id, occurred_at: Time.now - 1.hour)
+      i3 = Incident.create(latitude: -69.891827, longitude: 151.199568, incident_type_id: in_type.id, occurred_at: Time.now - 1.day)
       Incident.all.reload
       result = Incident.as_geojson
       expect(result.first[:type]).to eq('Feature')
@@ -30,6 +30,7 @@ describe Incident do
       expect(result.first[:properties][:id]).to eq(i1.id)
       expect(result.first[:geometry][:coordinates][1]).to eq(i1.latitude)
       expect(result.first[:geometry][:coordinates][0]).to eq(i1.longitude)
+      expect(result.first[:properties][:occurred_at]).to eq(t.to_i)
     end
   end
 

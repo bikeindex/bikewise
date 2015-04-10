@@ -9,3 +9,7 @@
 @import "app_styles/dev";
 @import "app_styles/incident_search";
 @import "app_styles/incident_submit";
+
+.swagger-section {
+  input.submit { @extend .btn; @extend .btn-success; }
+}

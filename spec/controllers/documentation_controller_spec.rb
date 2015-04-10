@@ -7,15 +7,14 @@ describe DocumentationController do
       get :index
     end
     it { should respond_with(:redirect) }
-    it { should redirect_to('/documentation/api_v1') }
+    it { should redirect_to('/documentation/api_v2') }
   end
 
   describe :api_v1 do 
     before do 
       get :api_v1
     end
-    it { should respond_with(:success) }
-    it { should render_template(:api_v1) }
+    it { should redirect_to('/documentation/api_v2') }
   end
 
   describe :api_v2 do 

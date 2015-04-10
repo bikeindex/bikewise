@@ -42,6 +42,7 @@ class Incident < ActiveRecord::Base
     self.incident_type = IncidentType.find_or_create_by(name: 'Unconfirmed') unless self.incident_type_id.present?
     self.type_name = incident_type.name
     self.additional_sources = []
+    self.occurred_at_stamp = occurred_at.to_i
     incident_reports.each { |ir| self.additional_sources << ir.report.source_hash }
     source_report = incident_reports.where(is_incident_source: true).first
     if source_report.present?
@@ -55,11 +56,12 @@ class Incident < ActiveRecord::Base
   # Faster JSON serialization because GeoJSON with 10k+ results
   # http://brainspec.com/blog/2012/09/28/lightning-json-in-rails/
   def self.as_geojson
-    connection.select_all(select([:latitude, :longitude, :id, :type_name]).arel).map { |attrs|
+    connection.select_all(select([:latitude, :longitude, :id, :type_name, :occurred_at_stamp]).arel).map { |attrs|
       { type: "Feature",
         properties: {
           id: attrs['id'].to_i,
-          type: attrs['type_name']
+          type: attrs['type_name'],
+          occurred_at: attrs['occurred_at_stamp'].to_i
         },
         geometry: {
           type: "Point",

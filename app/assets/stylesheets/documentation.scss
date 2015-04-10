@@ -83,7 +83,6 @@ $twelve-column:                  100%;
 
   .content { min-height: 10px; }
   .sandbox_header { padding: 5px 2px; }
-  // input.submit { @extend .btn; @extend .btn-primary; }
   
   .swagger-ui-wrap { max-width: 100%; }
 }
@@ -107,7 +106,7 @@ $twelve-column:                  100%;
     a#explore {
       float: left;
       width: 10%;
-      margin: 1.2em 0 0;
+      margin: 2.1em 0 0;
       padding-left: 0;
       padding-right: 0;
     }
@@ -159,6 +158,10 @@ footer#footer {
   clear: both;
   width: 100%;
   height: 80px;
+}
+
+.global-footer {
+  margin-top: 160px;
 }
 
 @media (min-width: $s-breakpoint) {

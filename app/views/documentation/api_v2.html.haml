@@ -12,27 +12,31 @@
       %header#header.content-header
         .container-fluid
           / %a#logo{href: root_url} BikeWise
-          %form#api_selector.form
-            .api-header-group.api-header-url
-              %label{ for: 'baseUrl' }
-                Swagger doc url
-              %input#input_baseUrl.form-control{:name => "baseUrl", :placeholder => "https://bikewise.org/api/v2", :type => "text"}
-            .api-header-group.api-header-key
-              %label{ for: 'baseUrl' }
-                API key
-              %input#input_apiKey.form-control{:name => "apiKey", :placeholder => "api_key", :type => "text"}
-            %a#explore.btn.btn-primary{:href => "#"}
-              Explore
+          / %form#api_selector.form
+          /   .api-header-group.api-header-url
+          /     %label{ for: 'baseUrl' }
+          /       Swagger doc url
+          /     %input#input_baseUrl.form-control{:name => "baseUrl", :placeholder => "https://bikewise.org/api/v2", :type => "text"}
+          /   .api-header-group.api-header-key
+          /     %label{ for: 'baseUrl' }
+          /       API key
+          /     %input#input_apiKey.form-control{:name => "apiKey", :placeholder => "api_key", :type => "text"}
+          /   %a#explore.btn.btn-primary{:href => "#"}
+          /     Explore
 
+          .outside-info
+            %h2.padded
+              General notes:
+            %p
+              %strong
+                Time
+              display everything in #{link_to "UTC unix timestamps", "https://en.wikipedia.org/wiki/Unix_time", target: '_blank'} (integers). Any time parameters you send need to use timestamps as well.
+            %p
+              %strong
+                Posting
+              in the future we will accept incidents, right now we're just displaying them.
       .container-fluid
         .outside-info
-          %h2.padded
-            General notes:
-          %p
-            %strong
-              Time
-            display everything in #{link_to "UTC unix timestamps", "https://en.wikipedia.org/wiki/Unix_time", target: '_blank'} (integers). Any time parameters you send need to use timestamps as well.
-
           %h2.padded
             BikeWise API V2 endpoints
 
