@@ -42,7 +42,7 @@ class Incident < ActiveRecord::Base
     self.incident_type = IncidentType.find_or_create_by(name: 'Unconfirmed') unless self.incident_type_id.present?
     self.type_name = incident_type.name
     self.additional_sources = []
-    self.occurred_at_stamp = occurred_at.to_i
+    self.occurred_at_stamp = (occurred_at || created_at).to_i
     incident_reports.each { |ir| self.additional_sources << ir.report.source_hash }
     source_report = incident_reports.where(is_incident_source: true).first
     if source_report.present?
