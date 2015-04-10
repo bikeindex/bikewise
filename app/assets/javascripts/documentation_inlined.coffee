@@ -75,12 +75,3 @@ $ ->
 
   window.swaggerUi.load()
   
-  $('#header').headroom()
-  $('.set-token').click (e) ->
-    e.preventDefault()
-    $('#header').addClass('headroom--pinned').removeClass('headroom--unpinned')
-    input_key = $("#input_apiKey")
-    input_key.fadeOut('fast', ->
-      # input_key.val($(e.target).attr('data-token')).change()
-      input_key.fadeIn('fast')
-    )
