@@ -5,7 +5,7 @@ describe 'Incidents API V2' do
     @incident = Incident.create
   end
   
-  xit "responds on index" do
+  it "responds on index" do
     Incident.create
     get '/api/v2/incidents?per_page=1'
     result = JSON.parse(response.body)
@@ -16,19 +16,18 @@ describe 'Incidents API V2' do
     expect(result['incidents'][0]['id']).to eq(@incident.id)
   end
 
-  xit "returns one with one" do
+  it "returns one with one" do
     get "/api/v2/incidents/#{@incident.id}"
     result = JSON.parse(response.body)
     response.code.should == '200'
     expect(result['incident']['id']).to eq(@incident.id)
   end
 
-  xit "responds with missing" do 
+  it "responds with missing" do 
     get "/api/v2/incidents/10000"
     response.code.should == '404'
     result = JSON.parse(response.body)
-    pp result
-    expect(result["message"].present?).to be_true
+    expect(result["error"].present?).to be_true
   end
 
 end

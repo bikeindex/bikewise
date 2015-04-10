@@ -21,6 +21,13 @@
           get '/' do
             paginate find_incidents
           end
+
+          params do 
+            optional :id, type: Integer, desc: "Incident ID"
+          end
+          get '/:id' do
+            Incident.find(params[:id])
+          end
         end
       end
     end
