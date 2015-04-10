@@ -28,7 +28,6 @@ module API
         }).finish
       end
 
-      mount API::V2::Selections
       mount API::V2::Incidents
       mount API::V2::Locations
 
