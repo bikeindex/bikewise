@@ -51,4 +51,33 @@ describe Incident do
     end
   end
 
+  describe :mapbox_title do 
+    it "does a good title" do 
+      incident = Incident.new 
+      incident.stub(:title).and_return("Stolen 2014 GT Bicycles transeo 4.0(black and orange)")
+      incident.stub(:occurred_at).and_return(Time.parse("2014-05-20 01:00:00 -0500"))
+      expect(incident.mapbox_title).to eq("Stolen 2014 GT Bicycles transeo 4.0 (05-20-2014)")
+    end
+  end
+
+  describe :mapbox_color do 
+    it "does color" do 
+      incident = Incident.new(occurred_at: Time.now - 5.hours)
+      pp incident.mapbox_color
+      expect(incident.mapbox_color).to eq("#E74C3C")
+    end
+  end
+
+  describe :mapbox_geojson do 
+    it "outputs mapbox geojson" do 
+      incident_type = FactoryGirl.create(:incident_type_theft)
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
+      binx_report = BinxReport.find_or_new_from_external_api(hash)
+      binx_report.process_hash
+      binx_report.save
+      incident = binx_report.create_or_update_incident
+      expect(incident.mapbox_geojson[:properties][:'marker-color']).to eq("#EDEFF0")
+    end
+  end
+
 end

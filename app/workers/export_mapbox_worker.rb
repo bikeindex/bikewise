@@ -1,4 +1,4 @@
-class SaverWorker
+class ExportMapboxWorker
   include Sidekiq::Worker
   sidekiq_options queue: 'tasker'
   sidekiq_options backtrace: true
@@ -6,7 +6,7 @@ class SaverWorker
     
   def perform(id)
     incident = Incident.find(id)
-    incident.save
+    Redis.current.lpush(ENV['MAPBOX_LIST_ID'], incident.mapbox_geojson.to_json)
   end
 
 end

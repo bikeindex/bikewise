@@ -70,4 +70,46 @@ class Incident < ActiveRecord::Base
     }
   end
 
+  def mapbox_title
+    "#{title.gsub(/\([^\)]*\)/, '').strip} (#{I18n.l occurred_at, format: :mapbox_time_display})"
+  end
+
+  def mapbox_color
+    o = occurred_at 
+    case 
+    when o > Time.now - 1.day 
+      "#E74C3C"
+    when o > Time.now - 1.week
+      "#EF8B80"
+    when o > Time.now - 1.month
+      "#F9CFCA"
+    else
+      "#EDEFF0"
+    end
+  end
+
+  def mapbox_description
+    d = image_url.present? ? "<img src='#{image_url}'> " : ''
+    d += description + ' '
+    d + ActionController::Base.helpers.link_to('View on Bike Index', source[:html_url], target: '_blank')
+  end
+
+  def mapbox_geojson
+    {
+      type: "Feature",
+      properties: {
+        id: id,
+        title: mapbox_title,
+        description: mapbox_description,
+        occurred_at: occurred_at.to_s,
+        :"marker-size" => "small",
+        :"marker-color" => mapbox_color
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [longitude.to_f, latitude.to_f]
+      }
+    }
+  end
+
 end
