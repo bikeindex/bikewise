@@ -15,7 +15,8 @@ task :write_mapbox_geojson => :environment do
   path = ENV['MAPBOX_EXPORT_TARGET'] + '/mapbox_geojson.geojson'
   output = File.open(path, "w")
   output.write '{"type": "FeatureCollection","features": ['
-  Redis.current.lrange(ENV['MAPBOX_LIST_ID'], 0, -1).each { |i| output.write i + "," }
+  Redis.current.lrange(ENV['MAPBOX_LIST_ID'], 0, -2).each { |i| output.write i + "," }
+  Redis.current.lrange(ENV['MAPBOX_LIST_ID'], -1, -1).each { |i| output.write i }
   output.write ']}'
   output.close
 end
