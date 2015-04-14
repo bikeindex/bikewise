@@ -63,7 +63,6 @@ describe Incident do
   describe :mapbox_color do 
     it "does color" do 
       incident = Incident.new(occurred_at: Time.now - 5.hours)
-      pp incident.mapbox_color
       expect(incident.mapbox_color).to eq("#E74C3C")
     end
   end

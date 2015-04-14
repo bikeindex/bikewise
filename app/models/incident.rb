@@ -90,7 +90,8 @@ class Incident < ActiveRecord::Base
 
   def mapbox_description
     d = image_url.present? ? "<img src='#{image_url}'> " : ''
-    d += "#{description} "
+    d += ActionController::Base.helpers.strip_tags(description) if description.present?
+    d += " "
     d + ActionController::Base.helpers.link_to('View on Bike Index', source[:html_url], target: '_blank')
   end
 

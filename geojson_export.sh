@@ -5,3 +5,4 @@ curl "https://bikewise.org/api/v2/locations?all=true" -o geojson_data/all.geojso
 git add geojson_data
 git commit -m "Updated with latest mapping data" 
 git push origin master
+rm -f geojson_data/mapbox_geojson.geojson
