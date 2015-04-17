@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe GetBinxReportWorker do
 
-  it "should get an issue page and process it" do 
+  it "gets an issue page and process it" do 
     VCR.use_cassette('get_binx_report_worker') do
       Sidekiq::Testing.inline!
       expect(BinxReport.count).to eq(0)

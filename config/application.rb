@@ -33,5 +33,10 @@ module Bikewise
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
+
+    config.generators do |g|
+      g.test_framework :rspec
+      g.factory_girl false      
+    end
   end
 end

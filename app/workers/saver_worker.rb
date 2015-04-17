@@ -6,6 +6,7 @@ class SaverWorker
     
   def perform(id)
     incident = Incident.find(id)
+    incident.feature_marker = incident.simplestyled_geojson
     incident.save
   end
 

@@ -3,7 +3,7 @@
       class Incidents < API::V2::Root
         include API::V2::Defaults
         
-        resource :incidents do
+        resource :incidents, desc: "Incidents matching parameters"  do
           desc "Paginated incidents matching parameters", {
             notes: <<-NOTE
 

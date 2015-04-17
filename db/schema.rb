@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409234457) do
+ActiveRecord::Schema.define(version: 20150417135006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -149,6 +149,7 @@ ActiveRecord::Schema.define(version: 20150409234457) do
     t.text     "location_description"
     t.integer  "location_select_id"
     t.integer  "occurred_at_stamp"
+    t.json     "feature_marker"
   end
 
   add_index "incidents", ["country_id"], name: "index_incidents_on_country_id", using: :btree

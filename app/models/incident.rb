@@ -35,6 +35,7 @@ class Incident < ActiveRecord::Base
   },
   using: {tsearch: {dictionary: "english", prefix: true}}
 
+  scope :feature_markered, -> { where("feature_marker IS NOT NULL") }
   default_scope { order('occurred_at DESC') } 
 
   before_save :store_type_name_and_sources
@@ -70,12 +71,16 @@ class Incident < ActiveRecord::Base
     }
   end
 
-  def mapbox_title
-    "#{title.gsub(/\([^\)]*\)/, '').strip} (#{I18n.l occurred_at, format: :mapbox_time_display})"
+  def fallback_occurred_at
+    occurred_at || Time.now
   end
 
-  def mapbox_color
-    o = occurred_at 
+  def simplestyled_title
+    "#{(title || "").gsub(/\([^\)]*\)/, '').strip} (#{I18n.l fallback_occurred_at, format: :simplestyled_time_display})"
+  end
+
+  def simplestyled_color
+    o = fallback_occurred_at
     case 
     when o > Time.now - 1.day 
       "#E74C3C"
@@ -88,23 +93,22 @@ class Incident < ActiveRecord::Base
     end
   end
 
-  def mapbox_description
+  def simplestyled_description
     d = image_url.present? ? "<img src='#{image_url}'> " : ''
     d += ActionController::Base.helpers.strip_tags(description) if description.present?
     d += " "
-    d + ActionController::Base.helpers.link_to('View on Bike Index', source[:html_url], target: '_blank')
+    d + ActionController::Base.helpers.link_to("View details", source[:html_url].to_s, target: '_blank') if source[:html_url].present?
   end
 
-  def mapbox_geojson
+  def simplestyled_geojson
     {
       type: "Feature",
       properties: {
-        id: id,
-        title: mapbox_title,
-        description: mapbox_description,
+        title: simplestyled_title,
+        description: simplestyled_description,
         occurred_at: occurred_at.to_s,
         :"marker-size" => "small",
-        :"marker-color" => mapbox_color
+        :"marker-color" => simplestyled_color
       },
       geometry: {
         type: "Point",
