@@ -5,6 +5,6 @@ task :start do
 end
 
 desc "Re-save everything"
-task :seeclickfix_import => :environment do
+task :resave_everything => :environment do
   Incident.all.pluck(:id).each { |i| SaverWorker.perform_async(i) }
 end
