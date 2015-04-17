@@ -75,7 +75,20 @@ describe Incident do
       binx_report.process_hash
       binx_report.save
       incident = binx_report.create_or_update_incident
-      expect(incident.simplestyled_geojson[:properties][:'marker-color']).to eq("#EDEFF0")
+      expect(incident.simplestyled_geojson[:properties][:'marker-color']).to eq("#E74C3C")
+    end
+  end
+
+  describe :search do 
+    it "searches successfully" do 
+      incident_type = FactoryGirl.create(:incident_type_theft)
+      hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
+      binx_report = BinxReport.find_or_new_from_external_api(hash)
+      binx_report.process_hash
+      binx_report.save
+      incident = binx_report.create_or_update_incident
+      SaverWorker.new.perform(incident.id)
+      Incident.search_text('jamis').unscoped.pluck(:feature_marker)
     end
   end
 

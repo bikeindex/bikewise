@@ -23,11 +23,11 @@ describe 'Locations API V2' do
       incident = binx_report.create_or_update_incident
       SaverWorker.new.perform(incident.id)
       incident = Incident.create(latitude: 32.7348953, longitude: -117.0970596)      
-      get '/api/v2/locations/markers'
+      get '/api/v2/locations/markers?query=comp'
       result = JSON.parse(response.body)
       pp result
       expect(result['type']).to eq('FeatureCollection')
-      expect(result['features'][0]['properties']['marker-color']).to eq("#EDEFF0")
+      expect(result['features'][0]['properties']['marker-color']).to eq("#E74C3C")
       response.code.should == '200'
     end
   end

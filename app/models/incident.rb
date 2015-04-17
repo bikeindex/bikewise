@@ -29,11 +29,20 @@ class Incident < ActiveRecord::Base
   after_validation :geocode, unless: ->(obj){ obj.latitude.present? && obj.longitude.present? }
 
   include PgSearch
-  pg_search_scope :search_text, against: {
-    title: 'A',
-    description:   'B',
-  },
-  using: {tsearch: {dictionary: "english", prefix: true}}
+  pg_search_scope :search, against: [:title, :description]
+  # pg_search_scope :search, against: {
+  #   title: 'A',
+  #   description:   'B',
+  # },
+  # using: {tsearch: {dictionary: "english", prefix: true}}
+
+  def self.search_text(query)
+    if query.present?
+      search(query)
+    else
+      scoped
+    end
+  end
 
   scope :feature_markered, -> { where("feature_marker IS NOT NULL") }
   default_scope { order('occurred_at DESC') } 

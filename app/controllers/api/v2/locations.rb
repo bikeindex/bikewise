@@ -61,7 +61,7 @@ module API
         get '/markers' do
           incidents = find_incidents.feature_markered
           incidents = incidents.limit(100) unless params[:all]
-          geoj = { type: "FeatureCollection", features: incidents.pluck(:feature_marker) }
+          geoj = { type: "FeatureCollection", features: incidents.unscoped.pluck(:feature_marker) }
           render geoj
         end
 
