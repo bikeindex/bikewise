@@ -42,11 +42,12 @@ getResults = (per_page=10) ->
         $('#url_parameters').append(dparam + "\n") 
 
 $(document).ready ->
-  getResults(5)
-  $('#internal_incident_search').submit (e) ->
-    e.preventDefault()
-    getResults()
-  picker = new Pikaday(field: $("#occurred_before")[0])
+  if $('#internal_incident_search').length > 0 
+    getResults(5)
+    $('#internal_incident_search').submit (e) ->
+      e.preventDefault()
+      getResults()
+    picker = new Pikaday(field: $("#occurred_before")[0])
 
 
 incidents_list = """
