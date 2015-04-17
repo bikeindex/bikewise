@@ -85,11 +85,13 @@ class Incident < ActiveRecord::Base
     when o > Time.now - 1.day 
       "#E74C3C"
     when o > Time.now - 1.week
-      "#EF8B80"
+      "#EB6759"
     when o > Time.now - 1.month
-      "#F9CFCA"
+      "#EE8276"
+    when o > Time.now - 6.months
+      "#F29D94"
     else
-      "#EDEFF0"
+      "#E74C3C"
     end
   end
 
