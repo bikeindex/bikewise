@@ -7,7 +7,8 @@ module API
         helpers do
           params :location_params do
             use :find_incident_params
-            optional :all, type: Boolean, desc: "Give 'em all to me"
+            optional :limit, type: Integer, desc: "Max number of results to return. Defaults to 100"
+            optional :all, type: Boolean, desc: "Give 'em all to me. Will ignore limit"
           end
         end
         desc "Unpaginated geojson response", {
@@ -43,7 +44,8 @@ module API
         end
         get '/' do
           incidents = find_incidents
-          incidents = incidents.limit(100) unless params[:all]
+          limit = params[:limit] || 100
+          incidents = incidents.limit(limit) unless params[:all]
           geoj = { type: "FeatureCollection", features: incidents.as_geojson }
           render geoj
         end
@@ -60,7 +62,8 @@ module API
         end
         get '/markers' do
           incidents = find_incidents.feature_markered
-          incidents = incidents.limit(100) unless params[:all]
+          limit = params[:limit] || 100
+          incidents = incidents.limit(limit) unless params[:all]
           geoj = { type: "FeatureCollection", features: incidents.unscoped.pluck(:feature_marker) }
           render geoj
         end
