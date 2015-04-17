@@ -22,11 +22,16 @@ describe 'Locations API V2' do
       binx_report.save
       incident = binx_report.create_or_update_incident
       SaverWorker.new.perform(incident.id)
-      incident = Incident.create(latitude: 32.7348953, longitude: -117.0970596)      
-      get '/api/v2/locations/markers?query=comp'
+      hash2 = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response_2.json')))
+      binx_report2 = BinxReport.find_or_new_from_external_api(hash2)
+      binx_report2.process_hash
+      binx_report2.save
+      incident2 = binx_report2.create_or_update_incident
+      SaverWorker.new.perform(incident2.id)
+      get '/api/v2/locations/markers?query=christmas'
       result = JSON.parse(response.body)
-      pp result
       expect(result['type']).to eq('FeatureCollection')
+      expect(result['features'].count).to eq(1)
       expect(result['features'][0]['properties']['marker-color']).to eq("#E74C3C")
       response.code.should == '200'
     end

@@ -39,7 +39,7 @@ module API
             **Go forth and make maps!**
           NOTE
         }
-        params do 
+        params do
           use :location_params
         end
         get '/' do
@@ -64,7 +64,8 @@ module API
           incidents = find_incidents.feature_markered
           limit = params[:limit] || 100
           incidents = incidents.limit(limit) unless params[:all]
-          geoj = { type: "FeatureCollection", features: incidents.unscoped.pluck(:feature_marker) }
+          data = params[:query].present? ? incidents.map(&:feature_marker) : incidents.pluck(:feature_marker)
+          geoj = { type: "FeatureCollection", features: data }
           render geoj
         end
 

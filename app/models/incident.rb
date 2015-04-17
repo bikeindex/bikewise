@@ -30,11 +30,6 @@ class Incident < ActiveRecord::Base
 
   include PgSearch
   pg_search_scope :search, against: [:title, :description]
-  # pg_search_scope :search, against: {
-  #   title: 'A',
-  #   description:   'B',
-  # },
-  # using: {tsearch: {dictionary: "english", prefix: true}}
 
   def self.search_text(query)
     if query.present?
