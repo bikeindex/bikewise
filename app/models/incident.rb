@@ -114,7 +114,8 @@ class Incident < ActiveRecord::Base
         description: simplestyled_description,
         occurred_at: occurred_at.to_s,
         :"marker-size" => "small",
-        :"marker-color" => simplestyled_color
+        :"marker-color" => simplestyled_color,
+        id: id
       },
       geometry: {
         type: "Point",
