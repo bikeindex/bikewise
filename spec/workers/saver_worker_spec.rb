@@ -15,7 +15,7 @@ describe SaverWorker do
     }.to change(SaverWorker.jobs, :size).by(1)
     SaverWorker.drain
     binx_report.reload
-    expect(binx_report.incident.feature_marker['properties']['marker-color']).to eq("#E74C3C")
+    expect(binx_report.incident.feature_marker['properties']['marker-color']).to eq("#83C0E9")
   end
 
 end

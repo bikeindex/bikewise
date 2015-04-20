@@ -32,7 +32,7 @@ describe 'Locations API V2' do
       result = JSON.parse(response.body)
       expect(result['type']).to eq('FeatureCollection')
       expect(result['features'].count).to eq(1)
-      expect(result['features'][0]['properties']['marker-color']).to eq("#E74C3C")
+      expect(result['features'][0]['properties']['marker-color']).to eq("#83C0E9")
       response.code.should == '200'
     end
   end

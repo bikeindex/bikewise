@@ -95,7 +95,7 @@ class Incident < ActiveRecord::Base
     when o > Time.now - 6.months
       "#F29D94"
     else
-      "#E74C3C"
+      "#83C0E9"
     end
   end
 
