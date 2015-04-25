@@ -87,15 +87,17 @@ class Incident < ActiveRecord::Base
     o = fallback_occurred_at
     case 
     when o > Time.now - 1.day 
-      "#E74C3C"
+      "#BD1622"
     when o > Time.now - 1.week
-      "#EB6759"
+      "#E74C3C"
     when o > Time.now - 1.month
-      "#EE8276"
+      "#EB6759"
     when o > Time.now - 6.months
+      "#EE8276"
+    when o > Time.now - 5.years
       "#F29D94"
     else
-      "#83C0E9"
+      "#F6B9B3"
     end
   end
 
