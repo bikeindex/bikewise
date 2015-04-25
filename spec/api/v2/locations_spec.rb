@@ -12,6 +12,18 @@ describe 'Locations API V2' do
       expect(result['type']).to eq('FeatureCollection')
       expect(result['features'][0].keys).to eq(["type", "properties", "geometry"])
     end
+
+    it "does occurred after" do 
+      old_incident = Incident.create(latitude: 32.7348953, longitude: -117.0970596, occurred_at: Time.now - 1.week)
+      incident = Incident.create(latitude: 32.7348953, longitude: -117.0970596, occurred_at: Time.now)
+      # target = '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":' + incident.id.to_s + ',"type":"Unconfirmed"},"geometry":{"type":"Point","coordinates":[-117.0970596,32.7348953]}}]}'
+      get "/api/v2/locations?occurred_after=#{(Time.now - 1.day).to_i}"
+      response.code.should == '200'
+      result = JSON.parse(response.body)
+      expect(result['type']).to eq('FeatureCollection')
+      expect(result['features'].count).to eq(1)
+      expect(result['features'][0].keys).to eq(["type", "properties", "geometry"])
+    end
   end
 
   describe "markers" do 
@@ -32,7 +44,7 @@ describe 'Locations API V2' do
       result = JSON.parse(response.body)
       expect(result['type']).to eq('FeatureCollection')
       expect(result['features'].count).to eq(1)
-      expect(result['features'][0]['properties']['marker-color']).to eq("#83C0E9")
+      expect(result['features'][0]['properties']['marker-color']).to eq("#F29D94")
       response.code.should == '200'
     end
   end

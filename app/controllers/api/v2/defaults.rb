@@ -30,8 +30,8 @@ module API
               date = Time.at(params[:occurred_after]).utc.to_datetime
               incidents = incidents.where("occurred_at >= ?", date)
             end
-            if params[:occurred_after].present?
-              date = Time.at(params[:occurred_after]).utc.to_datetime
+            if params[:occurred_before].present?
+              date = Time.at(params[:occurred_before]).utc.to_datetime
               incidents = incidents.where("occurred_at <= ?", date)
             end
             if params[:incident_type].present?

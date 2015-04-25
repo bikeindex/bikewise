@@ -63,7 +63,7 @@ describe Incident do
   describe :simplestyled_color do 
     it "does color" do 
       incident = Incident.new(occurred_at: Time.now - 5.hours)
-      expect(incident.simplestyled_color).to eq("#83C0E9")
+      expect(incident.simplestyled_color).to eq("#BD1622")
     end
   end
 
@@ -75,7 +75,7 @@ describe Incident do
       binx_report.process_hash
       binx_report.save
       incident = binx_report.create_or_update_incident
-      expect(incident.simplestyled_geojson[:properties][:'marker-color']).to eq("#83C0E9")
+      expect(incident.simplestyled_geojson[:properties][:'marker-color']).to eq("#F29D94")
     end
   end
 
