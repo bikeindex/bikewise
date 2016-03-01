@@ -1,0 +1,52 @@
+{
+  "bikes": {
+    "id": 24300,
+    "serial": "U75K23549",
+    "registration_created_at": "2012-01-27T00:00:00-06:00",
+    "registration_updated_at": "2015-04-17T00:08:55-05:00",
+    "url": "https://bikeindex.org/bikes/24300",
+    "api_url": "https://bikeindex.org/api/v1/bikes/24300",
+    "manufacturer_name": "Raleigh",
+    "manufacturer_id": 277,
+    "frame_colors": [
+      "White",
+      "Black",
+      "Yellow or Gold"
+    ],
+    "paint_description": null,
+    "stolen": true,
+    "name": null,
+    "year": 2009,
+    "frame_model": "Cadent FT1",
+    "frame_size": "23in",
+    "description": "Stuff",
+    "rear_tire_narrow": true,
+    "front_tire_narrow": null,
+    "photo": null,
+    "thumb": null,
+    "title": "2009 Raleigh Cadent FT1(white, black, and yellow or gold)",
+    "type_of_cycle": "Bike",
+    "images": [],
+    "rear_wheel_size": null,
+    "front_wheel_size": null,
+    "handlebar_type": null,
+    "frame_material": null,
+    "front_gear_type": null,
+    "rear_gear_type": null,
+    "stolen_record": {
+      "date_stolen": "2012-01-26T00:00:00-06:00",
+      "location": "Santa Cruz, CA, 95064",
+      "latitude": 36.9943539,
+      "longitude": -122.0654682,
+      "theft_description": "Cable lock was snipped with large gauge cutters. Bike's gone. Help me find it? It was a Christmas gift.",
+      "locking_description": null,
+      "lock_defeat_description": null,
+      "police_report_number": "12-068",
+      "police_report_department": "Santa Cruz",
+      "created_at": "2014-06-14T16:43:25-05:00",
+      "create_open311": false,
+      "id": 20633
+    },
+    "components": []
+  }
+}

@@ -1,4 +1,6 @@
-# [BikeWise.org](https://bikewise.org) [![Build Status](https://travis-ci.org/bikeindex/bikewise.svg)](https://travis-ci.org/bikeindex/bikewise) [![Test Coverage](https://codeclimate.com/github/bikeindex/bikewise/badges/coverage.svg)](https://codeclimate.com/github/bikeindex/bikewise)
+# [BikeWise.org](https://bikewise.org)
+
+<!-- [![Build Status](https://travis-ci.org/bikeindex/bikewise.svg)](https://travis-ci.org/bikeindex/bikewise) [![Test Coverage](https://codeclimate.com/github/bikeindex/bikewise/badges/coverage.svg)](https://codeclimate.com/github/bikeindex/bikewise) -->
 
 Bike Incident mapping data by [Bike Index](https://bikeindex.org/)!
 

@@ -31,6 +31,10 @@ body.home {
   color: white;
   h1 { margin-bottom: 1em; }
   p { font-size: 20px; }
+  a {
+    color: white;
+    text-decoration: underline;
+  }
 }
 
 @media (min-width: 900px) {

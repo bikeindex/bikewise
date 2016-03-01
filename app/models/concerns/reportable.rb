@@ -34,6 +34,7 @@ module Reportable
     u_incident.incident_type_id = incident_type_id
     u_incident.save
     after_incident_actions if self.methods.include?(:after_incident_actions)
+    SaverWorker.perform_async(u_incident.id)
     u_incident
   end
 

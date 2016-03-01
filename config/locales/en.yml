@@ -23,4 +23,4 @@ en:
   hello: "Hello world"
   time:
     formats:
-      mapbox_time_display: "%m-%d-%Y"
+      simplestyled_time_display: "%m-%d-%Y"
