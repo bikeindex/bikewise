@@ -21,13 +21,17 @@ module API
           end
 
           def find_incidents
-            incidents = Incident.all
+            if params[:query].present?
+              incidents = Incident.search_text(params[:query])
+            else
+              incidents = Incident.all
+            end
             if params[:occurred_after].present?
               date = Time.at(params[:occurred_after]).utc.to_datetime
               incidents = incidents.where("occurred_at >= ?", date)
             end
-            if params[:occurred_after].present?
-              date = Time.at(params[:occurred_after]).utc.to_datetime
+            if params[:occurred_before].present?
+              date = Time.at(params[:occurred_before]).utc.to_datetime
               incidents = incidents.where("occurred_at <= ?", date)
             end
             if params[:incident_type].present?
@@ -38,9 +42,6 @@ module API
               width = params[:proximity_square].present? ? params[:proximity_square] : 100
               box = Geocoder::Calculations.bounding_box(params[:proximity], width)
               incidents = incidents.within_bounding_box(box)
-            end
-            if params[:query].present?
-              incidents = incidents.search_text(params[:query])
             end
             incidents
           end
