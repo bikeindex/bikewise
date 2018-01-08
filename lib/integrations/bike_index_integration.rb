@@ -13,6 +13,7 @@ class BikeIndexIntegration
 
   def create_or_update_binx_report(binx_id)
     hash = get_request("bikes/#{binx_id}?")
+    pp hash
     return nil unless hash.present?
     binx_report = BinxReport.find_or_new_from_external_api(hash)
     binx_report.save if binx_report.present?
