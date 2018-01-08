@@ -20,7 +20,7 @@ class BikeIndexIntegration
 
   def get_stolen_bikes_updated_since(time)
     stolen_ids = get_request("bikes/stolen_ids?updated_since=#{time.to_i}&access_token=#{ENV['BIKEINDEX_ACCESS_TOKEN']}&organization_slug=#{ENV['BIKEINDEX_ORG_SLUG']}&")
-    stolen_ids["bikes"]
+    stolen_ids && stolen_ids["bikes"] || []
   end
 
 end
