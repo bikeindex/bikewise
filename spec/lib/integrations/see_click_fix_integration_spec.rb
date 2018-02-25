@@ -35,7 +35,7 @@ describe SeeClickFixIntegration do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/see_click_fix_issues_page.json')))
       integration = SeeClickFixIntegration.new
       updated_at = integration.last_issue_updated_at(hash)
-      expect(updated_at).to be > (Time.now - 1.year)
+      expect(updated_at).to be < Time.now - 1.year
     end
   end
 

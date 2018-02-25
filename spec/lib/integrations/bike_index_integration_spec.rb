@@ -30,7 +30,7 @@ describe BikeIndexIntegration do
         expect(BinxReport.count).to eq(0)
       end
     end
-    
+
     it "shouldn't create a duplicate bike" do 
       time = Time.now - 1.day
       binx_report = BinxReport.create(binx_id: 3414,
@@ -61,7 +61,7 @@ describe BikeIndexIntegration do
       # Only run test if the auth token exists
       if ENV['BIKEINDEX_ACCESS_TOKEN'].present?
         VCR.use_cassette('bike_index_get_stolen_bikes_updated_since') do
-          party_time = Time.parse('2014-10-10 14:44:11 -0500')
+          party_time = Time.now - 4.days
           integration = BikeIndexIntegration.new 
           stolen_ids = integration.get_stolen_bikes_updated_since(party_time)
           expect(stolen_ids.kind_of?(Array)).to be_true
