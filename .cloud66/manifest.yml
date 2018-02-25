@@ -1,4 +1,4 @@
 production:
-  postgresql:
-    configuration:
-      version: 9.3.5
+    postgresql:
+        configuration:
+            version: 9.3.5
