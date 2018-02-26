@@ -23,7 +23,7 @@ desc "import from BikeIndex"
 task :bikeindex_import => :environment do
   import = ImportStatus.find_or_create_by(source: 'bikeindex')
   integration = BikeIndexIntegration.new 
-  time = Time.now - 2.hours
+  time = (import.updated_at || Time.now) - 1.hours
   bike_ids = integration.get_stolen_bikes_updated_since(time)
   bike_ids.each { |id| GetBinxReportWorker.perform_async(id) }
   import.info_hash[:stolen_bikes_to_import] = bike_ids
