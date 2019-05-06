@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417135006) do
+ActiveRecord::Schema.define(version: 20190506213912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -124,8 +124,8 @@ ActiveRecord::Schema.define(version: 20150417135006) do
     t.integer  "country_id"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "image_url"
-    t.string   "image_url_thumb"
+    t.text     "image_url"
+    t.text     "image_url_thumb"
     t.text     "title"
     t.text     "description"
     t.string   "type_name"
