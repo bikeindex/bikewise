@@ -185,6 +185,9 @@ GEM
     grape-swagger (0.10.1)
       grape (>= 0.8.0)
       grape-entity
+    grape_logging (1.8.1)
+      grape
+      rack
     growl (1.0.3)
     guard (2.10.0)
       formatador (>= 0.2.4)
@@ -234,6 +237,12 @@ GEM
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    lograge (0.10.0)
+      actionpack (>= 4)
+      activesupport (>= 4)
+      railties (>= 4)
+      request_store (~> 1.0)
+    logstash-event (1.2.02)
     lumberjack (1.0.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
@@ -322,6 +331,8 @@ GEM
     redis (3.1.0)
     redis-namespace (1.5.1)
       redis (~> 3.0, >= 3.0.4)
+    request_store (1.4.1)
+      rack (>= 1.4)
     rerun (0.10.0)
       listen (~> 2.7, >= 2.7.3)
     responders (1.1.1)
@@ -433,6 +444,7 @@ DEPENDENCIES
   grape
   grape-active_model_serializers!
   grape-swagger
+  grape_logging
   growl
   guard
   guard-livereload
@@ -445,6 +457,8 @@ DEPENDENCIES
   json_spec
   kaminari
   kramdown
+  lograge
+  logstash-event
   mini_magick
   nokogiri (~> 1.6.5)
   omniauth-bike-index

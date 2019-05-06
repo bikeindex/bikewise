@@ -1,13 +1,12 @@
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
+# require "codeclimate-test-reporter"
+# CodeClimate::TestReporter.start
 
-ENV["RAILS_ENV"] ||= 'test'
+ENV["RAILS_ENV"] ||= "test"
 require File.expand_path("../../config/environment", __FILE__)
-require 'rspec/rails'
-require 'database_cleaner'
-require 'vcr'
-require 'sidekiq/testing'
-
+require "rspec/rails"
+require "database_cleaner"
+require "vcr"
+require "sidekiq/testing"
 
 DatabaseCleaner.strategy = :truncation
 
@@ -15,13 +14,13 @@ VCR.configure do |c|
   c.ignore_request do |request|
     request.uri[/(\$zoom\$)/]
   end
-  c.cassette_library_dir = 'spec/cassettes'
+  c.cassette_library_dir = "spec/cassettes"
   c.hook_into :webmock
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = true

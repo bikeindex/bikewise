@@ -1,6 +1,16 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.lograge.enabled = true
+  config.log_level = :debug
+  config.lograge.formatter = Lograge::Formatters::Logstash.new # Use logstash format
+  config.lograge.custom_options = lambda do |event|
+    {
+      remote_ip: event.payload[:ip],
+      params: event.payload[:params].except('controller', 'action', 'format', 'id')
+    }
+  end
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
