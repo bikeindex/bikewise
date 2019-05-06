@@ -2,13 +2,13 @@ source "https://rubygems.org"
 
 ruby "2.5.5"
 
-gem "rails", "~> 4.1.16"
+gem "rails", "4.2.11"
 gem 'pg'
-gem 'rake', '< 12.0'
+# gem 'rake', '< 12.0'
 
-gem 'sass-rails', '~> 4.0.3'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -60,7 +60,7 @@ gem 'haml-kramdown'
 gem 'carrierwave', '~> 0.9.0'
 gem 'carrierwave_backgrounder'
 gem "mini_magick"
-gem 'fog'
+gem "fog-aws"
 gem 'nokogiri', '~> 1.8.5'
 
 # Logging
