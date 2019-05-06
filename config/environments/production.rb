@@ -42,8 +42,18 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
-  # Set to :debug to see everything in the log.
+   # Settings specified here will take precedence over those in config/application.rb.
+  # Use lograge for logging to production
+  config.lograge.enabled = true
   config.log_level = :info
+  config.lograge.formatter = Lograge::Formatters::Logstash.new # Use logstash format
+  config.lograge.custom_options = lambda do |event|
+    {
+      remote_ip: event.payload[:ip],
+      params: event.payload[:params].except('controller', 'action', 'format', 'id')
+    }
+  end
+
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
