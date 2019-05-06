@@ -1,8 +1,8 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby '2.1.10'
+ruby "2.5.5"
 
-gem 'rails', '~> 4.1.16'
+gem "rails", "~> 4.1.16"
 gem 'pg'
 gem 'rake', '< 12.0'
 
@@ -24,8 +24,6 @@ gem 'dotenv-deployment'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'geocoder'
-
-gem 'honeybadger'
 
 gem 'devise'
 gem 'devise-bootstrap-views'
@@ -63,12 +61,16 @@ gem 'carrierwave', '~> 0.9.0'
 gem 'carrierwave_backgrounder'
 gem "mini_magick"
 gem 'fog'
-gem 'nokogiri', '~> 1.6.5'
+gem 'nokogiri', '~> 1.8.5'
 
 # Logging
 gem "grape_logging" # Grape logging. Also how we pass it to lograge. Always used, not just in Prod
 gem "lograge" # Structure log data, put it in single lines to improve the functionality
 gem "logstash-event" # Use logstash format for logging data
+
+group :production do
+  gem "honeybadger", "~> 2.0" # Error monitoring
+end
 
 group :development, :test do
   gem 'foreman'
@@ -78,10 +80,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'pry'
-  gem 'growl'
-  gem 'guard'
-  gem 'guard-rspec', '4.2.8'
-  gem 'guard-livereload'
+  gem "guard"
+  gem "guard-rspec"
+  gem "guard-rubocop", require: false
   gem 'database_cleaner'
   gem 'json_spec'
 end
