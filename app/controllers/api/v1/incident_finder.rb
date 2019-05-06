@@ -6,7 +6,7 @@ module API
 
         helpers do 
           def find_incidents
-            incidents = Incident.with_location
+            incidents = Incident.all
             if params[:updated_since].present?
               if params[:occurred_since] == 'yesterday'
                 date = (Time.now - 1.days) 
@@ -17,7 +17,6 @@ module API
             end
             if params[:email].present?
               user = User.where(email: params[:email]).first
-              pp user.incidents
               incidents = user.incidents if user.present?
             end
             if params[:occurred_since].present?
@@ -37,7 +36,7 @@ module API
             if params[:location].present?
               width = params[:location_width].present? ? params[:location_width] : 50
               box = Geocoder::Calculations.bounding_box(params[:location], width)
-              incidents = incidents.within_bounding_box(box)
+              incidents = incidents.with_location.within_bounding_box(box)
             end
             if params[:query].present?
               incidents = incidents.search_text(params[:query])

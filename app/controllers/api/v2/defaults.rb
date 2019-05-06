@@ -41,7 +41,7 @@ module API
             if params[:proximity].present?
               width = params[:proximity_square].present? ? params[:proximity_square] : 100
               box = Geocoder::Calculations.bounding_box(params[:proximity], width)
-              incidents = incidents.within_bounding_box(box)
+              incidents = incidents.with_location.within_bounding_box(box)
             end
             incidents
           end
