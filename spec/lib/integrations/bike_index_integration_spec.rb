@@ -1,11 +1,11 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe BikeIndexIntegration do
-  describe :create_or_update_binx_report do 
-    it "should create a bike" do 
-      if ENV['BIKEINDEX_ACCESS_TOKEN'].present?
-        VCR.use_cassette('bike_index_create_bike') do
-          integration = BikeIndexIntegration.new 
+  describe :create_or_update_binx_report do
+    it "should create a bike" do
+      if ENV["BIKEINDEX_ACCESS_TOKEN"].present?
+        VCR.use_cassette("bike_index_create_bike") do
+          integration = BikeIndexIntegration.new
           expect(BinxReport.count).to eq(0)
           integration.create_or_update_binx_report(3414)
           expect(BinxReport.count).to eq(1)
@@ -22,27 +22,27 @@ describe BikeIndexIntegration do
       end
     end
 
-    it "should not create a bike if the bike doesn't exist" do 
-      VCR.use_cassette('bike_index_create_missing_bike') do
-        integration = BikeIndexIntegration.new 
+    it "should not create a bike if the bike doesn't exist" do
+      VCR.use_cassette("bike_index_create_missing_bike") do
+        integration = BikeIndexIntegration.new
         expect(BinxReport.count).to eq(0)
         integration.create_or_update_binx_report(1)
         expect(BinxReport.count).to eq(0)
       end
     end
 
-    it "shouldn't create a duplicate bike" do 
+    it "shouldn't create a duplicate bike" do
       time = Time.now - 1.day
       binx_report = BinxReport.create(binx_id: 3414,
-        external_api_id: 146,
-        external_api_updated_at: time,
-        external_api_checked_at: time)
+                                      external_api_id: 146,
+                                      external_api_updated_at: time,
+                                      external_api_checked_at: time)
       expect(binx_report.external_api_checked_at).to eq(time)
       expect(binx_report.external_api_updated_at).to eq(time)
       integration = BikeIndexIntegration.new
-      bike_hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
-      BikeIndexIntegration.any_instance.should_receive(:get_request).and_return(bike_hash)  
-      integration = BikeIndexIntegration.new 
+      bike_hash = JSON.parse(File.read(File.join(Rails.root, "/spec/fixtures/stolen_binx_api_response.json")))
+      BikeIndexIntegration.any_instance.should_receive(:get_request).and_return(bike_hash)
+      integration = BikeIndexIntegration.new
       expect(BinxReport.count).to eq(1)
       integration.create_or_update_binx_report(3414)
       expect(BinxReport.count).to eq(1)
@@ -55,14 +55,14 @@ describe BikeIndexIntegration do
     end
   end
 
-  describe :get_stolen_bikes_updated_since do 
-    it "should get the stolen bikes updated since" do 
+  describe :get_stolen_bikes_updated_since do
+    let(:party_time) { Time.at(1556829112) } # Should be reset every time you are running these specs.
+    it "should get the stolen bikes updated since" do
       # Because the auth stuff is in the ENV file, which peeps might not have
       # Only run test if the auth token exists
-      if ENV['BIKEINDEX_ACCESS_TOKEN'].present?
-        VCR.use_cassette('bike_index_get_stolen_bikes_updated_since') do
-          party_time = Time.now - 4.days
-          integration = BikeIndexIntegration.new 
+      if ENV["BIKEINDEX_ACCESS_TOKEN"].present?
+        VCR.use_cassette("bike_index_get_stolen_bikes_updated_since") do
+          integration = BikeIndexIntegration.new
           stolen_ids = integration.get_stolen_bikes_updated_since(party_time)
           expect(stolen_ids.kind_of?(Array)).to be_true
           expect(stolen_ids.count).to be > 30
