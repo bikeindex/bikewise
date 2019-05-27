@@ -1,23 +1,22 @@
-require 'sidekiq/web'
+require "sidekiq/web"
 Rails.application.routes.draw do
-
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: 'users/registrations', sessions: 'users/sessions' }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: "users/registrations", sessions: "users/sessions" }
 
   resources :users, only: [:edit, :update]
   resources :account, only: [:index, :edit, :update]
-  root 'welcome#index'
-  get 'developer', to: 'welcome#developer'
+  root "welcome#index"
+  get "developer", to: "welcome#developer"
 
-  resources :documentation, only: [:index] do 
-    collection do 
+  resources :documentation, only: [:index] do
+    collection do
       get :api_v1
       get :api_v2
     end
   end
 
-  mount API::Root => '/api'
+  mount API::Base => "/api"
 
   authenticate :user, lambda { |u| u.admin? } do
-    mount Sidekiq::Web => '/sidekiq'
+    mount Sidekiq::Web => "/sidekiq"
   end
 end
