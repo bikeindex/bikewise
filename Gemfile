@@ -5,6 +5,7 @@ ruby "2.1.10"
 gem "rails", "~> 4.1.16"
 gem "pg"
 gem "rake", "< 12.0"
+gem "nokogiri", ">= 1.10.4" # Included here because of a security vulnerability
 
 gem "sass-rails", "~> 4.0.3"
 gem "uglifier", ">= 1.3.0"
@@ -63,7 +64,6 @@ gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"
 gem "mini_magick"
 gem "fog"
-gem "nokogiri", "~> 1.6.5"
 
 # Logging
 gem "grape_logging" # Grape logging. Also how we pass it to lograge. Always used, not just in Prod
