@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.1.10"
+ruby "2.5.5"
 
 gem "rails", "~> 4.1.16"
 gem "pg"
@@ -63,7 +63,7 @@ gem "haml-kramdown"
 gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"
 gem "mini_magick"
-gem "fog"
+gem "fog", "~> 1.25"
 
 # Logging
 gem "grape_logging" # Grape logging. Also how we pass it to lograge. Always used, not just in Prod
@@ -81,7 +81,6 @@ group :development, :test do
   gem "growl"
   gem "guard"
   gem "guard-rspec", "4.2.8"
-  gem "guard-livereload"
   gem "database_cleaner"
   gem "json_spec"
 end
