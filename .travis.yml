@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.1.10
+  - 2.5.5
 script:
   - RAILS_ENV=test bundle exec rake db:migrate && bundle exec rspec
 before_script:
