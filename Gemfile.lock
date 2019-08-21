@@ -518,7 +518,7 @@ DEPENDENCIES
   dotenv-deployment
   dotenv-rails
   factory_girl_rails
-  fog (~> 1.25)
+  fog
   foreman
   geocoder (~> 1.3.7)
   grape
