@@ -63,7 +63,7 @@ gem "haml-kramdown"
 gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"
 gem "mini_magick"
-gem "fog", "~> 1.25"
+gem "fog"
 
 # Logging
 gem "grape_logging" # Grape logging. Also how we pass it to lograge. Always used, not just in Prod
