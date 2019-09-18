@@ -63,7 +63,7 @@ gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"
 gem "mini_magick"
 gem "fog"
-gem "nokogiri", "~> 1.6.5"
+gem "nokogiri", "~> 1.9.1"
 
 # Logging
 gem "grape_logging" # Grape logging. Also how we pass it to lograge. Always used, not just in Prod
