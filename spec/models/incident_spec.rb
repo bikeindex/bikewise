@@ -76,7 +76,7 @@ describe Incident do
       binx_report.process_hash
       binx_report.save
       incident = binx_report.create_or_update_incident
-      expect(incident.simplestyled_geojson[:properties][:'marker-color']).to eq("#F29D94")
+      expect(incident.simplestyled_geojson[:properties][:'marker-color']).to eq("#F6B9B3")
     end
   end
 

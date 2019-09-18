@@ -6,6 +6,10 @@ module API
       default_error_formatter :json
       content_type :json, "application/json"
 
+      rescue_from :all do |e|
+        API::Base.respond_to_error(e)
+      end
+
       mount API::V2::Incidents
       mount API::V2::Locations
 
