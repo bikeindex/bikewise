@@ -1,11 +1,11 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe SaverWorker do
-  it "saves the simplestyled geojson when run and enqueues when created" do 
-    require 'sidekiq/testing'
+  it "saves the simplestyled geojson when run and enqueues when created" do
+    require "sidekiq/testing"
     Sidekiq::Testing.fake!
     incident_type = FactoryGirl.create(:incident_type_theft)
-    hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
+    hash = JSON.parse(File.read(File.join(Rails.root, "/spec/fixtures/stolen_binx_api_response.json")))
     binx_report = BinxReport.find_or_new_from_external_api(hash)
     binx_report.process_hash
     binx_report.save
@@ -14,6 +14,6 @@ describe SaverWorker do
     }.to change(SaverWorker.jobs, :size).by(1)
     SaverWorker.drain
     binx_report.reload
-    expect(binx_report.incident.feature_marker['properties']['marker-color']).to eq("#F29D94")
+    expect(binx_report.incident.feature_marker["properties"]["marker-color"]).to eq("#F6B9B3")
   end
 end

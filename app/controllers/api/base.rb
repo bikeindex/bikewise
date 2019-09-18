@@ -18,31 +18,34 @@ module API
     mount API::V1::Root
     mount API::V2::Root
 
-    rescue_from :all do |e|
+    def self.respond_to_error(e)
+      logger.error e unless Rails.env.test? # Breaks tests...
       eclass = e.class.to_s
-      message = "OAuth error: #{e.to_s}" if eclass.match("WineBouncer::Errors")
-      status = case
-               when eclass.match("OAuthUnauthorizedError")
-                 401
-               when eclass.match("OAuthForbiddenError")
-                 403
-               when eclass.match("RecordNotFound"), e.message.match(/unable to find/i).present?
-                 404
-               else
-                 (e.respond_to? :status) && e.status || 500
-               end
-      opts = { error: "#{message || e.message}" }
-      opts[:trace] = e.backtrace[0, 10] unless Rails.env.production?
-      Rack::Response.new(opts.to_json, status, {
+      message = "OAuth error: #{e}" if eclass =~ /WineBouncer::Errors/
+      opts = { error: message || e.message }
+      status_code = status_code_for(e, eclass)
+      if Rails.env.production?
+        Honeybadger.notify(e) if status_code > 450 # Only notify in production for 500s
+      else
+        opts[:trace] = e.backtrace[0, 10]
+      end
+      Rack::Response.new(opts.to_json, status_code, {
         "Content-Type" => "application/json",
         "Access-Control-Allow-Origin" => "*",
         "Access-Control-Request-Method" => "*",
       }).finish
     end
 
-    format :json
-    route :any, "*path" do
-      Rack::Response.new({ message: "Not found" }.to_json, 404).finish
+    def self.status_code_for(error, eclass)
+      if eclass =~ /OAuthUnauthorizedError/
+        401
+      elsif eclass =~ /OAuthForbiddenError/
+        403
+      elsif (eclass =~ /RecordNotFound/) || (error.message =~ /unable to find/i)
+        404
+      else
+        (error.respond_to? :status) && error.status || 500
+      end
     end
   end
 end
