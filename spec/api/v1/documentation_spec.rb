@@ -6,7 +6,6 @@ describe "Swagger Doc" do
     response.code.should == "200"
     json_response = JSON.parse(response.body)
     json_response["apiVersion"].should == "v1"
-    pp json_response
     json_response["apis"].size.should > 0
   end
 end
