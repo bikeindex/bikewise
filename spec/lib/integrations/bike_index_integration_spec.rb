@@ -22,8 +22,25 @@ describe BikeIndexIntegration do
       end
     end
 
-    it "should not create a bike if the bike doesn't exist" do
-      VCR.use_cassette("bike_index_create_missing_bike") do
+    context "bike has been deleted" do
+      it "should not create a bike if the bike doesn't exist" do
+        VCR.use_cassette("bike_index_create_missing_bike") do
+          integration = BikeIndexIntegration.new
+          expect(BinxReport.count).to eq(0)
+          integration.create_or_update_binx_report(1)
+          expect(BinxReport.count).to eq(0)
+        end
+      end
+    end
+
+    context "bike missing lat & lng" do
+      let(:bike_hash) do
+        og_hash = JSON.parse(File.read(File.join(Rails.root, "/spec/fixtures/stolen_binx_api_response.json")))
+        stolen_hash = og_hash["bikes"]["stolen_record"].merge("location" => "", "latitude" => nil, "longitude" => nil)
+        og_hash.merge("bikes" => og_hash["bikes"].merge("stolen_record" => stolen_hash))
+      end
+      it "should not create a bike" do
+        BikeIndexIntegration.any_instance.should_receive(:get_request).and_return(bike_hash)
         integration = BikeIndexIntegration.new
         expect(BinxReport.count).to eq(0)
         integration.create_or_update_binx_report(1)
