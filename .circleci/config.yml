@@ -1,0 +1,118 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/bikeindex/bikewise
+    parallelism: 2
+    shell: /bin/bash --login
+    environment:
+      RAILS_ENV: test
+      RACK_ENV: test
+      COVERAGE: true
+      DISABLE_SPRING: true
+      TRANSLATION_BRANCH: master
+      TZ: /usr/share/zoneinfo/America/Chicago
+
+    docker:
+      - image: circleci/ruby:2.1.10-stretch-node
+        environment:
+          PGHOST: 127.0.0.1
+          PGUSER: root
+      - image: circleci/postgres:10.4-alpine-postgis
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: bikeindex_test
+      - image: redis:4.0.9
+
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "b7:01:89:de:d8:f8:77:cc:9e:5a:ca:ee:0c:24:57:13"
+
+      - checkout
+
+      - run:
+          name: Install Dockerize
+          command: wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && sudo tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+          environment:
+            DOCKERIZE_VERSION: v0.6.1
+
+      - run:
+          name: Install system libraries
+          command: sudo apt-get update && sudo apt-get -y install postgresql-client
+
+      - run:
+          name: Install Bundler
+          command: gem install bundler
+
+      # Ruby dependencies
+      - restore_cache:
+          key: v2-bundler-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Bundle Gems
+          command: bundle install --without development --path=vendor/bundle --jobs=4 --retry=3
+      - save_cache:
+          key: v2-bundler-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+            - ~/.bundle
+
+      # Asset compilation
+      - restore_cache:
+          keys:
+            # This branch if available
+            - v2-assets-{{ .Branch }}
+            # Default branch if not
+            - v2-assets-master-
+            - v2-assets-
+      - run: bundle exec rake assets:precompile
+      - save_cache:
+          key: v2-assets-{{ .Branch }}
+          paths:
+            - public/assets
+            - tmp/cache/assets/sprockets
+
+      - run:
+          name: Wait for PostgreSQL to start
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Setup Database
+          command: |
+            bundle exec rake db:create db:structure:load
+
+      - run:
+          name: RSpec
+          command: |
+            mkdir -p test-results/rspec test-artifacts
+            ./cc-test-reporter before-build
+            TESTFILES=$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+            bundle exec rspec --profile 10 \
+                              --color \
+                              --order random \
+                              --require rails_helper \
+                              --format RspecJunitFormatter \
+                              --out test-results/rspec/rspec.xml \
+                              --format progress \
+                              -- ${TESTFILES}
+
+      - store_test_results:
+          path: test-results
+
+      - store_artifacts:
+          path: test-artifacts
+
+workflows:
+  version: 2
+
+  commit:
+    jobs:
+      - build
+      - upload-coverage:
+          requires:
+            - build
+      - deploy_production:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
