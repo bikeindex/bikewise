@@ -41,13 +41,16 @@ GEM
     addressable (2.3.6)
     api-pagination (4.1.1)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (9.6.1.1)
+      execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.7)
-    bootstrap-sass (3.1.1.1)
-      sass (~> 3.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
@@ -360,6 +363,8 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    sassc (2.2.1)
+      ffi (~> 1.9)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
     sidekiq (3.2.4)
@@ -426,7 +431,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   api-pagination
-  bootstrap-sass (~> 3.1.1)
+  bootstrap-sass (~> 3.4.1)
   carrierwave (~> 0.9.0)
   carrierwave_backgrounder
   codeclimate-test-reporter

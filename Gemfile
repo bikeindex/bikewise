@@ -51,7 +51,7 @@ gem "grape-swagger"
 gem "api-pagination"
 gem "swagger-ui_rails"
 
-gem "bootstrap-sass", "~> 3.1.1"
+gem "bootstrap-sass", "~> 3.4.1"
 gem "haml"
 
 gem "httparty"
