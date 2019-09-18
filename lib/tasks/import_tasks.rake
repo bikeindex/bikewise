@@ -35,6 +35,8 @@ task :process_reports => :environment do
   report_klasses = ["BinxReport", "ScfReport", "BwReport"]
   report_klasses.each do |klass|
     report_ids = klass.constantize.unprocessed.pluck(:id)
+    # ScfReports take a long time to process. So don't enqueue too many all at once
+    report_ids = report_ids.shuffle.slice(0..50) if klass == "ScfReport"
     report_ids.each { |id| ProcessReportsWorker.perform_async(klass, id) }
   end
 end
