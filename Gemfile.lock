@@ -107,7 +107,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.6)
+    ffi (1.11.1)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.25.0)
