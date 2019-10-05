@@ -25,6 +25,22 @@ describe "Locations API V2" do
       expect(result["features"].count).to eq(1)
       expect(result["features"][0].keys).to eq(["type", "properties", "geometry"])
     end
+
+    context "invalid location" do
+      RSpec.shared_context :geocoder_real do
+        before { Geocoder.configure(lookup: :google, use_https: true) }
+        after { Geocoder.configure(lookup: :test) }
+      end
+      it "renders with empty" do
+        VCR.use_cassette("v2_locations-invalid_proximity") do
+          get "/api/v2/locations?proximity=450.521728,-122.67326"
+          response.code.should == "200"
+          result = JSON.parse(response.body)
+          expect(result["type"]).to eq("FeatureCollection")
+          expect(result["features"]).to eq([])
+        end
+      end
+    end
   end
 
   describe "markers" do
