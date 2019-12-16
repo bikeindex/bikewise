@@ -98,7 +98,7 @@ GEM
     equalizer (0.0.10)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    excon (0.42.0)
+    excon (0.71.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
