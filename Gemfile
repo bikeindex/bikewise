@@ -4,7 +4,7 @@ ruby "2.1.10"
 
 gem "rails", "~> 4.1.16"
 gem "pg"
-gem "rake", "< 12.0"
+gem "rake", "< 13.0"
 
 gem "sass-rails", "~> 4.0.3"
 gem "uglifier", ">= 1.3.0"
