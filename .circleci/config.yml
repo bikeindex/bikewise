@@ -8,7 +8,7 @@ jobs:
       RAILS_ENV: test
       RACK_ENV: test
     docker:
-      - image: circleci/ruby:2.1.10-stretch-node
+      - image: circleci/ruby:2.1.10-node
         environment:
           PGHOST: 127.0.0.1
           PGUSER: root
