@@ -22,8 +22,8 @@ gem "jquery-rails"
 # deployment just to get rid of the deprecation warning. Won't be necessary after https://github.com/bkeepers/dotenv/pull/120 is merged
 gem "dotenv-deployment"
 gem "dotenv-rails"
-gem "active_model_serializers"
-gem "geocoder", "~> 1.3.7"
+gem "active_model_serializers", "~> 0.9.0"
+gem "geocoder"
 
 group :production do
   gem "honeybadger"
@@ -47,8 +47,8 @@ gem "sidekiq-unique-jobs"
 gem "pg_search"
 
 gem "kaminari"
-gem "grape"
-gem "grape-active_model_serializers", git: "https://github.com/jrhe/grape-active_model_serializers"
+gem "grape", "~> 0.11.0"
+gem "grape-active_model_serializers"
 gem "grape-swagger"
 gem "api-pagination"
 gem "swagger-ui_rails"
@@ -65,7 +65,7 @@ gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"
 gem "mini_magick"
 gem "fog"
-gem "nokogiri", "~> 1.6.5"
+gem "nokogiri"
 
 # Logging
 gem "grape_logging" # Grape logging. Also how we pass it to lograge. Always used, not just in Prod
