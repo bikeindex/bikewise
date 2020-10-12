@@ -23,7 +23,7 @@ gem "jquery-rails"
 gem "dotenv-deployment"
 gem "dotenv-rails"
 gem "active_model_serializers"
-gem "geocoder", "~> 1.3.7"
+gem "geocoder", "~> 1.6.1"
 
 gem "honeybadger"
 
