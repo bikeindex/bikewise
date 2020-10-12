@@ -64,7 +64,7 @@ gem "kramdown"
 gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"
 gem "mini_magick"
-gem "fog"
+gem "fog-aws"
 gem "nokogiri"
 
 # Logging
