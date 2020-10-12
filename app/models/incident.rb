@@ -29,6 +29,7 @@ class Incident < ActiveRecord::Base
   after_validation :geocode, unless: ->(obj){ obj.latitude.present? && obj.longitude.present? }
 
   scope :with_location, -> { where.not(latitude: nil) }
+  scope :example, -> { where(example: true) }
 
   include PgSearch
   pg_search_scope :search, against: [:title, :description]

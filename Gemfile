@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-ruby "2.1.10"
+ruby "2.5.8"
 
-gem "rails", "~> 4.1.16"
+gem "rails", "~> 4.2.11"
 gem "pg"
 gem "rake", "< 12.0"
 
@@ -25,7 +25,9 @@ gem "dotenv-rails"
 gem "active_model_serializers"
 gem "geocoder", "~> 1.3.7"
 
-gem "honeybadger"
+group :production do
+  gem "honeybadger"
+end
 
 gem "devise"
 gem "devise-bootstrap-views"
@@ -84,6 +86,7 @@ group :development, :test do
   gem "guard-livereload"
   gem "database_cleaner"
   gem "json_spec"
+  gem "rspec_junit_formatter" # For circle ci
 end
 
 group :test do
