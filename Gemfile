@@ -59,7 +59,7 @@ gem "haml"
 gem "httparty"
 
 gem "kramdown"
-gem "haml-kramdown"
+# gem "haml-kramdown"
 
 gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"

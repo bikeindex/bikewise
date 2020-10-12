@@ -345,8 +345,6 @@ GEM
     haml (5.2.0)
       temple (>= 0.8.0)
       tilt
-    haml-kramdown (0.0.1)
-      haml
     hashdiff (1.0.1)
     hashie (4.1.0)
     hike (1.2.3)
@@ -639,7 +637,6 @@ DEPENDENCIES
   guard-livereload
   guard-rspec (= 4.2.8)
   haml
-  haml-kramdown
   honeybadger
   httparty
   jquery-rails
