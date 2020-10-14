@@ -1,21 +1,6 @@
 require "spec_helper"
 
 describe Incident do
-  describe :validations do
-    it { should belong_to :incident_type }
-    it { should belong_to :type_properties }
-    it { should belong_to :country }
-    it { should belong_to :user }
-    it { should belong_to :gender_select }
-    it { should belong_to :experience_level_select }
-    it { should have_many :incident_reports }
-    it { should have_many :binx_reports }
-    it { should have_many :scf_reports }
-    it { should have_many :images }
-    it { should serialize :source }
-    it { should serialize :additional_sources }
-  end
-
   describe :as_geojson do
     it "makes it work" do
       in_type = FactoryGirl.create(:incident_type_theft)
@@ -47,7 +32,7 @@ describe Incident do
       expect(incident.additional_sources).to eq([])
     end
     it "has a before_save_callback_method defined for store_type_name_and_sources" do
-      Incident._save_callbacks.select { |cb| cb.kind.eql?(:before) }.map(&:raw_filter).include?(:store_type_name_and_sources).should == true
+      expect(Incident._save_callbacks.select { |cb| cb.kind.eql?(:before) }.map(&:raw_filter).include?(:store_type_name_and_sources)).to eq true
     end
   end
 

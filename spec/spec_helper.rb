@@ -26,6 +26,12 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.infer_base_class_for_anonymous_controllers = false
 
+  config.render_views
+
+  # Enable logging in
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Devise::Test::ControllerHelpers, type: :controller
+
   # config.before :suite do
   #   DatabaseCleaner.clean
   # end

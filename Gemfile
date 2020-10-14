@@ -48,9 +48,9 @@ gem "sidekiq-failures"
 gem "sidekiq-unique-jobs"
 
 gem "kaminari"
-gem "grape", "~> 0.11.0"
-gem "grape-active_model_serializers"
-gem "grape-swagger"
+gem "grape", "~> 0.19.1"
+gem "grape-active_model_serializers", "~> 1.4.0"
+gem "grape-swagger", "0.11"
 gem "api-pagination"
 gem "swagger-ui_rails"
 
@@ -60,7 +60,7 @@ gem "haml"
 gem "httparty"
 
 gem "kramdown"
-# gem "haml-kramdown"
+gem "kramdown-parser-gfm" # Parser required to render grape-swagger
 
 gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"
@@ -79,7 +79,6 @@ group :development, :test do
   gem "vcr"
   gem "rspec-rails", "~> 2.14.1"
   gem "factory_girl_rails"
-  gem "shoulda-matchers"
   gem "pry"
   gem "growl"
   gem "guard"
