@@ -13,7 +13,7 @@ describe LegacyBwReport do
     end
 
     it "should have the incident_attrs" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/legacy_bw_report_hash_crash.json')))
       bw_report = LegacyBwReport.find_or_new_from_external_api(hash)
       bw_report.process_hash

@@ -3,7 +3,7 @@ require "spec_helper"
 describe Incident do
   describe :as_geojson do
     it "makes it work" do
-      in_type = FactoryGirl.create(:incident_type_theft)
+      in_type = FactoryBot.create(:incident_type_theft)
       t = Time.now
       i1 = Incident.create(latitude: -33.891827, longitude: 151.199568, incident_type_id: in_type.id, occurred_at: t)
       i2 = Incident.create(latitude: -1.891827, longitude: 151.199568, incident_type_id: in_type.id, occurred_at: Time.now - 1.hour)
@@ -55,7 +55,7 @@ describe Incident do
 
   describe :simplestyled_geojson do
     it "outputs simplestyled geojson" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root, "/spec/fixtures/stolen_binx_api_response.json")))
       binx_report = BinxReport.find_or_new_from_external_api(hash)
       binx_report.process_hash
@@ -67,7 +67,7 @@ describe Incident do
 
   describe :search do
     it "searches successfully" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root, "/spec/fixtures/stolen_binx_api_response.json")))
       binx_report = BinxReport.find_or_new_from_external_api(hash)
       binx_report.process_hash

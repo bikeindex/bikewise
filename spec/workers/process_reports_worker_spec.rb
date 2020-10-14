@@ -17,7 +17,7 @@ describe ProcessReportsWorker do
   end
 
   it "should process a binx_report" do 
-    FactoryGirl.create(:incident_type_theft)
+    FactoryBot.create(:incident_type_theft)
     Sidekiq::Testing.inline!
     hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
     binx_report = BinxReport.find_or_new_from_external_api(hash)

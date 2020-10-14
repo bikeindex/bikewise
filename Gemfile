@@ -78,7 +78,7 @@ group :development, :test do
   gem "rerun"
   gem "vcr"
   gem "rspec-rails", "~> 2.14.1"
-  gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem "pry"
   gem "growl"
   gem "guard"

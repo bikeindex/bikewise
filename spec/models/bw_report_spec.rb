@@ -12,7 +12,7 @@ describe BwReport do
     end
 
     it "should have the incident_attrs" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/bw_report_hash.json')))
       bw_report = BwReport.find_or_new_from_external_api(hash)
       bw_report.process_hash
@@ -43,7 +43,7 @@ describe BwReport do
 
   describe :create_or_update_incident do
     it "should create an incident" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/bw_report_hash.json')))
       bw_report = BwReport.find_or_new_from_external_api(hash)
       bw_report.process_hash

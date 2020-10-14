@@ -32,7 +32,7 @@ describe BinxReport do
     end
 
     it "should have the incident_attrs" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
       hash['bikes']['stolen_record']['location'] = ", , AZ, 85003"
       binx_report = BinxReport.find_or_new_from_external_api(hash)
@@ -77,7 +77,7 @@ describe BinxReport do
 
   describe :create_or_update_incident do
     it "should create an incident" do 
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
       binx_report = BinxReport.find_or_new_from_external_api(hash)
       binx_report.process_hash
@@ -105,7 +105,7 @@ describe BinxReport do
     end
 
     it "should not create an incident if there isn't both lat & long" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
       hash['bikes']['stolen_record']['location'] = ''
       hash['bikes']['stolen_record']['latitude'] = ''
