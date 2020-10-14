@@ -262,7 +262,7 @@ GEM
       oauth2 (~> 1.4)
       omniauth (~> 1.9)
     orm_adapter (0.5.0)
-    pg (1.2.3)
+    pg (0.21.0)
     pg_search (2.3.0)
       activerecord (>= 4.2)
       activesupport (>= 4.2)
@@ -441,7 +441,7 @@ DEPENDENCIES
   mini_magick
   nokogiri
   omniauth-bike-index
-  pg
+  pg (~> 0.20)
   pg_search
   pry
   rack-cors

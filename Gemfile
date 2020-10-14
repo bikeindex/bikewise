@@ -1,9 +1,11 @@
 source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.5.5"
 
 gem "rails", "~> 4.2.11"
-gem "pg"
+gem "pg", "~> 0.20" # Postgres
+gem "pg_search" # Full text search - e.g. admin_search in user
 gem "rake", "< 12.0"
 
 gem "sass-rails", "~> 4.0.3"
@@ -44,7 +46,6 @@ gem "sinatra", ">= 1.3.0", :require => nil
 gem "sidekiq"
 gem "sidekiq-failures"
 gem "sidekiq-unique-jobs"
-gem "pg_search"
 
 gem "kaminari"
 gem "grape", "~> 0.11.0"
