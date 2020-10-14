@@ -2,7 +2,7 @@ require 'yaml'
 
 CarrierWave.configure do |config|
   config.cache_dir = "#{Rails.root}/tmp/"
-  config.storage = :fog # For some reason, uploading sitemap doesn't work unless this is included.
+  config.fog_provider "fog/aws"
   config.fog_credentials = {
     provider:               'AWS',       # required
     aws_access_key_id:      ENV['S3_ACCESS_KEY'],
