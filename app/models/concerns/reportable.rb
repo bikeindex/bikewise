@@ -22,7 +22,7 @@ module Reportable
 
   def create_or_update_incident
     return nil unless should_create_incident
-    u_incident = self.incident
+    u_incident = incident
     unless u_incident.present?
       u_incident = Incident.create
       ir = u_incident.incident_reports.create(report: self, is_incident_source: true)
@@ -34,7 +34,7 @@ module Reportable
     u_incident.incident_type_id = incident_type_id
     u_incident.save
     after_incident_actions if self.methods.include?(:after_incident_actions)
-    SaverWorker.perform_async(u_incident.id)
+    SaverWorker.perform_async(u_incident&.id)
     u_incident
   end
 

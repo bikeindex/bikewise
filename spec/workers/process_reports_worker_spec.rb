@@ -30,5 +30,4 @@ describe ProcessReportsWorker do
     expect(binx_report.incident.longitude).to be_present
     expect(binx_report.incident.image_url).to be_present
   end
-
 end

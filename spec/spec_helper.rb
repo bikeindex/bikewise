@@ -6,6 +6,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require "rspec/rails"
 require "database_cleaner"
 require "vcr"
+# Add additional requires below this line. Rails is not loaded until this point!
 require "sidekiq/testing"
 
 DatabaseCleaner.strategy = :truncation

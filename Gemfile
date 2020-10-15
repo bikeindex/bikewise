@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.5.5"
 
 gem "rails", "~> 4.2.11"
-gem "pg", "~> 0.20" # Postgres
-gem "pg_search" # Full text search - e.g. admin_search in user
+gem "pg", "~> 0.18" # Postgres
+gem "pg_search", "~> 1.0" # Full text search - e.g. admin_search in user
 gem "rake", "< 12.0"
 
 gem "sass-rails", "~> 4.0.3"
@@ -43,7 +43,7 @@ gem "rack-cors", :require => "rack/cors"
 gem "dalli"
 
 gem "sinatra", ">= 1.3.0", :require => nil
-gem "sidekiq"
+gem "sidekiq", "~> 4.0"
 gem "sidekiq-failures"
 gem "sidekiq-unique-jobs"
 

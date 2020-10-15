@@ -266,10 +266,11 @@ GEM
       oauth2 (~> 1.4)
       omniauth (~> 1.9)
     orm_adapter (0.5.0)
-    pg (0.21.0)
-    pg_search (2.3.0)
-      activerecord (>= 4.2)
-      activesupport (>= 4.2)
+    pg (0.18.0)
+    pg_search (1.0.6)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -312,7 +313,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.2.2)
+    redis (3.3.5)
     request_store (1.5.0)
       rack (>= 1.4)
     rerun (0.13.0)
@@ -347,11 +348,11 @@ GEM
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
     shellany (0.0.1)
-    sidekiq (5.2.8)
-      connection_pool (~> 2.2, >= 2.2.2)
-      rack (< 2.1.0)
+    sidekiq (4.2.10)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
-      redis (>= 3.3.5, < 5)
+      redis (~> 3.2, >= 3.2.1)
     sidekiq-failures (1.0.0)
       sidekiq (>= 4.0.0)
     sidekiq-unique-jobs (6.0.24)
@@ -443,8 +444,8 @@ DEPENDENCIES
   mini_magick
   nokogiri
   omniauth-bike-index
-  pg (~> 0.20)
-  pg_search
+  pg (~> 0.18)
+  pg_search (~> 1.0)
   pry
   rack-cors
   rails (~> 4.2.11)
@@ -453,7 +454,7 @@ DEPENDENCIES
   rspec-rails (~> 2.14.1)
   rspec_junit_formatter
   sass-rails (~> 4.0.3)
-  sidekiq
+  sidekiq (~> 4.0)
   sidekiq-failures
   sidekiq-unique-jobs
   sinatra (>= 1.3.0)
