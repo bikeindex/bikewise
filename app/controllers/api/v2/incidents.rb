@@ -19,13 +19,17 @@
             use :find_incident_params
           end
           get '/', root: "incidents", each_serializer: IncidentSerializer do
-            @page = params[:page] || 1
-            @per_page = params[:per_page] || 25
-            @paginated_obj = find_incidents.page(@page).per(@per_page)
-            ActiveModel::ArraySerializer.new(@paginated_obj,
-              each_serializer: IncidentSerializer,
-              root: "incidents").as_json
-            # result
+            # TODO IMMediatelyu - fix pagination
+            # Tried this, but it didn't seem to work
+            # @page = params[:page] || 1
+            # @per_page = params[:per_page] || 25
+            # @paginated_obj = find_incidents.page(@page).per(@per_page)
+            # ActiveModel::ArraySerializer.new(@paginated_obj,
+            #   each_serializer: IncidentSerializer,
+            #   root: "incidents").as_json
+            
+            result = paginate find_incidents
+            result
             # { "incidents" =>  result }
           end
 
