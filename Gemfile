@@ -65,7 +65,7 @@ gem "kramdown-parser-gfm" # Parser required to render grape-swagger
 gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"
 gem "mini_magick"
-gem "fog-aws"
+gem "fog", "~> 1.25.0"
 gem "nokogiri"
 
 # Logging
