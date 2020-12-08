@@ -21,7 +21,7 @@ module API
         end
         get do
           find_selections
-          { types: @selections }
+          render @selections
         end
       
         desc "Return selections for a given type"
@@ -32,7 +32,7 @@ module API
         get ':select_type' do 
           find_selections
           @selections = @selections.where(select_type: params[:select_type])
-          @selections
+          render @selections
         end
       end
     end
