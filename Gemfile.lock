@@ -243,7 +243,6 @@ GEM
     mustermann-grape (1.0.1)
       mustermann (>= 1.0.0)
     nenv (0.3.0)
-    net-ssh (6.1.0)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     notiffany (0.1.3)
@@ -441,7 +440,6 @@ DEPENDENCIES
   lograge
   logstash-event
   mini_magick
-  net-ssh
   nokogiri
   omniauth-bike-index
   pg (~> 0.18)
