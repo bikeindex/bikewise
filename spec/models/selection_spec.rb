@@ -1,25 +1,6 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe Selection do
-  describe :validations do
-    it { should have_many :hazard_selects }
-    it { should have_many :hazard_priority_selects }
-    it { should have_many :locking_selects }
-    it { should have_many :locking_defeat_selects }
-    it { should have_many :condition_selects }
-    it { should have_many :crash_selects }
-    it { should have_many :vehicle_selects }
-    it { should have_many :lighting_selects }
-    it { should have_many :visibility_selects }
-    it { should have_many :geometry_selects }
-    it { should have_many :injury_severity_selects }
-    it { should have_many :incident_location_selects }
-    it { should have_many :incident_experience_level_selects }
-    it { should have_many :incident_gender_selects }
-    it { should have_many :user_experience_level_selects }
-    it { should have_many :user_gender_selects }
-  end
-
   describe :fuzzy_find_or_create do 
     it "creates a selection" do 
       select_hash = { 'select_type' => 'foo  type ', name: 'SOME  crazy NAME', user_created: false}

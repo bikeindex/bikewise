@@ -1,16 +1,6 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe User do
-  describe :validations do
-    it { should serialize :binx_bike_ids }
-    it { should serialize :legacy_bw_hash }
-    it { should have_many :incidents }
-    it { should belong_to :experience_level_select }
-    it { should belong_to :gender_select }
-    # it { should validate_presence_of :binx_id }
-    it { should validate_uniqueness_of :binx_id }
-  end
-
   describe :find_or_new_from_legacy_hash do 
     it "creates a user from legacy_bw_hash" do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/legacy_bw_report_hash_user.json')))

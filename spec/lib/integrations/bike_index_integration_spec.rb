@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 describe BikeIndexIntegration do
   describe :create_or_update_binx_report do
@@ -40,7 +40,7 @@ describe BikeIndexIntegration do
         og_hash.merge("bikes" => og_hash["bikes"].merge("stolen_record" => stolen_hash))
       end
       it "should not create a bike" do
-        BikeIndexIntegration.any_instance.should_receive(:get_request).and_return(bike_hash)
+        expect_any_instance_of(BikeIndexIntegration).to receive(:get_request).and_return(bike_hash)
         integration = BikeIndexIntegration.new
         expect(BinxReport.count).to eq(0)
         integration.create_or_update_binx_report(1)
@@ -58,7 +58,7 @@ describe BikeIndexIntegration do
       expect(binx_report.external_api_updated_at).to eq(time)
       integration = BikeIndexIntegration.new
       bike_hash = JSON.parse(File.read(File.join(Rails.root, "/spec/fixtures/stolen_binx_api_response.json")))
-      BikeIndexIntegration.any_instance.should_receive(:get_request).and_return(bike_hash)
+      expect_any_instance_of(BikeIndexIntegration).to receive(:get_request).and_return(bike_hash)
       integration = BikeIndexIntegration.new
       expect(BinxReport.count).to eq(1)
       integration.create_or_update_binx_report(3414)

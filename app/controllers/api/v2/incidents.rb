@@ -18,7 +18,7 @@
           params do 
             use :find_incident_params
           end
-          get '/' do
+          get '/', root: "incidents", each_serializer: IncidentSerializer do
             paginate find_incidents
           end
 

@@ -1,12 +1,6 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe IncidentType do
-  describe :validations do
-    it { should have_many :incidents }
-    # it { should validate_presence_of :slug }
-    # it { should validate_uniqueness_of :slug }
-  end
-
   describe :fuzzy_find_id do 
     it "should fuzzy_find incident_type_id" do 
       incident_type = IncidentType.create(name: 'Some WEird Thing')
@@ -26,6 +20,4 @@ describe IncidentType do
       expect(IncidentType.possible_types.include?('foo')).to be_true
     end
   end
-
-  
 end

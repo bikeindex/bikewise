@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :bike do
   end
   factory :bw_report do
@@ -28,6 +28,6 @@ FactoryGirl.define do
   factory :user do
   end
   factory :incident_type_theft, class: IncidentType do 
-    name 'Theft'
+    name { 'Theft' }
   end
 end

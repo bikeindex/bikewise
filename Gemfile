@@ -1,9 +1,11 @@
 source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.1.10"
+ruby "2.5.5"
 
-gem "rails", "~> 4.1.16"
-gem "pg"
+gem "rails", "~> 4.2.11"
+gem "pg", "~> 0.18" # Postgres
+gem "pg_search", "~> 1.0" # Full text search - e.g. admin_search in user
 gem "rake", "< 12.0"
 
 gem "sass-rails", "~> 4.0.3"
@@ -22,10 +24,12 @@ gem "jquery-rails"
 # deployment just to get rid of the deprecation warning. Won't be necessary after https://github.com/bkeepers/dotenv/pull/120 is merged
 gem "dotenv-deployment"
 gem "dotenv-rails"
-gem "active_model_serializers"
-gem "geocoder", "~> 1.3.7"
+gem "active_model_serializers", "~> 0.9.0"
+gem "geocoder"
 
-gem "honeybadger"
+group :production do
+  gem "honeybadger"
+end
 
 gem "devise"
 gem "devise-bootstrap-views"
@@ -39,15 +43,14 @@ gem "rack-cors", :require => "rack/cors"
 gem "dalli"
 
 gem "sinatra", ">= 1.3.0", :require => nil
-gem "sidekiq"
+gem "sidekiq", "~> 4.0"
 gem "sidekiq-failures"
 gem "sidekiq-unique-jobs"
-gem "pg_search"
 
 gem "kaminari"
-gem "grape"
-gem "grape-active_model_serializers", git: "https://github.com/jrhe/grape-active_model_serializers"
-gem "grape-swagger"
+gem "grape", "~> 0.19.1"
+gem "grape-active_model_serializers", "~> 1.4.0"
+gem "grape-swagger", "0.11"
 gem "api-pagination"
 gem "swagger-ui_rails"
 
@@ -57,13 +60,13 @@ gem "haml"
 gem "httparty"
 
 gem "kramdown"
-gem "haml-kramdown"
+gem "kramdown-parser-gfm" # Parser required to render grape-swagger
 
 gem "carrierwave", "~> 0.9.0"
 gem "carrierwave_backgrounder"
 gem "mini_magick"
-gem "fog"
-gem "nokogiri", "~> 1.6.5"
+gem "fog-aws"
+gem "nokogiri"
 
 # Logging
 gem "grape_logging" # Grape logging. Also how we pass it to lograge. Always used, not just in Prod
@@ -75,8 +78,7 @@ group :development, :test do
   gem "rerun"
   gem "vcr"
   gem "rspec-rails", "~> 2.14.1"
-  gem "factory_girl_rails"
-  gem "shoulda-matchers"
+  gem "factory_bot_rails"
   gem "pry"
   gem "growl"
   gem "guard"
@@ -84,6 +86,7 @@ group :development, :test do
   gem "guard-livereload"
   gem "database_cleaner"
   gem "json_spec"
+  gem "rspec_junit_formatter" # For circle ci
 end
 
 group :test do

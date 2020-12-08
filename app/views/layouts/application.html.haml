@@ -17,7 +17,7 @@
             = link_to current_user.display_id, "/account"
             = link_to "log out", destroy_user_session_path, method: :delete, class: 'signout-link'
           - else
-            = link_to "Sign in", user_omniauth_authorize_path(:bike_index)
+            = link_to "Sign in", user_bike_index_omniauth_authorize_path
 
     = yield
     %footer.global-footer

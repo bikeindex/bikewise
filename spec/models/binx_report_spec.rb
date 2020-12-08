@@ -1,16 +1,6 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe BinxReport do
-  describe :validations do
-    # it { should validate_presence_of :binx_id }
-
-    # Incidentable attributes
-    it { should have_one :incident_report }
-    it { should have_one :incident }
-    it { should validate_uniqueness_of(:external_api_id).allow_nil }
-    it { should serialize :external_api_hash }
-  end
-
   describe :new_from_external_hash do 
     it "should make a binx report from an api hash and not save" do
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
@@ -42,7 +32,7 @@ describe BinxReport do
     end
 
     it "should have the incident_attrs" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
       hash['bikes']['stolen_record']['location'] = ", , AZ, 85003"
       binx_report = BinxReport.find_or_new_from_external_api(hash)
@@ -87,7 +77,7 @@ describe BinxReport do
 
   describe :create_or_update_incident do
     it "should create an incident" do 
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
       binx_report = BinxReport.find_or_new_from_external_api(hash)
       binx_report.process_hash
@@ -115,7 +105,7 @@ describe BinxReport do
     end
 
     it "should not create an incident if there isn't both lat & long" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root,'/spec/fixtures/stolen_binx_api_response.json')))
       hash['bikes']['stolen_record']['location'] = ''
       hash['bikes']['stolen_record']['latitude'] = ''

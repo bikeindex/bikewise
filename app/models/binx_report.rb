@@ -18,7 +18,7 @@ class BinxReport < ActiveRecord::Base
   end
 
   def incident_attrs
-    hash = {
+    {
       latitude: external_api_hash[:stolen_record][:latitude],
       longitude: external_api_hash[:stolen_record][:longitude],
       address: external_api_hash[:stolen_record][:location].gsub(/\A(,\s?)+/,''),

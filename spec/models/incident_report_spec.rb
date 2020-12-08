@@ -1,11 +1,6 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe IncidentReport do
-  describe :validations do
-    it { should belong_to :incident }
-    it { should belong_to :report }
-  end
-
   describe :set_open_311_status do 
     it "should set the incident as open311 if it is and make it the source" do 
       incident = Incident.new
@@ -18,7 +13,7 @@ describe IncidentReport do
     end
 
     it "should have before_save_callback_method defined for set_mnfg_name" do
-      IncidentReport._save_callbacks.select { |cb| cb.kind.eql?(:before) }.map(&:raw_filter).include?(:set_open311_status).should == true
+      expect(IncidentReport._save_callbacks.select { |cb| cb.kind.eql?(:before) }.map(&:raw_filter).include?(:set_open311_status)).to eq true
     end
   end
 end

@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 describe SeeClickFixIntegration do
   describe :get_issues_page do
@@ -43,7 +43,7 @@ describe SeeClickFixIntegration do
     it "should get page, process page, and return max pages" do
       VCR.use_cassette("see_click_fix_get_process_and_return_max") do
         integration = SeeClickFixIntegration.new
-        integration.should_receive(:make_reports_from_issues_page).and_return(true)
+        expect(integration).to receive(:make_reports_from_issues_page).and_return(true)
         max_page = integration.get_issues_and_make_reports(1)
         expect(max_page).to be > 2_000
         expect(max_page).to be < 30_000

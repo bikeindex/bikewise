@@ -1,12 +1,12 @@
-require 'spec_helper'
+require "rails_helper"
 
-describe 'Types API V1' do
+describe 'Types API V1', type: :request do
   describe 'all' do 
     it "renders types" do
       @hazard = Selection.create(name: 'foo hazard', select_type: 'hazard', user_created: false)
       get '/api/v1/types'
-      response.code.should == '200'
-      result = JSON.parse(response.body)['types']
+      expect(response.code).to eq '200'
+      result = JSON.parse(response.body)["types"]
       expect(result.count).to be > 0
       # expect(result[0]['id']).to eq(@hazard.id)
       expect(result[0]['name']).to eq('foo hazard')
@@ -33,7 +33,7 @@ describe 'Types API V1' do
     xit "renders hazards" do
       get '/api/v1/types/hazard'
       pp response
-      response.code.should == '200'
+      expect(response.code).to eq '200'
       result = JSON.parse(response.body)['types']
       # pp result
       expect(result.count).to be > 0
@@ -46,7 +46,7 @@ describe 'Types API V1' do
       get '/api/v1/types/hazard?include_user_created=true'
       result = JSON.parse(response.body)['types']
       # pp result
-      response.code.should == '200'
+      expect(response.code).to eq '200'
       expect(result.count).to be(2)
     end
 
@@ -55,7 +55,7 @@ describe 'Types API V1' do
       types.each do |type|
         url = "/api/v1/types/#{type}"
         get url
-        response.code.should == '200'
+        expect(response.code).to eq '200'
         result = JSON.parse(response.body)['types']
         pp url unless result.count == 1
         expect(result.count).to be(1)

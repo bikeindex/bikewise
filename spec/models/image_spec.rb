@@ -1,9 +1,4 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe Image do
-  describe :validations do
-    it { should belong_to :incident }
-  end
-
-
 end

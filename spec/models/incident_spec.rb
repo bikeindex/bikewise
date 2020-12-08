@@ -1,24 +1,9 @@
-require "spec_helper"
+require "rails_helper"
 
 describe Incident do
-  describe :validations do
-    it { should belong_to :incident_type }
-    it { should belong_to :type_properties }
-    it { should belong_to :country }
-    it { should belong_to :user }
-    it { should belong_to :gender_select }
-    it { should belong_to :experience_level_select }
-    it { should have_many :incident_reports }
-    it { should have_many :binx_reports }
-    it { should have_many :scf_reports }
-    it { should have_many :images }
-    it { should serialize :source }
-    it { should serialize :additional_sources }
-  end
-
   describe :as_geojson do
     it "makes it work" do
-      in_type = FactoryGirl.create(:incident_type_theft)
+      in_type = FactoryBot.create(:incident_type_theft)
       t = Time.now
       i1 = Incident.create(latitude: -33.891827, longitude: 151.199568, incident_type_id: in_type.id, occurred_at: t)
       i2 = Incident.create(latitude: -1.891827, longitude: 151.199568, incident_type_id: in_type.id, occurred_at: Time.now - 1.hour)
@@ -47,7 +32,7 @@ describe Incident do
       expect(incident.additional_sources).to eq([])
     end
     it "has a before_save_callback_method defined for store_type_name_and_sources" do
-      Incident._save_callbacks.select { |cb| cb.kind.eql?(:before) }.map(&:raw_filter).include?(:store_type_name_and_sources).should == true
+      expect(Incident._save_callbacks.select { |cb| cb.kind.eql?(:before) }.map(&:raw_filter).include?(:store_type_name_and_sources)).to eq true
     end
   end
 
@@ -70,7 +55,7 @@ describe Incident do
 
   describe :simplestyled_geojson do
     it "outputs simplestyled geojson" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root, "/spec/fixtures/stolen_binx_api_response.json")))
       binx_report = BinxReport.find_or_new_from_external_api(hash)
       binx_report.process_hash
@@ -82,7 +67,7 @@ describe Incident do
 
   describe :search do
     it "searches successfully" do
-      incident_type = FactoryGirl.create(:incident_type_theft)
+      incident_type = FactoryBot.create(:incident_type_theft)
       hash = JSON.parse(File.read(File.join(Rails.root, "/spec/fixtures/stolen_binx_api_response.json")))
       binx_report = BinxReport.find_or_new_from_external_api(hash)
       binx_report.process_hash

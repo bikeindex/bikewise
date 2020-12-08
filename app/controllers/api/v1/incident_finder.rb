@@ -6,7 +6,7 @@ module API
 
         helpers do 
           def find_incidents
-            incidents = Incident.all
+            incidents = Incident.with_location
             if params[:updated_since].present?
               if params[:occurred_since] == 'yesterday'
                 date = (Time.now - 1.days) 
