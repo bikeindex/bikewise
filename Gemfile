@@ -48,7 +48,7 @@ gem "sidekiq-failures"
 gem "sidekiq-unique-jobs"
 
 gem "kaminari"
-gem "grape", "~> 0.19.1"
+gem "grape", "~> 1.1.0"
 gem "grape-active_model_serializers", "~> 1.4.0"
 gem "grape-swagger", "0.11"
 gem "api-pagination"
