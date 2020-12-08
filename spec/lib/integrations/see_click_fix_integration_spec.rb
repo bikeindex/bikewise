@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 describe SeeClickFixIntegration do
   describe :get_issues_page do

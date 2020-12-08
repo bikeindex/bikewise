@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe IncidentType do
   describe :fuzzy_find_id do 

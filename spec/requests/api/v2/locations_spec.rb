@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 describe "Locations API V2", type: :request do
   describe "root" do

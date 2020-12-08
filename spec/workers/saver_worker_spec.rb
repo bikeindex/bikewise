@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 describe SaverWorker do
   it "saves the simplestyled geojson when run and enqueues when created" do

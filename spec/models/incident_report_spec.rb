@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe IncidentReport do
   describe :set_open_311_status do 

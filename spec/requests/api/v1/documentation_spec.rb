@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 describe "Swagger Doc", type: :request do
   it "swagger documentation" do

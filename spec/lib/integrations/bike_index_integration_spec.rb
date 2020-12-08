@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 describe BikeIndexIntegration do
   describe :create_or_update_binx_report do

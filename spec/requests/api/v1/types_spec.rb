@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe 'Types API V1', type: :request do
   describe 'all' do 

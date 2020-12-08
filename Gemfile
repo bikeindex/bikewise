@@ -24,7 +24,7 @@ gem "jquery-rails"
 # deployment just to get rid of the deprecation warning. Won't be necessary after https://github.com/bkeepers/dotenv/pull/120 is merged
 gem "dotenv-deployment"
 gem "dotenv-rails"
-gem "active_model_serializers"
+gem "active_model_serializers", "~> 0.9.0"
 gem "geocoder"
 
 group :production do

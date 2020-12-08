@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "rails_helper"
 
 describe Selection do
   describe :fuzzy_find_or_create do 
