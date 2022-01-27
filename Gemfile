@@ -43,7 +43,7 @@ gem "rack-cors", :require => "rack/cors"
 gem "dalli"
 
 gem "sinatra", ">= 1.3.0", :require => nil
-gem "sidekiq", "~> 4.0"
+gem "sidekiq", "~> 5.2"
 gem "sidekiq-failures"
 gem "sidekiq-unique-jobs"
 
